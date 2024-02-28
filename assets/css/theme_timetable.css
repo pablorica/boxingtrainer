@@ -1,0 +1,168 @@
+table.tt_timetable{
+	font-family: inherit;
+}
+.sf-timetable-menu li:hover ul a,
+.sf-timetable-menu li.submenu:hover ul a{
+	font-family: inherit;
+}
+.tt_tabs_navigation li a{
+	font-family: inherit;
+}
+.tabs_box_navigation.sf-timetable-menu{
+	font-family: inherit;
+}
+table.tt_timetable,
+table.tt_timetable thead tr {
+	border-width: 1px;
+	border-style: solid;
+}
+table.tt_timetable {
+    border-collapse: collapse !important;
+}
+table.tt_timetable tbody tr {
+	border-width: 1px;
+	border-style: dashed;
+}
+table.tt_timetable td, table.tt_timetable th {
+	border-right-width: 1px !important;
+	border-right-style: solid !important;
+}
+.tt_timetable th{
+	padding: 20px 10px;
+}
+.tt_timetable th,
+.tt_timetable td{
+	color: inherit;
+}
+table.tt_timetable .event:not(.tt_single_event) .event_container {
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+}
+table.tt_timetable .event:not(.tt_single_event) .event_container:last-child {
+    border-bottom: none;
+}
+table.tt_timetable .event, table.tt_timetable .event .event_container.tt_tooltip:hover, table.tt_timetable .event:hover {
+    background-color: transparent;
+}
+.tt_timetable .event{
+	color: inherit;
+}
+.tt_timetable .event a,
+.tt_timetable .event .event_header{
+	color: inherit !important;
+	font-size: inherit;
+	font-weight: inherit;
+}
+.tt_timetable .hours{
+	color: inherit;
+	font-weight: inherit;
+}
+.tt_timetable .event.tt_tooltip:hover .hours,
+.tt_timetable .event .event_container.tt_tooltip:hover .hours{
+	color: inherit;
+}
+table.tt_timetable .event_container {
+    padding: 30px 10px;
+}
+.tt_tooltip .tt_tooltip_content{
+	background-color: #fff;
+	color: inherit;
+	text-align: center;
+	padding: 20px 10px;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	-webkit-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.2);
+	box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.2);
+}
+.tt_tooltip .tt_tooltip_arrow{
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 11px 9px 0 9px;
+	border-color: #fff transparent transparent;
+	display: inline;
+	position: relative;
+	bottom: -12px;
+	left: 0;
+}
+.tt_tooltip .tt_tooltip_content{
+	font-size: inherit;
+}
+.tt_tabs_navigation{
+	display: table;
+	margin: 0 auto;
+	width: auto !important;
+}
+.tt_tabs_navigation li{
+	font-size: inherit !important;
+}
+.tt_tabs_navigation li a{
+	padding-top: 8px !important;
+	padding-right: 25px !important;
+	padding-bottom: 8px !important;
+	padding-left: 25px !important;
+	-webkit-border-radius: 18px;
+	-moz-border-radius: 18px;
+	border-radius: 18px;
+	margin-bottom: 0 !important;
+	line-height: inherit;
+	font-size: inherit !important;
+	color: inherit !important;
+	border: none !important;
+	position: relative;
+	line-height: 20px;
+}
+.tt_tabs_navigation li a{
+	-webkit-transition: background-color 200ms ease-in-out, color 200ms ease-in-out !important;
+	-moz-transition: background-color 200ms ease-in-out, color 200ms ease-in-out !important;
+	-ms-transition: background-color 200ms ease-in-out, color 200ms ease-in-out !important;
+	-o-transition: background-color 200ms ease-in-out, color 200ms ease-in-out !important;
+	transition: background-color 200ms ease-in-out, color 200ms ease-in-out !important;
+}
+.tt_tabs_navigation li a:before{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+	-webkit-border-radius: 18px;
+	-moz-border-radius: 18px;
+	border-radius: 18px;
+}
+.tt_tabs_navigation li a:before{
+	-webkit-transition: border 200ms ease-in-out;
+	-moz-transition: border 200ms ease-in-out;
+	-ms-transition: border 200ms ease-in-out;
+	-o-transition: border 200ms ease-in-out;
+	transition: border 200ms ease-in-out;
+}
+.tt_tabs_navigation li a:hover,
+.tt_tabs_navigation li a.selected,
+.tt_tabs_navigation li.ui-tabs-active a{
+	padding-top: 8px !important;
+	padding-right: 25px !important;
+	padding-bottom: 8px !important;
+	padding-left: 25px !important;
+	color: inherit !important;
+}
+.tt_timetable .event .before_hour_text,
+.tt_timetable .event .after_hour_text{
+	font-size: inherit;
+}
+.tt_tabs_navigation li a:before{
+	border-style: solid;
+	border-width: 3px;
+}
+.inner-events-post .featured-image{
+	margin-bottom: 20px;
+}
+.timetable_sidebar_box{
+	margin-top: 0;
+}
+.widget h5.box_header{
+	margin-top: 0;
+	margin-bottom: 30px;
+}

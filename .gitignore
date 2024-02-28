@@ -1,4 +1,106 @@
-# Wordpress - ignore core, configuration, examples, uploads and logs.
+
+# Ignore all files and directories starting with . or ~ or ._ or ending with ~
+.*
+~*
+*~
+._*
+
+# ignore node dependency directories
+node_modules/
+dist/
+dist-product/
+build/
+bower_components
+/vendor/
+
+# ignore backup directories
+distBU/
+srcBU/
+
+# ignore OS generated files
+ehthumbs.db
+Thumbs.db
+.Trashes
+
+# ignore Editor files
+*.sublime-project
+*.sublime-workspace
+*.sublime*
+*.komodoproject
+*.code-workspace
+*.elc
+*.esproj
+*.tmproj*
+
+# ignore log files and databases
+*.log
+*.sql
+*.sqlite
+
+# ignore compiled files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# ignore packaged files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# ignore files that a local computer might use for its own convenience
+.DS_Store
+*.swp
+*.pyc
+
+# local build tools
+.vagrant
+.idea
+*.sassc
+*.scssc
+*.codekit
+*.sh
+*.lock 
+phpcs.xml
+*.sass-cache
+npm-debug.log
+
+
+# Numerous always-ignore extensions
+*.bak
+*.cvs
+*.db
+*.diff
+*.err
+*.orig
+*.rej
+
+
+# Ignore compiled files
+js/codigo.*
+css/*.*
+
+# Ignore potentially dangerous files (dependabot alerts)
+yarn.lock 
+package-lock.json
+composer.lock
+
+# Ignore htaccess
+/.htaccess
+
+
+# -------------------------
+# Wordpress
+# -------------------------
+
+# Ignore core, configuration, examples, uploads and logs.
 # https://github.com/github/gitignore/blob/main/WordPress.gitignore
 
 # Core
@@ -46,3 +148,37 @@ wp-config.php
 # Note: If you wish to whitelist themes,
 # uncomment the next line
 #/wp-content/themes
+
+
+# -------------------------
+# BEGIN Whitelisted Files
+# -------------------------
+
+# track these files, if they exist
+!.gitignore
+!.gitattributes
+!.github
+!.editorconfig
+!.phpcs.xml.dist
+!.babelrc.js
+!.browserslist
+!README.md
+!CHANGELOG.md
+!composer.json
+
+# Migration file
+!*.sql.gz
+
+
+# track favicon files, if they exist
+!android-chrome-*.png
+!apple-touch-icon*.png
+!browserconfig.xml
+!favicon*.png
+!favicon*.ico
+!manifest.json
+!mstile-*.png
+!safari-pinned-tab.svg
+!site.webmanifest
+
+

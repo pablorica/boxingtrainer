@@ -1,0 +1,3840 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ABC Personal\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-09-11 12:35+0300\n"
+"PO-Revision-Date: 2016-09-11 12:37+0300\n"
+"Last-Translator: Michael M <hello@wpbakery.com>\n"
+"Language-Team: lidplussdesign\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e;esc_attr__;esc_html_e;esc_html__;esc_attr_e;_x;"
+"_nx\n"
+"X-Poedit-Basepath: ..\n"
+"X-Generator: Poedit 1.8.8\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:26
+msgid "Oops! The page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:27
+msgid ""
+"The page you are looking for is not available. Please try to perform a "
+"search."
+msgstr ""
+
+#: 404.php:30 framework-customizations/theme/options/header.php:2514
+#: framework-customizations/theme/options/header.php:2527
+#: framework-customizations/theme/options/header.php:2540
+#: framework-customizations/theme/options/header.php:2553
+#: framework-customizations/theme/options/header.php:2566 search.php:31
+msgid "Search"
+msgstr ""
+
+#: 404.php:43
+msgid "Blog Posts"
+msgstr ""
+
+#: 404.php:65
+msgid "Available Pages"
+msgstr ""
+
+#: 404.php:91
+msgid "Available Products"
+msgstr ""
+
+#: 404.php:117
+msgid "Available Projects"
+msgstr ""
+
+#. translators: %s: post title
+#: comments.php:17
+#, php-format
+msgid "One thought on &ldquo;%s&rdquo;"
+msgstr ""
+
+#: comments.php:22
+#, php-format
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgstr ""
+
+#: comments.php:51
+msgid "Comments are closed."
+msgstr ""
+
+#: comments.php:55
+msgid "Comment"
+msgstr ""
+
+#: comments.php:63
+msgid "Name"
+msgstr ""
+
+#: comments.php:69
+msgid "Email"
+msgstr ""
+
+#: comments.php:75
+msgid "Website"
+msgstr ""
+
+#: framework-customizations/theme/options/blog.php:6
+#: functions/front_functions.php:526 functions/front_functions.php:538
+#: functions/front_functions.php:546 functions/front_functions.php:554
+#: functions/front_functions.php:580
+msgid "Blog"
+msgstr ""
+
+#: framework-customizations/theme/options/blog.php:11
+#: framework-customizations/theme/options/blog.php:16
+msgid "Blog options"
+msgstr ""
+
+#: framework-customizations/theme/options/blog.php:23
+msgid "Blog Title"
+msgstr ""
+
+#: framework-customizations/theme/options/blog.php:28
+msgid "Blog Post Color"
+msgstr ""
+
+#: framework-customizations/theme/options/blog.php:33
+msgid "Blog Post Hover Color"
+msgstr ""
+
+#: framework-customizations/theme/options/blog.php:52
+msgid "Blog Post Title Font"
+msgstr ""
+
+#: framework-customizations/theme/options/blog.php:57
+msgid "Title Link Color"
+msgstr ""
+
+#: framework-customizations/theme/options/blog.php:62
+msgid "Title Hover Link Color"
+msgstr ""
+
+#: framework-customizations/theme/options/blog.php:80
+#: framework-customizations/theme/options/blog.php:176
+msgid "Post Meta Font"
+msgstr ""
+
+#: framework-customizations/theme/options/blog.php:98
+msgid "\"Continue Reading\" Button Font"
+msgstr ""
+
+#: framework-customizations/theme/options/blog.php:103
+msgid "\"Continue Reading\" Button Color"
+msgstr ""
+
+#: framework-customizations/theme/options/blog.php:108
+msgid "\"Continue Reading\" Button Hover Color"
+msgstr ""
+
+#: framework-customizations/theme/options/blog.php:117
+msgid "Thumbnail Overlay Background"
+msgstr ""
+
+#: framework-customizations/theme/options/blog.php:122
+#: framework-customizations/theme/options/blog.php:207
+#: framework-customizations/theme/options/general.php:2435
+msgid "Thumbnail Button Color"
+msgstr ""
+
+#: framework-customizations/theme/options/blog.php:127
+#: framework-customizations/theme/options/blog.php:212
+#: framework-customizations/theme/options/general.php:2440
+msgid "Thumbnail Button Hover Color"
+msgstr ""
+
+#: framework-customizations/theme/options/blog.php:141
+#: framework-customizations/theme/options/blog.php:146
+#: framework-customizations/theme/options/portfolio.php:11
+#: framework-customizations/theme/options/portfolio.php:16
+msgid "Post options"
+msgstr ""
+
+#: framework-customizations/theme/options/blog.php:153
+#: framework-customizations/theme/options/portfolio.php:24
+msgid "Post Color"
+msgstr ""
+
+#: framework-customizations/theme/options/blog.php:158
+#: framework-customizations/theme/options/portfolio.php:29
+msgid "Post Hover Color"
+msgstr ""
+
+#: framework-customizations/theme/options/blog.php:186
+#: framework-customizations/theme/options/blog.php:191
+msgid "Related posts"
+msgstr ""
+
+#: framework-customizations/theme/options/blog.php:202
+#: framework-customizations/theme/options/general.php:2430
+msgid "Thumbnail Overlay Color"
+msgstr ""
+
+#: framework-customizations/theme/options/blog.php:238
+#: framework-customizations/theme/options/general.php:2466
+msgid "Post Title Font"
+msgstr ""
+
+#: framework-customizations/theme/options/blog.php:243
+#: framework-customizations/theme/options/general.php:2471
+#: framework-customizations/theme/options/portfolio.php:56
+msgid "Title Color"
+msgstr ""
+
+#: framework-customizations/theme/options/blog.php:248
+#: framework-customizations/theme/options/general.php:2476
+#: framework-customizations/theme/options/portfolio.php:61
+msgid "Title Hover Color"
+msgstr ""
+
+#: framework-customizations/theme/options/blog.php:262
+msgid "Post Meta"
+msgstr ""
+
+#: framework-customizations/theme/options/blog.php:265
+#: framework-customizations/theme/options/blog.php:305
+#: framework-customizations/theme/options/events.php:41
+#: framework-customizations/theme/options/events.php:151
+#: framework-customizations/theme/options/events.php:164
+#: framework-customizations/theme/options/events.php:213
+#: framework-customizations/theme/options/events.php:226
+#: framework-customizations/theme/options/footer.php:35
+#: framework-customizations/theme/options/footer.php:195
+#: framework-customizations/theme/options/general.php:339
+#: framework-customizations/theme/options/general.php:373
+#: framework-customizations/theme/options/general.php:407
+#: framework-customizations/theme/options/general.php:441
+#: framework-customizations/theme/options/general.php:475
+#: framework-customizations/theme/options/general.php:509
+#: framework-customizations/theme/options/general.php:543
+#: framework-customizations/theme/options/general.php:577
+#: framework-customizations/theme/options/general.php:611
+#: framework-customizations/theme/options/general.php:645
+#: framework-customizations/theme/options/general.php:679
+#: framework-customizations/theme/options/general.php:713
+#: framework-customizations/theme/options/general.php:747
+#: framework-customizations/theme/options/general.php:781
+#: framework-customizations/theme/options/general.php:815
+#: framework-customizations/theme/options/general.php:849
+#: framework-customizations/theme/options/general.php:883
+#: framework-customizations/theme/options/general.php:917
+#: framework-customizations/theme/options/general.php:951
+#: framework-customizations/theme/options/general.php:985
+#: framework-customizations/theme/options/general.php:1019
+#: framework-customizations/theme/options/general.php:1053
+#: framework-customizations/theme/options/general.php:1087
+#: framework-customizations/theme/options/general.php:1121
+#: framework-customizations/theme/options/general.php:1155
+#: framework-customizations/theme/options/general.php:1189
+#: framework-customizations/theme/options/general.php:1223
+#: framework-customizations/theme/options/general.php:1257
+#: framework-customizations/theme/options/general.php:1291
+#: framework-customizations/theme/options/general.php:1325
+#: framework-customizations/theme/options/general.php:1359
+#: framework-customizations/theme/options/general.php:1393
+#: framework-customizations/theme/options/general.php:1427
+#: framework-customizations/theme/options/general.php:1461
+#: framework-customizations/theme/options/general.php:1495
+#: framework-customizations/theme/options/general.php:1529
+#: framework-customizations/theme/options/general.php:1563
+#: framework-customizations/theme/options/general.php:1597
+#: framework-customizations/theme/options/general.php:1631
+#: framework-customizations/theme/options/general.php:1665
+#: framework-customizations/theme/options/general.php:1699
+#: framework-customizations/theme/options/general.php:1733
+#: framework-customizations/theme/options/general.php:1767
+#: framework-customizations/theme/options/general.php:1801
+#: framework-customizations/theme/options/general.php:1835
+#: framework-customizations/theme/options/general.php:1869
+#: framework-customizations/theme/options/general.php:1903
+#: framework-customizations/theme/options/general.php:1937
+#: framework-customizations/theme/options/general.php:1971
+#: framework-customizations/theme/options/general.php:2005
+#: framework-customizations/theme/options/general.php:2039
+#: framework-customizations/theme/options/general.php:2073
+#: framework-customizations/theme/options/general.php:2107
+#: framework-customizations/theme/options/general.php:2141
+#: framework-customizations/theme/options/general.php:2175
+#: framework-customizations/theme/options/general.php:2209
+#: framework-customizations/theme/options/general.php:2243
+#: framework-customizations/theme/options/general.php:2277
+#: framework-customizations/theme/options/general.php:2311
+#: framework-customizations/theme/options/general.php:2488
+#: framework-customizations/theme/options/header.php:30
+#: framework-customizations/theme/options/header.php:84
+#: framework-customizations/theme/options/header.php:122
+#: framework-customizations/theme/options/header.php:268
+#: framework-customizations/theme/options/header.php:369
+#: framework-customizations/theme/options/header.php:454
+#: framework-customizations/theme/options/header.php:550
+#: framework-customizations/theme/options/header.php:625
+#: framework-customizations/theme/options/header.php:655
+#: framework-customizations/theme/options/header.php:783
+#: framework-customizations/theme/options/header.php:832
+#: framework-customizations/theme/options/header.php:903
+#: framework-customizations/theme/options/header.php:952
+#: framework-customizations/theme/options/header.php:1035
+#: framework-customizations/theme/options/header.php:1053
+#: framework-customizations/theme/options/header.php:1103
+#: framework-customizations/theme/options/header.php:1193
+#: framework-customizations/theme/options/header.php:1284
+#: framework-customizations/theme/options/header.php:1352
+#: framework-customizations/theme/options/header.php:1436
+#: framework-customizations/theme/options/header.php:1479
+#: framework-customizations/theme/options/header.php:1578
+#: framework-customizations/theme/options/header.php:1633
+#: framework-customizations/theme/options/header.php:1744
+#: framework-customizations/theme/options/header.php:1822
+#: framework-customizations/theme/options/header.php:1861
+#: framework-customizations/theme/options/header.php:1919
+#: framework-customizations/theme/options/header.php:2004
+#: framework-customizations/theme/options/header.php:2052
+#: framework-customizations/theme/options/header.php:2095
+#: framework-customizations/theme/options/header.php:2223
+#: framework-customizations/theme/options/header.php:2281
+#: framework-customizations/theme/options/header.php:2366
+#: framework-customizations/theme/options/header.php:2420
+#: framework-customizations/theme/options/header.php:2725
+#: framework-customizations/theme/options/header.php:2759
+#: framework-customizations/theme/options/header.php:2793
+#: framework-customizations/theme/options/header.php:2827
+#: framework-customizations/theme/options/header.php:2861
+#: framework-customizations/theme/options/header.php:2895
+#: framework-customizations/theme/options/header.php:2929
+#: framework-customizations/theme/options/header.php:2963
+#: framework-customizations/theme/options/header.php:2997
+#: framework-customizations/theme/options/header.php:3031
+#: framework-customizations/theme/options/header.php:3065
+#: framework-customizations/theme/options/header.php:3099
+#: framework-customizations/theme/options/header.php:3133
+#: framework-customizations/theme/options/header.php:3167
+#: framework-customizations/theme/options/header.php:3201
+#: framework-customizations/theme/options/header.php:3235
+#: framework-customizations/theme/options/header.php:3269
+#: framework-customizations/theme/options/header.php:3303
+#: framework-customizations/theme/options/header.php:3337
+#: framework-customizations/theme/options/header.php:3371
+#: framework-customizations/theme/options/header.php:3405
+#: framework-customizations/theme/options/header.php:3439
+#: framework-customizations/theme/options/header.php:3473
+#: framework-customizations/theme/options/header.php:3507
+#: framework-customizations/theme/options/header.php:3541
+#: framework-customizations/theme/options/header.php:3575
+#: framework-customizations/theme/options/header.php:3609
+#: framework-customizations/theme/options/header.php:3643
+#: framework-customizations/theme/options/header.php:3677
+#: framework-customizations/theme/options/header.php:3711
+#: framework-customizations/theme/options/header.php:3745
+#: framework-customizations/theme/options/header.php:3779
+#: framework-customizations/theme/options/header.php:3813
+#: framework-customizations/theme/options/header.php:3847
+#: framework-customizations/theme/options/header.php:3881
+#: framework-customizations/theme/options/header.php:3915
+#: framework-customizations/theme/options/header.php:3949
+#: framework-customizations/theme/options/header.php:3983
+#: framework-customizations/theme/options/header.php:4017
+#: framework-customizations/theme/options/header.php:4051
+#: framework-customizations/theme/options/header.php:4085
+#: framework-customizations/theme/options/header.php:4119
+#: framework-customizations/theme/options/header.php:4153
+#: framework-customizations/theme/options/header.php:4187
+#: framework-customizations/theme/options/header.php:4221
+#: framework-customizations/theme/options/header.php:4255
+#: framework-customizations/theme/options/header.php:4289
+#: framework-customizations/theme/options/header.php:4323
+#: framework-customizations/theme/options/header.php:4357
+#: framework-customizations/theme/options/header.php:4391
+#: framework-customizations/theme/options/header.php:4425
+#: framework-customizations/theme/options/header.php:4459
+#: framework-customizations/theme/options/header.php:4493
+#: framework-customizations/theme/options/header.php:4527
+#: framework-customizations/theme/options/header.php:4561
+#: framework-customizations/theme/options/header.php:4595
+#: framework-customizations/theme/options/header.php:4629
+#: framework-customizations/theme/options/header.php:4663
+#: framework-customizations/theme/options/header.php:4697
+#: framework-customizations/theme/options/header.php:4786
+#: framework-customizations/theme/options/header.php:4841
+#: framework-customizations/theme/options/header.php:5037
+#: framework-customizations/theme/options/header.php:5050
+#: framework-customizations/theme/options/portfolio.php:78
+#: framework-customizations/theme/options/portfolio.php:118
+#: framework-customizations/theme/options/posts/events.php:39
+#: framework-customizations/theme/options/posts/events.php:157
+#: framework-customizations/theme/options/posts/events.php:170
+#: framework-customizations/theme/options/posts/events.php:237
+#: framework-customizations/theme/options/posts/events.php:250
+#: framework-customizations/theme/options/posts/fw-portfolio.php:39
+#: framework-customizations/theme/options/posts/fw-portfolio.php:157
+#: framework-customizations/theme/options/posts/fw-portfolio.php:170
+#: framework-customizations/theme/options/posts/fw-portfolio.php:261
+#: framework-customizations/theme/options/posts/fw-portfolio.php:274
+#: framework-customizations/theme/options/posts/page.php:111
+#: framework-customizations/theme/options/posts/page.php:229
+#: framework-customizations/theme/options/posts/page.php:242
+#: framework-customizations/theme/options/posts/page.php:309
+#: framework-customizations/theme/options/posts/page.php:322
+#: framework-customizations/theme/options/posts/post.php:39
+#: framework-customizations/theme/options/posts/post.php:157
+#: framework-customizations/theme/options/posts/post.php:170
+#: framework-customizations/theme/options/posts/post.php:237
+#: framework-customizations/theme/options/posts/post.php:250
+#: framework-customizations/theme/options/posts/product.php:39
+#: framework-customizations/theme/options/posts/product.php:157
+#: framework-customizations/theme/options/posts/product.php:170
+#: framework-customizations/theme/options/posts/product.php:249
+#: framework-customizations/theme/options/posts/product.php:262
+#: framework-customizations/theme/options/posts/tribe_events.php:39
+#: framework-customizations/theme/options/posts/tribe_events.php:157
+#: framework-customizations/theme/options/posts/tribe_events.php:170
+#: framework-customizations/theme/options/posts/tribe_events.php:237
+#: framework-customizations/theme/options/posts/tribe_events.php:250
+#: framework-customizations/theme/options/shop.php:116
+#: framework-customizations/theme/options/shop.php:300
+#: framework-customizations/theme/options/shop.php:387
+#: framework-customizations/theme/options/timetable.php:31
+#: framework-customizations/theme/options/timetable.php:155
+msgid "Disabled"
+msgstr ""
+
+#: framework-customizations/theme/options/blog.php:269
+#: framework-customizations/theme/options/blog.php:309
+#: framework-customizations/theme/options/events.php:45
+#: framework-customizations/theme/options/events.php:155
+#: framework-customizations/theme/options/events.php:168
+#: framework-customizations/theme/options/events.php:217
+#: framework-customizations/theme/options/events.php:230
+#: framework-customizations/theme/options/footer.php:39
+#: framework-customizations/theme/options/footer.php:199
+#: framework-customizations/theme/options/general.php:343
+#: framework-customizations/theme/options/general.php:377
+#: framework-customizations/theme/options/general.php:411
+#: framework-customizations/theme/options/general.php:445
+#: framework-customizations/theme/options/general.php:479
+#: framework-customizations/theme/options/general.php:513
+#: framework-customizations/theme/options/general.php:547
+#: framework-customizations/theme/options/general.php:581
+#: framework-customizations/theme/options/general.php:615
+#: framework-customizations/theme/options/general.php:649
+#: framework-customizations/theme/options/general.php:683
+#: framework-customizations/theme/options/general.php:717
+#: framework-customizations/theme/options/general.php:751
+#: framework-customizations/theme/options/general.php:785
+#: framework-customizations/theme/options/general.php:819
+#: framework-customizations/theme/options/general.php:853
+#: framework-customizations/theme/options/general.php:887
+#: framework-customizations/theme/options/general.php:921
+#: framework-customizations/theme/options/general.php:955
+#: framework-customizations/theme/options/general.php:989
+#: framework-customizations/theme/options/general.php:1023
+#: framework-customizations/theme/options/general.php:1057
+#: framework-customizations/theme/options/general.php:1091
+#: framework-customizations/theme/options/general.php:1125
+#: framework-customizations/theme/options/general.php:1159
+#: framework-customizations/theme/options/general.php:1193
+#: framework-customizations/theme/options/general.php:1227
+#: framework-customizations/theme/options/general.php:1261
+#: framework-customizations/theme/options/general.php:1295
+#: framework-customizations/theme/options/general.php:1329
+#: framework-customizations/theme/options/general.php:1363
+#: framework-customizations/theme/options/general.php:1397
+#: framework-customizations/theme/options/general.php:1431
+#: framework-customizations/theme/options/general.php:1465
+#: framework-customizations/theme/options/general.php:1499
+#: framework-customizations/theme/options/general.php:1533
+#: framework-customizations/theme/options/general.php:1567
+#: framework-customizations/theme/options/general.php:1601
+#: framework-customizations/theme/options/general.php:1635
+#: framework-customizations/theme/options/general.php:1669
+#: framework-customizations/theme/options/general.php:1703
+#: framework-customizations/theme/options/general.php:1737
+#: framework-customizations/theme/options/general.php:1771
+#: framework-customizations/theme/options/general.php:1805
+#: framework-customizations/theme/options/general.php:1839
+#: framework-customizations/theme/options/general.php:1873
+#: framework-customizations/theme/options/general.php:1907
+#: framework-customizations/theme/options/general.php:1941
+#: framework-customizations/theme/options/general.php:1975
+#: framework-customizations/theme/options/general.php:2009
+#: framework-customizations/theme/options/general.php:2043
+#: framework-customizations/theme/options/general.php:2077
+#: framework-customizations/theme/options/general.php:2111
+#: framework-customizations/theme/options/general.php:2145
+#: framework-customizations/theme/options/general.php:2179
+#: framework-customizations/theme/options/general.php:2213
+#: framework-customizations/theme/options/general.php:2247
+#: framework-customizations/theme/options/general.php:2281
+#: framework-customizations/theme/options/general.php:2315
+#: framework-customizations/theme/options/general.php:2492
+#: framework-customizations/theme/options/header.php:34
+#: framework-customizations/theme/options/header.php:88
+#: framework-customizations/theme/options/header.php:126
+#: framework-customizations/theme/options/header.php:272
+#: framework-customizations/theme/options/header.php:373
+#: framework-customizations/theme/options/header.php:458
+#: framework-customizations/theme/options/header.php:554
+#: framework-customizations/theme/options/header.php:629
+#: framework-customizations/theme/options/header.php:659
+#: framework-customizations/theme/options/header.php:787
+#: framework-customizations/theme/options/header.php:836
+#: framework-customizations/theme/options/header.php:907
+#: framework-customizations/theme/options/header.php:956
+#: framework-customizations/theme/options/header.php:1039
+#: framework-customizations/theme/options/header.php:1057
+#: framework-customizations/theme/options/header.php:1107
+#: framework-customizations/theme/options/header.php:1197
+#: framework-customizations/theme/options/header.php:1288
+#: framework-customizations/theme/options/header.php:1356
+#: framework-customizations/theme/options/header.php:1440
+#: framework-customizations/theme/options/header.php:1483
+#: framework-customizations/theme/options/header.php:1582
+#: framework-customizations/theme/options/header.php:1637
+#: framework-customizations/theme/options/header.php:1748
+#: framework-customizations/theme/options/header.php:1826
+#: framework-customizations/theme/options/header.php:1865
+#: framework-customizations/theme/options/header.php:1923
+#: framework-customizations/theme/options/header.php:2008
+#: framework-customizations/theme/options/header.php:2056
+#: framework-customizations/theme/options/header.php:2099
+#: framework-customizations/theme/options/header.php:2227
+#: framework-customizations/theme/options/header.php:2285
+#: framework-customizations/theme/options/header.php:2370
+#: framework-customizations/theme/options/header.php:2424
+#: framework-customizations/theme/options/header.php:2729
+#: framework-customizations/theme/options/header.php:2763
+#: framework-customizations/theme/options/header.php:2797
+#: framework-customizations/theme/options/header.php:2831
+#: framework-customizations/theme/options/header.php:2865
+#: framework-customizations/theme/options/header.php:2899
+#: framework-customizations/theme/options/header.php:2933
+#: framework-customizations/theme/options/header.php:2967
+#: framework-customizations/theme/options/header.php:3001
+#: framework-customizations/theme/options/header.php:3035
+#: framework-customizations/theme/options/header.php:3069
+#: framework-customizations/theme/options/header.php:3103
+#: framework-customizations/theme/options/header.php:3137
+#: framework-customizations/theme/options/header.php:3171
+#: framework-customizations/theme/options/header.php:3205
+#: framework-customizations/theme/options/header.php:3239
+#: framework-customizations/theme/options/header.php:3273
+#: framework-customizations/theme/options/header.php:3307
+#: framework-customizations/theme/options/header.php:3341
+#: framework-customizations/theme/options/header.php:3375
+#: framework-customizations/theme/options/header.php:3409
+#: framework-customizations/theme/options/header.php:3443
+#: framework-customizations/theme/options/header.php:3477
+#: framework-customizations/theme/options/header.php:3511
+#: framework-customizations/theme/options/header.php:3545
+#: framework-customizations/theme/options/header.php:3579
+#: framework-customizations/theme/options/header.php:3613
+#: framework-customizations/theme/options/header.php:3647
+#: framework-customizations/theme/options/header.php:3681
+#: framework-customizations/theme/options/header.php:3715
+#: framework-customizations/theme/options/header.php:3749
+#: framework-customizations/theme/options/header.php:3783
+#: framework-customizations/theme/options/header.php:3817
+#: framework-customizations/theme/options/header.php:3851
+#: framework-customizations/theme/options/header.php:3885
+#: framework-customizations/theme/options/header.php:3919
+#: framework-customizations/theme/options/header.php:3953
+#: framework-customizations/theme/options/header.php:3987
+#: framework-customizations/theme/options/header.php:4021
+#: framework-customizations/theme/options/header.php:4055
+#: framework-customizations/theme/options/header.php:4089
+#: framework-customizations/theme/options/header.php:4123
+#: framework-customizations/theme/options/header.php:4157
+#: framework-customizations/theme/options/header.php:4191
+#: framework-customizations/theme/options/header.php:4225
+#: framework-customizations/theme/options/header.php:4259
+#: framework-customizations/theme/options/header.php:4293
+#: framework-customizations/theme/options/header.php:4327
+#: framework-customizations/theme/options/header.php:4361
+#: framework-customizations/theme/options/header.php:4395
+#: framework-customizations/theme/options/header.php:4429
+#: framework-customizations/theme/options/header.php:4463
+#: framework-customizations/theme/options/header.php:4497
+#: framework-customizations/theme/options/header.php:4531
+#: framework-customizations/theme/options/header.php:4565
+#: framework-customizations/theme/options/header.php:4599
+#: framework-customizations/theme/options/header.php:4633
+#: framework-customizations/theme/options/header.php:4667
+#: framework-customizations/theme/options/header.php:4701
+#: framework-customizations/theme/options/header.php:4790
+#: framework-customizations/theme/options/header.php:4845
+#: framework-customizations/theme/options/header.php:5041
+#: framework-customizations/theme/options/header.php:5054
+#: framework-customizations/theme/options/portfolio.php:82
+#: framework-customizations/theme/options/portfolio.php:122
+#: framework-customizations/theme/options/posts/events.php:43
+#: framework-customizations/theme/options/posts/events.php:161
+#: framework-customizations/theme/options/posts/events.php:174
+#: framework-customizations/theme/options/posts/events.php:241
+#: framework-customizations/theme/options/posts/events.php:254
+#: framework-customizations/theme/options/posts/fw-portfolio.php:43
+#: framework-customizations/theme/options/posts/fw-portfolio.php:161
+#: framework-customizations/theme/options/posts/fw-portfolio.php:174
+#: framework-customizations/theme/options/posts/fw-portfolio.php:265
+#: framework-customizations/theme/options/posts/fw-portfolio.php:278
+#: framework-customizations/theme/options/posts/page.php:115
+#: framework-customizations/theme/options/posts/page.php:233
+#: framework-customizations/theme/options/posts/page.php:246
+#: framework-customizations/theme/options/posts/page.php:313
+#: framework-customizations/theme/options/posts/page.php:326
+#: framework-customizations/theme/options/posts/post.php:43
+#: framework-customizations/theme/options/posts/post.php:161
+#: framework-customizations/theme/options/posts/post.php:174
+#: framework-customizations/theme/options/posts/post.php:241
+#: framework-customizations/theme/options/posts/post.php:254
+#: framework-customizations/theme/options/posts/product.php:43
+#: framework-customizations/theme/options/posts/product.php:161
+#: framework-customizations/theme/options/posts/product.php:174
+#: framework-customizations/theme/options/posts/product.php:253
+#: framework-customizations/theme/options/posts/product.php:266
+#: framework-customizations/theme/options/posts/tribe_events.php:43
+#: framework-customizations/theme/options/posts/tribe_events.php:161
+#: framework-customizations/theme/options/posts/tribe_events.php:174
+#: framework-customizations/theme/options/posts/tribe_events.php:241
+#: framework-customizations/theme/options/posts/tribe_events.php:254
+#: framework-customizations/theme/options/shop.php:120
+#: framework-customizations/theme/options/shop.php:304
+#: framework-customizations/theme/options/shop.php:391
+#: framework-customizations/theme/options/timetable.php:35
+#: framework-customizations/theme/options/timetable.php:159
+msgid "Enabled"
+msgstr ""
+
+#: framework-customizations/theme/options/blog.php:302
+#: framework-customizations/theme/options/general.php:2485
+#: framework-customizations/theme/options/portfolio.php:115
+msgid "Image Replacement"
+msgstr ""
+
+#: framework-customizations/theme/options/blog.php:315
+msgid "Excerpt"
+msgstr ""
+
+#: framework-customizations/theme/options/blog.php:316
+msgid "Choose number of words for description."
+msgstr ""
+
+#: framework-customizations/theme/options/blog.php:326
+msgid "Comments options"
+msgstr ""
+
+#: framework-customizations/theme/options/blog.php:331
+msgid "Comment options"
+msgstr ""
+
+#: framework-customizations/theme/options/blog.php:338
+msgid "Comments Color"
+msgstr ""
+
+#: framework-customizations/theme/options/blog.php:343
+msgid "Comments Hover Color"
+msgstr ""
+
+#: framework-customizations/theme/options/blog.php:361
+msgid "Comment Author Font"
+msgstr ""
+
+#: framework-customizations/theme/options/blog.php:379
+msgid "Reply Button Font"
+msgstr ""
+
+#: framework-customizations/theme/options/blog.php:384
+msgid "Reply Button Color"
+msgstr ""
+
+#: framework-customizations/theme/options/blog.php:389
+msgid "Reply Button Hover Color"
+msgstr ""
+
+#: framework-customizations/theme/options/blog.php:407
+#: framework-customizations/theme/options/contact_form.php:57
+#: framework-customizations/theme/options/contact_form.php:185
+#: framework-customizations/theme/options/events.php:305
+#: framework-customizations/theme/options/shop.php:237
+msgid "Form Label Font"
+msgstr ""
+
+#: framework-customizations/theme/options/blog.php:412
+#: framework-customizations/theme/options/contact_form.php:67
+#: framework-customizations/theme/options/contact_form.php:195
+#: framework-customizations/theme/options/events.php:310
+#: framework-customizations/theme/options/shop.php:242
+msgid "Label Element Color"
+msgstr ""
+
+#: framework-customizations/theme/options/blog.php:434
+#: framework-customizations/theme/options/contact_form.php:99
+#: framework-customizations/theme/options/contact_form.php:227
+#: framework-customizations/theme/options/events.php:353
+#: framework-customizations/theme/options/events.php:560
+#: framework-customizations/theme/options/events.php:799
+#: framework-customizations/theme/options/events.php:964
+#: framework-customizations/theme/options/general.php:2397
+#: framework-customizations/theme/options/shop.php:88
+#: framework-customizations/theme/options/tables.php:96
+#: framework-customizations/theme/options/tables.php:223
+msgid "Button Text"
+msgstr ""
+
+#: framework-customizations/theme/options/blog.php:439
+#: framework-customizations/theme/options/contact_form.php:104
+#: framework-customizations/theme/options/contact_form.php:232
+#: framework-customizations/theme/options/events.php:358
+#: framework-customizations/theme/options/events.php:565
+#: framework-customizations/theme/options/events.php:804
+#: framework-customizations/theme/options/events.php:969
+#: framework-customizations/theme/options/general.php:2402
+#: framework-customizations/theme/options/shop.php:93
+#: framework-customizations/theme/options/tables.php:101
+#: framework-customizations/theme/options/tables.php:228
+msgid "Button Text Color"
+msgstr ""
+
+#: framework-customizations/theme/options/blog.php:444
+#: framework-customizations/theme/options/contact_form.php:109
+#: framework-customizations/theme/options/contact_form.php:237
+#: framework-customizations/theme/options/events.php:363
+#: framework-customizations/theme/options/events.php:570
+#: framework-customizations/theme/options/events.php:809
+#: framework-customizations/theme/options/events.php:974
+#: framework-customizations/theme/options/general.php:2407
+#: framework-customizations/theme/options/shop.php:98
+#: framework-customizations/theme/options/tables.php:106
+#: framework-customizations/theme/options/tables.php:233
+msgid "Button Text Hover Color"
+msgstr ""
+
+#: framework-customizations/theme/options/blog.php:449
+#: framework-customizations/theme/options/contact_form.php:114
+#: framework-customizations/theme/options/contact_form.php:242
+#: framework-customizations/theme/options/events.php:368
+#: framework-customizations/theme/options/events.php:575
+#: framework-customizations/theme/options/events.php:814
+#: framework-customizations/theme/options/events.php:979
+#: framework-customizations/theme/options/general.php:2337
+#: framework-customizations/theme/options/general.php:2412
+#: framework-customizations/theme/options/header.php:521
+#: framework-customizations/theme/options/header.php:669
+#: framework-customizations/theme/options/header.php:4757
+#: framework-customizations/theme/options/header.php:4878
+#: framework-customizations/theme/options/shop.php:103
+#: framework-customizations/theme/options/tables.php:111
+#: framework-customizations/theme/options/tables.php:238
+msgid "Button Color"
+msgstr ""
+
+#: framework-customizations/theme/options/blog.php:454
+#: framework-customizations/theme/options/contact_form.php:119
+#: framework-customizations/theme/options/contact_form.php:247
+#: framework-customizations/theme/options/events.php:373
+#: framework-customizations/theme/options/events.php:580
+#: framework-customizations/theme/options/events.php:819
+#: framework-customizations/theme/options/events.php:984
+#: framework-customizations/theme/options/general.php:2417
+#: framework-customizations/theme/options/header.php:526
+#: framework-customizations/theme/options/header.php:674
+#: framework-customizations/theme/options/shop.php:108
+#: framework-customizations/theme/options/tables.php:116
+#: framework-customizations/theme/options/tables.php:243
+msgid "Button Hover Color"
+msgstr ""
+
+#: framework-customizations/theme/options/contact_form.php:6
+msgid "Contact Form"
+msgstr ""
+
+#: framework-customizations/theme/options/contact_form.php:11
+#: framework-customizations/theme/options/contact_form.php:16
+#: framework-customizations/theme/options/tables.php:11
+#: framework-customizations/theme/options/tables.php:16
+msgid "Primary styles"
+msgstr ""
+
+#: framework-customizations/theme/options/contact_form.php:24
+#: framework-customizations/theme/options/contact_form.php:152
+#: framework-customizations/theme/options/events.php:272
+#: framework-customizations/theme/options/header.php:103
+#: framework-customizations/theme/options/header.php:168
+#: framework-customizations/theme/options/header.php:570
+#: framework-customizations/theme/options/header.php:690
+#: framework-customizations/theme/options/header.php:695
+#: framework-customizations/theme/options/header.php:1073
+#: framework-customizations/theme/options/header.php:1160
+#: framework-customizations/theme/options/header.php:1206
+#: framework-customizations/theme/options/header.php:1365
+#: framework-customizations/theme/options/header.php:1456
+#: framework-customizations/theme/options/header.php:1540
+#: framework-customizations/theme/options/header.php:1646
+#: framework-customizations/theme/options/header.php:1932
+#: framework-customizations/theme/options/header.php:2072
+#: framework-customizations/theme/options/header.php:2183
+#: framework-customizations/theme/options/header.php:2294
+#: framework-customizations/theme/options/header.php:2386
+#: framework-customizations/theme/options/header.php:2481
+#: framework-customizations/theme/options/header.php:4799
+#: framework-customizations/theme/options/header.php:4893
+#: framework-customizations/theme/options/shop.php:319
+#: framework-customizations/theme/options/shop.php:406
+#: framework-customizations/theme/options/tables.php:39
+#: framework-customizations/theme/options/tables.php:165
+#: framework-customizations/theme/options/timetable.php:45
+#: framework-customizations/theme/options/timetable.php:260
+msgid "Border Color"
+msgstr ""
+
+#: framework-customizations/theme/options/contact_form.php:29
+#: framework-customizations/theme/options/contact_form.php:157
+#: framework-customizations/theme/options/events.php:277
+msgid "Border Focus Color"
+msgstr ""
+
+#: framework-customizations/theme/options/contact_form.php:34
+#: framework-customizations/theme/options/contact_form.php:162
+#: framework-customizations/theme/options/events.php:282
+msgid "Form Color"
+msgstr ""
+
+#: framework-customizations/theme/options/contact_form.php:39
+#: framework-customizations/theme/options/contact_form.php:167
+#: framework-customizations/theme/options/events.php:287
+msgid "Form Focus Color"
+msgstr ""
+
+#: framework-customizations/theme/options/contact_form.php:62
+#: framework-customizations/theme/options/contact_form.php:190
+msgid "Label Text Color"
+msgstr ""
+
+#: framework-customizations/theme/options/contact_form.php:72
+#: framework-customizations/theme/options/contact_form.php:200
+msgid "Input Text Color"
+msgstr ""
+
+#: framework-customizations/theme/options/contact_form.php:77
+#: framework-customizations/theme/options/contact_form.php:205
+msgid "Placeholder Color"
+msgstr ""
+
+#: framework-customizations/theme/options/contact_form.php:133
+#: framework-customizations/theme/options/contact_form.php:138
+#: framework-customizations/theme/options/tables.php:136
+#: framework-customizations/theme/options/tables.php:141
+msgid "Secondary styles"
+msgstr ""
+
+#: framework-customizations/theme/options/contact_form.php:146
+#: framework-customizations/theme/options/tables.php:23
+#: framework-customizations/theme/options/tables.php:149
+msgid "How to use?"
+msgstr ""
+
+#: framework-customizations/theme/options/contact_form.php:147
+msgid ""
+"Use <strong>secondary-style</strong> with <strong>html_class</strong> "
+"attribute in Contact Form 7 shortcode, example: [contact-form-7 id=\"\" "
+"title=\"Contact form 1\" <strong>html_class=\"secondary-style\"</strong>]"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:6
+#: functions/front_functions.php:564
+msgid "Events"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:11
+#: framework-customizations/theme/options/events.php:16
+msgid "Events page options"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:23
+msgid "Events Title"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:28
+msgid "Events Sub-title"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:38
+#: framework-customizations/theme/options/posts/events.php:36
+#: framework-customizations/theme/options/posts/fw-portfolio.php:36
+#: framework-customizations/theme/options/posts/page.php:108
+#: framework-customizations/theme/options/posts/post.php:36
+#: framework-customizations/theme/options/posts/product.php:36
+#: framework-customizations/theme/options/posts/tribe_events.php:36
+msgid "Custom Header Background"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:63
+#: framework-customizations/theme/options/footer.php:57
+#: framework-customizations/theme/options/footer.php:333
+#: framework-customizations/theme/options/header.php:5093
+#: framework-customizations/theme/options/posts/events.php:61
+#: framework-customizations/theme/options/posts/fw-portfolio.php:61
+#: framework-customizations/theme/options/posts/page.php:133
+#: framework-customizations/theme/options/posts/post.php:61
+#: framework-customizations/theme/options/posts/product.php:61
+#: framework-customizations/theme/options/posts/tribe_events.php:61
+msgid "Background"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:65
+#: framework-customizations/theme/options/events.php:77
+#: framework-customizations/theme/options/events.php:86
+#: framework-customizations/theme/options/footer.php:59
+#: framework-customizations/theme/options/footer.php:71
+#: framework-customizations/theme/options/footer.php:80
+#: framework-customizations/theme/options/footer.php:209
+#: framework-customizations/theme/options/general.php:2342
+#: framework-customizations/theme/options/header.php:531
+#: framework-customizations/theme/options/header.php:679
+#: framework-customizations/theme/options/header.php:4762
+#: framework-customizations/theme/options/header.php:4883
+#: framework-customizations/theme/options/header.php:5095
+#: framework-customizations/theme/options/header.php:5107
+#: framework-customizations/theme/options/header.php:5116
+#: framework-customizations/theme/options/posts/events.php:63
+#: framework-customizations/theme/options/posts/events.php:75
+#: framework-customizations/theme/options/posts/events.php:84
+#: framework-customizations/theme/options/posts/fw-portfolio.php:63
+#: framework-customizations/theme/options/posts/fw-portfolio.php:75
+#: framework-customizations/theme/options/posts/fw-portfolio.php:84
+#: framework-customizations/theme/options/posts/page.php:135
+#: framework-customizations/theme/options/posts/page.php:147
+#: framework-customizations/theme/options/posts/page.php:156
+#: framework-customizations/theme/options/posts/post.php:63
+#: framework-customizations/theme/options/posts/post.php:75
+#: framework-customizations/theme/options/posts/post.php:84
+#: framework-customizations/theme/options/posts/product.php:63
+#: framework-customizations/theme/options/posts/product.php:75
+#: framework-customizations/theme/options/posts/product.php:84
+#: framework-customizations/theme/options/posts/tribe_events.php:63
+#: framework-customizations/theme/options/posts/tribe_events.php:75
+#: framework-customizations/theme/options/posts/tribe_events.php:84
+#: framework-customizations/theme/options/timetable.php:265
+msgid "Background Color"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:66
+#: framework-customizations/theme/options/events.php:101
+#: framework-customizations/theme/options/footer.php:60
+#: framework-customizations/theme/options/footer.php:94
+#: framework-customizations/theme/options/header.php:5096
+#: framework-customizations/theme/options/header.php:5131
+#: framework-customizations/theme/options/posts/events.php:64
+#: framework-customizations/theme/options/posts/events.php:99
+#: framework-customizations/theme/options/posts/fw-portfolio.php:64
+#: framework-customizations/theme/options/posts/fw-portfolio.php:99
+#: framework-customizations/theme/options/posts/page.php:136
+#: framework-customizations/theme/options/posts/page.php:171
+#: framework-customizations/theme/options/posts/post.php:64
+#: framework-customizations/theme/options/posts/post.php:99
+#: framework-customizations/theme/options/posts/product.php:64
+#: framework-customizations/theme/options/posts/product.php:99
+#: framework-customizations/theme/options/posts/tribe_events.php:64
+#: framework-customizations/theme/options/posts/tribe_events.php:99
+msgid "Background Image"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:91
+#: framework-customizations/theme/options/footer.php:85
+#: framework-customizations/theme/options/header.php:5121
+#: framework-customizations/theme/options/posts/events.php:89
+#: framework-customizations/theme/options/posts/fw-portfolio.php:89
+#: framework-customizations/theme/options/posts/page.php:161
+#: framework-customizations/theme/options/posts/post.php:89
+#: framework-customizations/theme/options/posts/product.php:89
+#: framework-customizations/theme/options/posts/tribe_events.php:89
+msgid "Background Settings"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:93
+#: framework-customizations/theme/options/footer.php:87
+#: framework-customizations/theme/options/header.php:5123
+#: framework-customizations/theme/options/posts/events.php:91
+#: framework-customizations/theme/options/posts/fw-portfolio.php:91
+#: framework-customizations/theme/options/posts/page.php:163
+#: framework-customizations/theme/options/posts/post.php:91
+#: framework-customizations/theme/options/posts/product.php:91
+#: framework-customizations/theme/options/posts/tribe_events.php:91
+msgid "Repeat, Position: center center"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:94
+#: framework-customizations/theme/options/footer.php:88
+#: framework-customizations/theme/options/header.php:5124
+#: framework-customizations/theme/options/posts/events.php:92
+#: framework-customizations/theme/options/posts/fw-portfolio.php:92
+#: framework-customizations/theme/options/posts/page.php:164
+#: framework-customizations/theme/options/posts/post.php:92
+#: framework-customizations/theme/options/posts/product.php:92
+#: framework-customizations/theme/options/posts/tribe_events.php:92
+msgid "Repeat, Position: top center"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:95
+#: framework-customizations/theme/options/footer.php:89
+#: framework-customizations/theme/options/header.php:5125
+#: framework-customizations/theme/options/posts/events.php:93
+#: framework-customizations/theme/options/posts/fw-portfolio.php:93
+#: framework-customizations/theme/options/posts/page.php:165
+#: framework-customizations/theme/options/posts/post.php:93
+#: framework-customizations/theme/options/posts/product.php:93
+#: framework-customizations/theme/options/posts/tribe_events.php:93
+msgid "Cover, Position: center center"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:96
+#: framework-customizations/theme/options/header.php:5126
+#: framework-customizations/theme/options/posts/events.php:94
+#: framework-customizations/theme/options/posts/fw-portfolio.php:94
+#: framework-customizations/theme/options/posts/page.php:166
+#: framework-customizations/theme/options/posts/post.php:94
+#: framework-customizations/theme/options/posts/product.php:94
+#: framework-customizations/theme/options/posts/tribe_events.php:94
+msgid "Parallax, Position: center center"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:119
+#: framework-customizations/theme/options/header.php:5004
+#: framework-customizations/theme/options/posts/events.php:124
+#: framework-customizations/theme/options/posts/fw-portfolio.php:124
+#: framework-customizations/theme/options/posts/page.php:196
+#: framework-customizations/theme/options/posts/post.php:124
+#: framework-customizations/theme/options/posts/product.php:124
+#: framework-customizations/theme/options/posts/tribe_events.php:124
+msgid "Title Paddings"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:126
+#: framework-customizations/theme/options/events.php:187
+#: framework-customizations/theme/options/footer.php:114
+#: framework-customizations/theme/options/footer.php:220
+#: framework-customizations/theme/options/header.php:59
+#: framework-customizations/theme/options/header.php:147
+#: framework-customizations/theme/options/header.php:232
+#: framework-customizations/theme/options/header.php:294
+#: framework-customizations/theme/options/header.php:333
+#: framework-customizations/theme/options/header.php:400
+#: framework-customizations/theme/options/header.php:434
+#: framework-customizations/theme/options/header.php:469
+#: framework-customizations/theme/options/header.php:592
+#: framework-customizations/theme/options/header.php:707
+#: framework-customizations/theme/options/header.php:747
+#: framework-customizations/theme/options/header.php:1124
+#: framework-customizations/theme/options/header.php:1315
+#: framework-customizations/theme/options/header.php:1499
+#: framework-customizations/theme/options/header.php:1597
+#: framework-customizations/theme/options/header.php:1765
+#: framework-customizations/theme/options/header.php:1882
+#: framework-customizations/theme/options/header.php:2116
+#: framework-customizations/theme/options/header.php:2244
+#: framework-customizations/theme/options/header.php:2440
+#: framework-customizations/theme/options/header.php:4729
+#: framework-customizations/theme/options/header.php:4862
+#: framework-customizations/theme/options/header.php:5011
+#: framework-customizations/theme/options/posts/events.php:131
+#: framework-customizations/theme/options/posts/events.php:202
+#: framework-customizations/theme/options/posts/fw-portfolio.php:131
+#: framework-customizations/theme/options/posts/fw-portfolio.php:202
+#: framework-customizations/theme/options/posts/page.php:203
+#: framework-customizations/theme/options/posts/page.php:274
+#: framework-customizations/theme/options/posts/post.php:131
+#: framework-customizations/theme/options/posts/post.php:202
+#: framework-customizations/theme/options/posts/product.php:131
+#: framework-customizations/theme/options/posts/product.php:202
+#: framework-customizations/theme/options/posts/tribe_events.php:131
+#: framework-customizations/theme/options/posts/tribe_events.php:202
+msgid "top"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:132
+#: framework-customizations/theme/options/events.php:193
+#: framework-customizations/theme/options/footer.php:120
+#: framework-customizations/theme/options/footer.php:226
+#: framework-customizations/theme/options/header.php:65
+#: framework-customizations/theme/options/header.php:153
+#: framework-customizations/theme/options/header.php:244
+#: framework-customizations/theme/options/header.php:300
+#: framework-customizations/theme/options/header.php:345
+#: framework-customizations/theme/options/header.php:406
+#: framework-customizations/theme/options/header.php:604
+#: framework-customizations/theme/options/header.php:713
+#: framework-customizations/theme/options/header.php:759
+#: framework-customizations/theme/options/header.php:1130
+#: framework-customizations/theme/options/header.php:1327
+#: framework-customizations/theme/options/header.php:1505
+#: framework-customizations/theme/options/header.php:1609
+#: framework-customizations/theme/options/header.php:1771
+#: framework-customizations/theme/options/header.php:1894
+#: framework-customizations/theme/options/header.php:1966
+#: framework-customizations/theme/options/header.php:2122
+#: framework-customizations/theme/options/header.php:2133
+#: framework-customizations/theme/options/header.php:2256
+#: framework-customizations/theme/options/header.php:2328
+#: framework-customizations/theme/options/header.php:2446
+#: framework-customizations/theme/options/header.php:4741
+#: framework-customizations/theme/options/header.php:4868
+#: framework-customizations/theme/options/header.php:5017
+#: framework-customizations/theme/options/posts/events.php:137
+#: framework-customizations/theme/options/posts/events.php:208
+#: framework-customizations/theme/options/posts/fw-portfolio.php:137
+#: framework-customizations/theme/options/posts/fw-portfolio.php:208
+#: framework-customizations/theme/options/posts/page.php:209
+#: framework-customizations/theme/options/posts/page.php:280
+#: framework-customizations/theme/options/posts/post.php:137
+#: framework-customizations/theme/options/posts/post.php:208
+#: framework-customizations/theme/options/posts/product.php:137
+#: framework-customizations/theme/options/posts/product.php:208
+#: framework-customizations/theme/options/posts/tribe_events.php:137
+#: framework-customizations/theme/options/posts/tribe_events.php:208
+msgid "bottom"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:148
+#: framework-customizations/theme/options/header.php:4938
+#: framework-customizations/theme/options/header.php:5034
+#: framework-customizations/theme/options/posts/events.php:154
+#: framework-customizations/theme/options/posts/fw-portfolio.php:154
+#: framework-customizations/theme/options/posts/page.php:226
+#: framework-customizations/theme/options/posts/post.php:154
+#: framework-customizations/theme/options/posts/product.php:154
+#: framework-customizations/theme/options/posts/tribe_events.php:154
+#: framework-customizations/theme/options/timetable.php:255
+msgid "Title"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:161
+#: framework-customizations/theme/options/header.php:5047
+#: framework-customizations/theme/options/posts/events.php:167
+#: framework-customizations/theme/options/posts/fw-portfolio.php:167
+#: framework-customizations/theme/options/posts/page.php:239
+#: framework-customizations/theme/options/posts/post.php:167
+#: framework-customizations/theme/options/posts/product.php:167
+#: framework-customizations/theme/options/posts/tribe_events.php:167
+msgid "Breadcrumb"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:180
+#: framework-customizations/theme/options/posts/events.php:195
+#: framework-customizations/theme/options/posts/fw-portfolio.php:195
+#: framework-customizations/theme/options/posts/page.php:267
+#: framework-customizations/theme/options/posts/post.php:195
+#: framework-customizations/theme/options/posts/product.php:195
+#: framework-customizations/theme/options/posts/tribe_events.php:195
+msgid "Page Paddings"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:210
+#: framework-customizations/theme/options/footer.php:10
+#: framework-customizations/theme/options/footer.php:32
+#: framework-customizations/theme/options/posts/events.php:234
+#: framework-customizations/theme/options/posts/fw-portfolio.php:258
+#: framework-customizations/theme/options/posts/page.php:306
+#: framework-customizations/theme/options/posts/post.php:234
+#: framework-customizations/theme/options/posts/product.php:246
+#: framework-customizations/theme/options/posts/tribe_events.php:234
+msgid "Footer"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:223
+#: framework-customizations/theme/options/posts/events.php:247
+#: framework-customizations/theme/options/posts/fw-portfolio.php:271
+#: framework-customizations/theme/options/posts/page.php:319
+#: framework-customizations/theme/options/posts/post.php:247
+#: framework-customizations/theme/options/posts/product.php:259
+#: framework-customizations/theme/options/posts/tribe_events.php:247
+msgid "Bottom Section"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:241
+#: framework-customizations/theme/options/posts/fw-portfolio.php:224
+#: framework-customizations/theme/options/posts/page.php:63
+msgid "Full Width"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:242
+msgid "Left"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:243
+msgid "Right"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:245
+msgid "Events Page Sidebar"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:257
+#: framework-customizations/theme/options/events.php:262
+msgid "Events Bar"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:322
+msgid "\"View As\" Navigation Color"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:327
+msgid "\"View As\" Navigation Hover Color"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:388
+#: framework-customizations/theme/options/events.php:393
+msgid "Mouth View Calendar"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:417
+#: framework-customizations/theme/options/events.php:625
+#: framework-customizations/theme/options/events.php:864
+#: framework-customizations/theme/options/header.php:2637
+msgid "Navigation Font"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:422
+#: framework-customizations/theme/options/events.php:630
+#: framework-customizations/theme/options/events.php:869
+#: framework-customizations/theme/options/header.php:2642
+#: framework-customizations/theme/options/header.php:2680
+msgid "Navigation Color"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:427
+#: framework-customizations/theme/options/events.php:635
+#: framework-customizations/theme/options/events.php:874
+#: framework-customizations/theme/options/header.php:2647
+msgid "Navigation Hover Color"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:453
+msgid "Table Header Font"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:458
+msgid "Calendar Border Color"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:463
+msgid "Calendar Background Color"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:468
+msgid "Calendar Text Color"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:486
+msgid "Date Font"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:491
+msgid "Date Color"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:496
+msgid "Date Background Color"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:501
+msgid "Date Active Color"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:506
+msgid "Date Background Active Color"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:524
+msgid "Events Link Font"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:529
+msgid "Events Link Color"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:534
+msgid "Events Link Hover Color"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:595
+#: framework-customizations/theme/options/events.php:600
+msgid "List/Day View"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:661
+msgid "Separator font"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:666
+msgid "Separator color"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:671
+msgid "Separator background color"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:684
+#: framework-customizations/theme/options/events.php:887
+msgid "Post link color"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:689
+#: framework-customizations/theme/options/events.php:892
+msgid "Post link hover color"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:707
+msgid "Post title font"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:712
+msgid "Post title color"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:717
+msgid "Post title hover color"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:735
+msgid "\"Find Out More\" Button Font"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:740
+msgid "\"Find Out More\" Button Color"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:745
+msgid "\"Find Out More\" Button Hover Color"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:763
+#: framework-customizations/theme/options/events.php:910
+msgid "Price Badge Font"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:768
+#: framework-customizations/theme/options/events.php:915
+msgid "Price Badge Color"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:773
+#: framework-customizations/theme/options/events.php:920
+msgid "Price Badge Background"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:834
+#: framework-customizations/theme/options/events.php:839
+msgid "Event Post"
+msgstr ""
+
+#: framework-customizations/theme/options/events.php:938
+msgid "Defines Terms Font"
+msgstr ""
+
+#: framework-customizations/theme/options/footer.php:15
+#: framework-customizations/theme/options/footer.php:20
+msgid "Footer options"
+msgstr ""
+
+#: framework-customizations/theme/options/footer.php:107
+msgid "Footer Paddings"
+msgstr ""
+
+#: framework-customizations/theme/options/footer.php:143
+#: framework-customizations/theme/options/footer.php:249
+msgid "Font"
+msgstr ""
+
+#: framework-customizations/theme/options/footer.php:148
+msgid "Font Color"
+msgstr ""
+
+#: framework-customizations/theme/options/footer.php:153
+#: framework-customizations/theme/options/footer.php:254
+#: framework-customizations/theme/options/footer.php:259
+#: framework-customizations/theme/options/general.php:116
+#: framework-customizations/theme/options/general.php:175
+msgid "Link Color"
+msgstr ""
+
+#: framework-customizations/theme/options/footer.php:158
+#: framework-customizations/theme/options/footer.php:264
+#: framework-customizations/theme/options/general.php:122
+#: framework-customizations/theme/options/general.php:181
+msgid "Link Hover Color"
+msgstr ""
+
+#: framework-customizations/theme/options/footer.php:175
+#: framework-customizations/theme/options/footer.php:180
+msgid "Footer bottom"
+msgstr ""
+
+#: framework-customizations/theme/options/footer.php:192
+msgid "Footer Bottom"
+msgstr ""
+
+#: framework-customizations/theme/options/footer.php:213
+msgid "Footer Bottom Paddings"
+msgstr ""
+
+#: framework-customizations/theme/options/footer.php:269
+msgid "Content"
+msgstr ""
+
+#: framework-customizations/theme/options/footer.php:289
+#: framework-customizations/theme/options/footer.php:294
+msgid "Footer widgets"
+msgstr ""
+
+#: framework-customizations/theme/options/footer.php:314
+msgid "Footer Widget Title"
+msgstr ""
+
+#: framework-customizations/theme/options/footer.php:319
+msgid "Widget Title Color"
+msgstr ""
+
+#: framework-customizations/theme/options/footer.php:335
+msgid "Footer 3 Columns"
+msgstr ""
+
+#: framework-customizations/theme/options/footer.php:336
+msgid "Footer 4 Columns"
+msgstr ""
+
+#: framework-customizations/theme/options/footer.php:346
+msgid "Footer 3 Column Layouts"
+msgstr ""
+
+#: framework-customizations/theme/options/footer.php:354
+#: framework-customizations/theme/options/footer.php:367
+#: framework-customizations/theme/options/footer.php:380
+#: framework-customizations/theme/options/footer.php:407
+#: framework-customizations/theme/options/footer.php:420
+#: framework-customizations/theme/options/footer.php:433
+#: framework-customizations/theme/options/footer.php:446
+msgid "Column 1/1"
+msgstr ""
+
+#: framework-customizations/theme/options/footer.php:355
+#: framework-customizations/theme/options/footer.php:368
+#: framework-customizations/theme/options/footer.php:381
+#: framework-customizations/theme/options/footer.php:408
+#: framework-customizations/theme/options/footer.php:421
+#: framework-customizations/theme/options/footer.php:434
+#: framework-customizations/theme/options/footer.php:447
+msgid "Column 1/2"
+msgstr ""
+
+#: framework-customizations/theme/options/footer.php:356
+#: framework-customizations/theme/options/footer.php:369
+#: framework-customizations/theme/options/footer.php:382
+#: framework-customizations/theme/options/footer.php:409
+#: framework-customizations/theme/options/footer.php:422
+#: framework-customizations/theme/options/footer.php:435
+#: framework-customizations/theme/options/footer.php:448
+msgid "Column 1/3"
+msgstr ""
+
+#: framework-customizations/theme/options/footer.php:357
+#: framework-customizations/theme/options/footer.php:370
+#: framework-customizations/theme/options/footer.php:383
+#: framework-customizations/theme/options/footer.php:410
+#: framework-customizations/theme/options/footer.php:423
+#: framework-customizations/theme/options/footer.php:436
+#: framework-customizations/theme/options/footer.php:449
+msgid "Column 1/4"
+msgstr ""
+
+#: framework-customizations/theme/options/footer.php:358
+#: framework-customizations/theme/options/footer.php:371
+#: framework-customizations/theme/options/footer.php:384
+#: framework-customizations/theme/options/footer.php:411
+#: framework-customizations/theme/options/footer.php:424
+#: framework-customizations/theme/options/footer.php:437
+#: framework-customizations/theme/options/footer.php:450
+msgid "Column 1/6"
+msgstr ""
+
+#: framework-customizations/theme/options/footer.php:399
+msgid "Footer 4 Column Layouts"
+msgstr ""
+
+#: framework-customizations/theme/options/footer.php:472
+#: framework-customizations/theme/options/general.php:215
+msgid "Widget List Link Color"
+msgstr ""
+
+#: framework-customizations/theme/options/footer.php:478
+#: framework-customizations/theme/options/general.php:221
+msgid "Widget List Link Hover Color"
+msgstr ""
+
+#: framework-customizations/theme/options/footer.php:492
+#: framework-customizations/theme/options/general.php:235
+msgid "Search Widget Button Color"
+msgstr ""
+
+#: framework-customizations/theme/options/footer.php:498
+#: framework-customizations/theme/options/general.php:241
+msgid "Search Widget Button Hover Color"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:10
+msgid "General"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:15
+#: framework-customizations/theme/options/general.php:20
+msgid "General options"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:27
+msgid "Body Color"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:32
+msgid "Header Wrap Background"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:37
+msgid "Header Layouts"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:39
+#: framework-customizations/theme/options/general.php:48
+#: framework-customizations/theme/options/general.php:57
+#: framework-customizations/theme/options/general.php:66
+msgid "1480px wide"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:40
+#: framework-customizations/theme/options/general.php:49
+#: framework-customizations/theme/options/general.php:58
+#: framework-customizations/theme/options/general.php:67
+msgid "1200px wide"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:46
+msgid "Title Layouts"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:55
+msgid "Page Layouts"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:64
+msgid "Footer Layouts"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:78
+#: framework-customizations/theme/options/general.php:83
+msgid "Typography"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:104
+msgid "Body Font"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:110
+msgid "Body Font Color"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:141
+msgid "Headings Font"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:147
+msgid "Headings Font Color"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:158
+#: framework-customizations/theme/options/general.php:164
+#: framework-customizations/theme/options/posts/fw-portfolio.php:225
+msgid "Sidebar"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:205
+msgid "Widget Title Font"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:264
+msgid "Tag Widget Font"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:276
+#: framework-customizations/theme/options/general.php:281
+msgid "Custom Css/Js"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:288
+msgid "Custom Css"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:294
+msgid "Custom Js"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:304
+#: framework-customizations/theme/options/general.php:309
+msgid "Social Media Widget"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:320
+#: framework-customizations/theme/options/header.php:2706
+msgid "Button Types"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:322
+#: framework-customizations/theme/options/header.php:2708
+msgid "Variant 1"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:323
+#: framework-customizations/theme/options/header.php:2709
+msgid "Variant 2"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:336
+#: framework-customizations/theme/options/header.php:2722
+msgid "Forrst"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:351
+#: framework-customizations/theme/options/general.php:385
+#: framework-customizations/theme/options/general.php:419
+#: framework-customizations/theme/options/general.php:453
+#: framework-customizations/theme/options/general.php:487
+#: framework-customizations/theme/options/general.php:521
+#: framework-customizations/theme/options/general.php:555
+#: framework-customizations/theme/options/general.php:589
+#: framework-customizations/theme/options/general.php:623
+#: framework-customizations/theme/options/general.php:657
+#: framework-customizations/theme/options/general.php:691
+#: framework-customizations/theme/options/general.php:725
+#: framework-customizations/theme/options/general.php:759
+#: framework-customizations/theme/options/general.php:793
+#: framework-customizations/theme/options/general.php:827
+#: framework-customizations/theme/options/general.php:861
+#: framework-customizations/theme/options/general.php:895
+#: framework-customizations/theme/options/general.php:929
+#: framework-customizations/theme/options/general.php:963
+#: framework-customizations/theme/options/general.php:997
+#: framework-customizations/theme/options/general.php:1031
+#: framework-customizations/theme/options/general.php:1065
+#: framework-customizations/theme/options/general.php:1099
+#: framework-customizations/theme/options/general.php:1133
+#: framework-customizations/theme/options/general.php:1167
+#: framework-customizations/theme/options/general.php:1201
+#: framework-customizations/theme/options/general.php:1235
+#: framework-customizations/theme/options/general.php:1269
+#: framework-customizations/theme/options/general.php:1303
+#: framework-customizations/theme/options/general.php:1337
+#: framework-customizations/theme/options/general.php:1371
+#: framework-customizations/theme/options/general.php:1405
+#: framework-customizations/theme/options/general.php:1439
+#: framework-customizations/theme/options/general.php:1473
+#: framework-customizations/theme/options/general.php:1507
+#: framework-customizations/theme/options/general.php:1541
+#: framework-customizations/theme/options/general.php:1575
+#: framework-customizations/theme/options/general.php:1609
+#: framework-customizations/theme/options/general.php:1643
+#: framework-customizations/theme/options/general.php:1677
+#: framework-customizations/theme/options/general.php:1711
+#: framework-customizations/theme/options/general.php:1745
+#: framework-customizations/theme/options/general.php:1779
+#: framework-customizations/theme/options/general.php:1813
+#: framework-customizations/theme/options/general.php:1847
+#: framework-customizations/theme/options/general.php:1881
+#: framework-customizations/theme/options/general.php:1915
+#: framework-customizations/theme/options/general.php:1949
+#: framework-customizations/theme/options/general.php:1983
+#: framework-customizations/theme/options/general.php:2017
+#: framework-customizations/theme/options/general.php:2051
+#: framework-customizations/theme/options/general.php:2085
+#: framework-customizations/theme/options/general.php:2119
+#: framework-customizations/theme/options/general.php:2153
+#: framework-customizations/theme/options/general.php:2187
+#: framework-customizations/theme/options/general.php:2221
+#: framework-customizations/theme/options/general.php:2255
+#: framework-customizations/theme/options/general.php:2289
+#: framework-customizations/theme/options/general.php:2323
+#: framework-customizations/theme/options/header.php:1703
+#: framework-customizations/theme/options/header.php:2737
+#: framework-customizations/theme/options/header.php:2771
+#: framework-customizations/theme/options/header.php:2805
+#: framework-customizations/theme/options/header.php:2839
+#: framework-customizations/theme/options/header.php:2873
+#: framework-customizations/theme/options/header.php:2907
+#: framework-customizations/theme/options/header.php:2941
+#: framework-customizations/theme/options/header.php:2975
+#: framework-customizations/theme/options/header.php:3009
+#: framework-customizations/theme/options/header.php:3043
+#: framework-customizations/theme/options/header.php:3077
+#: framework-customizations/theme/options/header.php:3111
+#: framework-customizations/theme/options/header.php:3145
+#: framework-customizations/theme/options/header.php:3179
+#: framework-customizations/theme/options/header.php:3213
+#: framework-customizations/theme/options/header.php:3247
+#: framework-customizations/theme/options/header.php:3281
+#: framework-customizations/theme/options/header.php:3315
+#: framework-customizations/theme/options/header.php:3349
+#: framework-customizations/theme/options/header.php:3383
+#: framework-customizations/theme/options/header.php:3417
+#: framework-customizations/theme/options/header.php:3451
+#: framework-customizations/theme/options/header.php:3485
+#: framework-customizations/theme/options/header.php:3519
+#: framework-customizations/theme/options/header.php:3553
+#: framework-customizations/theme/options/header.php:3587
+#: framework-customizations/theme/options/header.php:3621
+#: framework-customizations/theme/options/header.php:3655
+#: framework-customizations/theme/options/header.php:3689
+#: framework-customizations/theme/options/header.php:3723
+#: framework-customizations/theme/options/header.php:3757
+#: framework-customizations/theme/options/header.php:3791
+#: framework-customizations/theme/options/header.php:3825
+#: framework-customizations/theme/options/header.php:3859
+#: framework-customizations/theme/options/header.php:3893
+#: framework-customizations/theme/options/header.php:3927
+#: framework-customizations/theme/options/header.php:3961
+#: framework-customizations/theme/options/header.php:3995
+#: framework-customizations/theme/options/header.php:4029
+#: framework-customizations/theme/options/header.php:4063
+#: framework-customizations/theme/options/header.php:4097
+#: framework-customizations/theme/options/header.php:4131
+#: framework-customizations/theme/options/header.php:4165
+#: framework-customizations/theme/options/header.php:4199
+#: framework-customizations/theme/options/header.php:4233
+#: framework-customizations/theme/options/header.php:4267
+#: framework-customizations/theme/options/header.php:4301
+#: framework-customizations/theme/options/header.php:4335
+#: framework-customizations/theme/options/header.php:4369
+#: framework-customizations/theme/options/header.php:4403
+#: framework-customizations/theme/options/header.php:4437
+#: framework-customizations/theme/options/header.php:4471
+#: framework-customizations/theme/options/header.php:4505
+#: framework-customizations/theme/options/header.php:4539
+#: framework-customizations/theme/options/header.php:4573
+#: framework-customizations/theme/options/header.php:4607
+#: framework-customizations/theme/options/header.php:4641
+#: framework-customizations/theme/options/header.php:4675
+#: framework-customizations/theme/options/header.php:4709
+msgid "URL (Link)"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:354
+#: framework-customizations/theme/options/general.php:388
+#: framework-customizations/theme/options/general.php:422
+#: framework-customizations/theme/options/general.php:456
+#: framework-customizations/theme/options/general.php:490
+#: framework-customizations/theme/options/general.php:524
+#: framework-customizations/theme/options/general.php:558
+#: framework-customizations/theme/options/general.php:592
+#: framework-customizations/theme/options/general.php:626
+#: framework-customizations/theme/options/general.php:660
+#: framework-customizations/theme/options/general.php:694
+#: framework-customizations/theme/options/general.php:728
+#: framework-customizations/theme/options/general.php:762
+#: framework-customizations/theme/options/general.php:796
+#: framework-customizations/theme/options/general.php:830
+#: framework-customizations/theme/options/general.php:864
+#: framework-customizations/theme/options/general.php:898
+#: framework-customizations/theme/options/general.php:932
+#: framework-customizations/theme/options/general.php:966
+#: framework-customizations/theme/options/general.php:1000
+#: framework-customizations/theme/options/general.php:1034
+#: framework-customizations/theme/options/general.php:1068
+#: framework-customizations/theme/options/general.php:1102
+#: framework-customizations/theme/options/general.php:1136
+#: framework-customizations/theme/options/general.php:1170
+#: framework-customizations/theme/options/general.php:1204
+#: framework-customizations/theme/options/general.php:1238
+#: framework-customizations/theme/options/general.php:1272
+#: framework-customizations/theme/options/general.php:1306
+#: framework-customizations/theme/options/general.php:1340
+#: framework-customizations/theme/options/general.php:1374
+#: framework-customizations/theme/options/general.php:1408
+#: framework-customizations/theme/options/general.php:1442
+#: framework-customizations/theme/options/general.php:1476
+#: framework-customizations/theme/options/general.php:1510
+#: framework-customizations/theme/options/general.php:1544
+#: framework-customizations/theme/options/general.php:1578
+#: framework-customizations/theme/options/general.php:1612
+#: framework-customizations/theme/options/general.php:1646
+#: framework-customizations/theme/options/general.php:1680
+#: framework-customizations/theme/options/general.php:1714
+#: framework-customizations/theme/options/general.php:1748
+#: framework-customizations/theme/options/general.php:1782
+#: framework-customizations/theme/options/general.php:1816
+#: framework-customizations/theme/options/general.php:1850
+#: framework-customizations/theme/options/general.php:1884
+#: framework-customizations/theme/options/general.php:1918
+#: framework-customizations/theme/options/general.php:1952
+#: framework-customizations/theme/options/general.php:1986
+#: framework-customizations/theme/options/general.php:2020
+#: framework-customizations/theme/options/general.php:2054
+#: framework-customizations/theme/options/general.php:2088
+#: framework-customizations/theme/options/general.php:2122
+#: framework-customizations/theme/options/general.php:2156
+#: framework-customizations/theme/options/general.php:2190
+#: framework-customizations/theme/options/general.php:2224
+#: framework-customizations/theme/options/general.php:2258
+#: framework-customizations/theme/options/general.php:2292
+#: framework-customizations/theme/options/general.php:2326
+#: framework-customizations/theme/options/header.php:1706
+#: framework-customizations/theme/options/header.php:2740
+#: framework-customizations/theme/options/header.php:2774
+#: framework-customizations/theme/options/header.php:2808
+#: framework-customizations/theme/options/header.php:2842
+#: framework-customizations/theme/options/header.php:2876
+#: framework-customizations/theme/options/header.php:2910
+#: framework-customizations/theme/options/header.php:2944
+#: framework-customizations/theme/options/header.php:2978
+#: framework-customizations/theme/options/header.php:3012
+#: framework-customizations/theme/options/header.php:3046
+#: framework-customizations/theme/options/header.php:3080
+#: framework-customizations/theme/options/header.php:3114
+#: framework-customizations/theme/options/header.php:3148
+#: framework-customizations/theme/options/header.php:3182
+#: framework-customizations/theme/options/header.php:3216
+#: framework-customizations/theme/options/header.php:3250
+#: framework-customizations/theme/options/header.php:3284
+#: framework-customizations/theme/options/header.php:3318
+#: framework-customizations/theme/options/header.php:3352
+#: framework-customizations/theme/options/header.php:3386
+#: framework-customizations/theme/options/header.php:3420
+#: framework-customizations/theme/options/header.php:3454
+#: framework-customizations/theme/options/header.php:3488
+#: framework-customizations/theme/options/header.php:3522
+#: framework-customizations/theme/options/header.php:3556
+#: framework-customizations/theme/options/header.php:3590
+#: framework-customizations/theme/options/header.php:3624
+#: framework-customizations/theme/options/header.php:3658
+#: framework-customizations/theme/options/header.php:3692
+#: framework-customizations/theme/options/header.php:3726
+#: framework-customizations/theme/options/header.php:3760
+#: framework-customizations/theme/options/header.php:3794
+#: framework-customizations/theme/options/header.php:3828
+#: framework-customizations/theme/options/header.php:3862
+#: framework-customizations/theme/options/header.php:3896
+#: framework-customizations/theme/options/header.php:3930
+#: framework-customizations/theme/options/header.php:3964
+#: framework-customizations/theme/options/header.php:3998
+#: framework-customizations/theme/options/header.php:4032
+#: framework-customizations/theme/options/header.php:4066
+#: framework-customizations/theme/options/header.php:4100
+#: framework-customizations/theme/options/header.php:4134
+#: framework-customizations/theme/options/header.php:4168
+#: framework-customizations/theme/options/header.php:4202
+#: framework-customizations/theme/options/header.php:4236
+#: framework-customizations/theme/options/header.php:4270
+#: framework-customizations/theme/options/header.php:4304
+#: framework-customizations/theme/options/header.php:4338
+#: framework-customizations/theme/options/header.php:4372
+#: framework-customizations/theme/options/header.php:4406
+#: framework-customizations/theme/options/header.php:4440
+#: framework-customizations/theme/options/header.php:4474
+#: framework-customizations/theme/options/header.php:4508
+#: framework-customizations/theme/options/header.php:4542
+#: framework-customizations/theme/options/header.php:4576
+#: framework-customizations/theme/options/header.php:4610
+#: framework-customizations/theme/options/header.php:4644
+#: framework-customizations/theme/options/header.php:4678
+#: framework-customizations/theme/options/header.php:4712
+msgid "Add link to button."
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:370
+#: framework-customizations/theme/options/header.php:2756
+msgid "Dribbble"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:404
+#: framework-customizations/theme/options/header.php:2790
+msgid "Flickr"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:438
+#: framework-customizations/theme/options/header.php:2824
+msgid "Twitter"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:472
+#: framework-customizations/theme/options/header.php:2858
+msgid "Facebook"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:506
+#: framework-customizations/theme/options/header.php:2892
+msgid "Skype"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:540
+#: framework-customizations/theme/options/header.php:2926
+msgid "Digg"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:574
+#: framework-customizations/theme/options/header.php:2960
+msgid "Google"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:608
+#: framework-customizations/theme/options/header.php:2994
+msgid "Html5"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:642
+#: framework-customizations/theme/options/header.php:3028
+msgid "Linkedin"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:676
+#: framework-customizations/theme/options/header.php:3062
+msgid "Lastfm"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:710
+#: framework-customizations/theme/options/header.php:3096
+msgid "Vimeo"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:744
+#: framework-customizations/theme/options/header.php:3130
+msgid "Yahoo"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:778
+#: framework-customizations/theme/options/header.php:3164
+msgid "Tumblr"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:812
+#: framework-customizations/theme/options/header.php:3198
+msgid "Apple"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:846
+#: framework-customizations/theme/options/header.php:3232
+msgid "Windows"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:880
+#: framework-customizations/theme/options/header.php:3266
+msgid "Youtube"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:914
+#: framework-customizations/theme/options/header.php:3300
+msgid "Delicious"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:948
+#: framework-customizations/theme/options/header.php:3334
+msgid "Rss"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:982
+#: framework-customizations/theme/options/header.php:3368
+msgid "Picasa"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:1016
+#: framework-customizations/theme/options/header.php:3402
+msgid "Deviantart"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:1050
+#: framework-customizations/theme/options/header.php:3436
+msgid "Whatsapp"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:1084
+#: framework-customizations/theme/options/header.php:3470
+msgid "Snapchat"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:1118
+#: framework-customizations/theme/options/header.php:3504
+msgid "Blogger"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:1152
+#: framework-customizations/theme/options/header.php:3538
+msgid "Wordpress"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:1186
+#: framework-customizations/theme/options/header.php:3572
+msgid "Amazon"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:1220
+#: framework-customizations/theme/options/header.php:3606
+msgid "Appstore"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:1254
+#: framework-customizations/theme/options/header.php:3640
+msgid "Paypal"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:1288
+#: framework-customizations/theme/options/header.php:3674
+msgid "Myspace"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:1322
+#: framework-customizations/theme/options/header.php:3708
+msgid "Dropbox"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:1356
+#: framework-customizations/theme/options/header.php:3742
+msgid "Windows8"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:1390
+#: framework-customizations/theme/options/header.php:3776
+msgid "Pinterest"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:1424
+#: framework-customizations/theme/options/header.php:3810
+msgid "Soundcloud"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:1458
+#: framework-customizations/theme/options/header.php:3844
+msgid "Google Drive"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:1492
+#: framework-customizations/theme/options/header.php:3878
+msgid "Android"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:1526
+#: framework-customizations/theme/options/header.php:3912
+msgid "Behance"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:1560
+#: framework-customizations/theme/options/header.php:3946
+msgid "Instagram"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:1594
+#: framework-customizations/theme/options/header.php:3980
+msgid "Ebay"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:1628
+#: framework-customizations/theme/options/header.php:4014
+msgid "Google Plus"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:1662
+#: framework-customizations/theme/options/header.php:4048
+msgid "Github"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:1696
+#: framework-customizations/theme/options/header.php:4082
+msgid "Stackoverflow"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:1730
+#: framework-customizations/theme/options/header.php:4116
+msgid "Spotify"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:1764
+#: framework-customizations/theme/options/header.php:4150
+msgid "Stumbleupon"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:1798
+#: framework-customizations/theme/options/header.php:4184
+msgid "Visa"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:1832
+#: framework-customizations/theme/options/header.php:4218
+msgid "Mastercard"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:1866
+#: framework-customizations/theme/options/header.php:4252
+msgid "Amex"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:1900
+#: framework-customizations/theme/options/header.php:4286
+msgid "Ios"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:1934
+#: framework-customizations/theme/options/header.php:4320
+msgid "Osx"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:1968
+#: framework-customizations/theme/options/header.php:4354
+msgid "Evernote"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:2002
+#: framework-customizations/theme/options/general.php:2036
+#: framework-customizations/theme/options/header.php:4388
+#: framework-customizations/theme/options/header.php:4422
+msgid "Yelp"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:2070
+#: framework-customizations/theme/options/header.php:4456
+msgid "Medium"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:2104
+#: framework-customizations/theme/options/header.php:4490
+msgid "Slack"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:2138
+#: framework-customizations/theme/options/header.php:4524
+msgid "Vine"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:2172
+#: framework-customizations/theme/options/header.php:4558
+msgid "Edge"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:2206
+#: framework-customizations/theme/options/header.php:4592
+msgid "Outlook"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:2240
+#: framework-customizations/theme/options/header.php:4626
+msgid "Pencilcase"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:2274
+#: framework-customizations/theme/options/header.php:4660
+msgid "Play"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:2308
+#: framework-customizations/theme/options/header.php:4694
+msgid "iCloud"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:2347
+#: framework-customizations/theme/options/header.php:536
+#: framework-customizations/theme/options/header.php:684
+#: framework-customizations/theme/options/header.php:4767
+#: framework-customizations/theme/options/header.php:4888
+msgid "Background Hover Color"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:2352
+#: framework-customizations/theme/options/header.php:4772
+msgid "Tooltip Bakground"
+msgstr ""
+
+#: framework-customizations/theme/options/general.php:2367
+#: framework-customizations/theme/options/general.php:2372
+msgid "Search Page"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:6
+msgid "Header"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:11
+#: framework-customizations/theme/options/header.php:16
+msgid "Header Elements"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:27
+msgid "Sticky Menu"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:48
+#: framework-customizations/theme/options/header.php:52
+#: framework-customizations/theme/options/header.php:136
+#: framework-customizations/theme/options/header.php:5069
+#: framework-customizations/theme/options/header.php:5074
+msgid "Header Background"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:81
+msgid "Header Bottom Border"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:96
+#: framework-customizations/theme/options/header.php:161
+#: framework-customizations/theme/options/header.php:562
+#: framework-customizations/theme/options/header.php:1065
+#: framework-customizations/theme/options/header.php:1448
+#: framework-customizations/theme/options/header.php:2064
+#: framework-customizations/theme/options/header.php:2378
+#: framework-customizations/theme/options/shop.php:312
+#: framework-customizations/theme/options/shop.php:399
+msgid "Border Weight"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:119
+#: framework-customizations/theme/options/header.php:265
+#: framework-customizations/theme/options/header.php:366
+#: framework-customizations/theme/options/header.php:451
+#: framework-customizations/theme/options/header.php:652
+#: framework-customizations/theme/options/header.php:1100
+#: framework-customizations/theme/options/header.php:1476
+#: framework-customizations/theme/options/header.php:1741
+#: framework-customizations/theme/options/header.php:2092
+#: framework-customizations/theme/options/header.php:2417
+#: framework-customizations/theme/options/header.php:4838
+msgid "Sticky Menu Styles"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:140
+msgid "Header Paddings"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:194
+msgid "Logo Type"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:196
+msgid "Text Logo"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:197
+msgid "Image Logo"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:221
+#: framework-customizations/theme/options/header.php:1725
+msgid "Logo Text"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:225
+#: framework-customizations/theme/options/header.php:287
+#: framework-customizations/theme/options/header.php:326
+#: framework-customizations/theme/options/header.php:393
+msgid "Logo Margins"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:238
+#: framework-customizations/theme/options/header.php:339
+#: framework-customizations/theme/options/header.php:598
+#: framework-customizations/theme/options/header.php:753
+#: framework-customizations/theme/options/header.php:803
+#: framework-customizations/theme/options/header.php:852
+#: framework-customizations/theme/options/header.php:879
+#: framework-customizations/theme/options/header.php:923
+#: framework-customizations/theme/options/header.php:972
+#: framework-customizations/theme/options/header.php:1321
+#: framework-customizations/theme/options/header.php:1382
+#: framework-customizations/theme/options/header.php:1603
+#: framework-customizations/theme/options/header.php:1662
+#: framework-customizations/theme/options/header.php:1684
+#: framework-customizations/theme/options/header.php:1888
+#: framework-customizations/theme/options/header.php:1949
+#: framework-customizations/theme/options/header.php:2250
+#: framework-customizations/theme/options/header.php:2311
+#: framework-customizations/theme/options/header.php:4735
+#: framework-customizations/theme/options/header.php:4816
+msgid "right"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:250
+#: framework-customizations/theme/options/header.php:351
+#: framework-customizations/theme/options/header.php:440
+#: framework-customizations/theme/options/header.php:610
+#: framework-customizations/theme/options/header.php:765
+#: framework-customizations/theme/options/header.php:809
+#: framework-customizations/theme/options/header.php:858
+#: framework-customizations/theme/options/header.php:885
+#: framework-customizations/theme/options/header.php:929
+#: framework-customizations/theme/options/header.php:978
+#: framework-customizations/theme/options/header.php:1333
+#: framework-customizations/theme/options/header.php:1388
+#: framework-customizations/theme/options/header.php:1615
+#: framework-customizations/theme/options/header.php:1668
+#: framework-customizations/theme/options/header.php:1690
+#: framework-customizations/theme/options/header.php:1900
+#: framework-customizations/theme/options/header.php:1955
+#: framework-customizations/theme/options/header.php:2262
+#: framework-customizations/theme/options/header.php:2317
+#: framework-customizations/theme/options/header.php:4747
+#: framework-customizations/theme/options/header.php:4822
+msgid "left"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:282
+msgid "Logo Text Color"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:315
+#: framework-customizations/theme/options/header.php:381
+msgid "Logo"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:319
+#: framework-customizations/theme/options/header.php:385
+msgid "Logo Height"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:322
+#: framework-customizations/theme/options/header.php:388
+msgid "value in pixels"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:431
+#: framework-customizations/theme/options/header.php:466
+msgid "Header Navigation"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:437
+msgid "Right Bar"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:495
+msgid "Menu Navatigion"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:497
+#: framework-customizations/theme/options/header.php:512
+msgid "Hidden"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:498
+#: framework-customizations/theme/options/header.php:513
+msgid "Visible"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:510
+msgid "Menu"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:547
+msgid "Menu Navigation Border"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:575
+#: framework-customizations/theme/options/header.php:1078
+#: framework-customizations/theme/options/header.php:1165
+#: framework-customizations/theme/options/header.php:1461
+#: framework-customizations/theme/options/header.php:1545
+#: framework-customizations/theme/options/header.php:2077
+#: framework-customizations/theme/options/header.php:2188
+#: framework-customizations/theme/options/header.php:2391
+#: framework-customizations/theme/options/header.php:2486
+msgid "Border Hover Color"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:585
+#: framework-customizations/theme/options/header.php:700
+msgid "Menu Navigation Margins"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:622
+msgid "Right-to-left Animation"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:636
+msgid "Menu Animation"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:740
+#: framework-customizations/theme/options/header.php:1117
+msgid "Menu Item Paddings"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:780
+msgid "Menu Button Paddings (Notebook Layout)"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:829
+msgid "Menu Button Paddings (Tablet Layout)"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:872
+msgid "Menu Button Inner Paddings"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:900
+msgid "Menu Button Inner Paddings (Notebook Layout)"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:949
+msgid "Menu Button Inner Paddings (Tablet Layout)"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:1007
+msgid "Menu Button Text"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:1012
+#: framework-customizations/theme/options/header.php:1140
+#: framework-customizations/theme/options/header.php:1237
+msgid "Menu Button Color"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:1017
+#: framework-customizations/theme/options/header.php:1145
+#: framework-customizations/theme/options/header.php:1242
+msgid "Menu Button Hover Color"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:1022
+#: framework-customizations/theme/options/header.php:1150
+msgid "Menu Background Color"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:1027
+#: framework-customizations/theme/options/header.php:1155
+msgid "Menu Background Hover Color"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:1032
+msgid "Overlay Effect"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:1050
+msgid "Button Border"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:1087
+msgid "Button Radius"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:1190
+msgid "Dropdown Top Border"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:1231
+msgid "Dropdown Font"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:1262
+msgid "Dropdown Title Font"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:1281
+msgid "Search Form"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:1298
+msgid "Form Type"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:1300
+#: functions/front_functions.php:988 includes/header_search_form.php:21
+msgid "Search For"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:1301
+#: includes/header_search_form.php:16
+msgid "Search For Products"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:1308
+#: framework-customizations/theme/options/header.php:1492
+msgid "Search Container Margins"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:1349
+#: framework-customizations/theme/options/header.php:1630
+#: framework-customizations/theme/options/header.php:1916
+#: framework-customizations/theme/options/header.php:2278
+#: framework-customizations/theme/options/header.php:4783
+msgid "Separate Line"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:1375
+msgid "Search Button Margins"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:1396
+msgid "Button Width"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:1401
+msgid "Button Icon Size"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:1408
+#: framework-customizations/theme/options/header.php:1520
+msgid "Search Button Color"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:1413
+#: framework-customizations/theme/options/header.php:1525
+msgid "Search Button Hover Color"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:1418
+#: framework-customizations/theme/options/header.php:1530
+msgid "Search Button Background"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:1423
+#: framework-customizations/theme/options/header.php:1535
+msgid "Search Button Hover Background"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:1433
+msgid "Search Button Border"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:1515
+#: framework-customizations/theme/options/header.php:1781
+#: framework-customizations/theme/options/header.php:2138
+#: framework-customizations/theme/options/header.php:2456
+msgid "Separate Line Color"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:1575
+#: framework-customizations/theme/options/header.php:2515
+#: framework-customizations/theme/options/header.php:2528
+#: framework-customizations/theme/options/header.php:2541
+#: framework-customizations/theme/options/header.php:2554
+#: framework-customizations/theme/options/header.php:2567
+msgid "Message Block"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:1590
+#: framework-customizations/theme/options/header.php:1758
+msgid "Message Container Margins"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:1655
+msgid "Message Block Margins"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:1677
+msgid "Message Block Paddings"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:1698
+msgid "Text Content"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:1730
+#: framework-customizations/theme/options/header.php:1786
+#: framework-customizations/theme/options/header.php:1791
+msgid "Message Block Background"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:1819
+#: framework-customizations/theme/options/header.php:2516
+#: framework-customizations/theme/options/header.php:2529
+#: framework-customizations/theme/options/header.php:2542
+#: framework-customizations/theme/options/header.php:2555
+#: framework-customizations/theme/options/header.php:2568
+#: functions/widget-social_media.php:16
+msgid "Social Media"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:1836
+msgid ""
+"Navigate to \"Header\" => \"Header Social Media\" for social media options."
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:1858
+#: framework-customizations/theme/options/header.php:2517
+#: framework-customizations/theme/options/header.php:2530
+#: framework-customizations/theme/options/header.php:2543
+#: framework-customizations/theme/options/header.php:2556
+#: framework-customizations/theme/options/header.php:2569
+msgid "Shopping Cart"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:1875
+#: framework-customizations/theme/options/header.php:2109
+msgid "Shopping Cart Container Margins"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:1942
+msgid "Shopping Cart Button Margins"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:1963
+#: framework-customizations/theme/options/header.php:2130
+msgid "Shopping Cart Button Padding"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:1969
+msgid "Shopping Cart Button Width"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:1976
+#: framework-customizations/theme/options/header.php:2143
+msgid "Shopping Cart Button Color"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:1981
+#: framework-customizations/theme/options/header.php:2148
+msgid "Shopping Cart Button Hover Color"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:1986
+#: framework-customizations/theme/options/header.php:2153
+msgid "Shopping Cart Button Background"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:1991
+#: framework-customizations/theme/options/header.php:2158
+msgid "Shopping Cart Button Hover Background"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:2001
+msgid "Shopping Cart Alternative Variant"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:2018
+#: framework-customizations/theme/options/header.php:2163
+msgid "Counter Color"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:2023
+#: framework-customizations/theme/options/header.php:2168
+msgid "Counter Hover Color"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:2028
+#: framework-customizations/theme/options/header.php:2173
+msgid "Counter Background"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:2033
+#: framework-customizations/theme/options/header.php:2178
+msgid "Counter Hover Background"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:2049
+msgid "Shopping Cart Button Border"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:2220
+#: framework-customizations/theme/options/header.php:2518
+#: framework-customizations/theme/options/header.php:2531
+#: framework-customizations/theme/options/header.php:2544
+#: framework-customizations/theme/options/header.php:2557
+#: framework-customizations/theme/options/header.php:2570
+msgid "WPML Button"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:2237
+#: framework-customizations/theme/options/header.php:2433
+msgid "WPML Container Margins"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:2304
+msgid "WPML Button Margins"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:2325
+msgid "WPML Button Padding"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:2331
+msgid "WPML Cart Button Width"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:2338
+#: framework-customizations/theme/options/header.php:2461
+msgid "WPML Button Color"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:2343
+#: framework-customizations/theme/options/header.php:2466
+msgid "WPML Button Hover Color"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:2348
+#: framework-customizations/theme/options/header.php:2471
+msgid "WPML Button Background"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:2353
+#: framework-customizations/theme/options/header.php:2476
+msgid "WPML Button Hover Background"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:2363
+msgid "WPML Button Border"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:2401
+msgid "Dropdown Text Color"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:2406
+msgid "Dropdown Text Hover Color"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:2511
+msgid "Order 1"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:2513
+#: framework-customizations/theme/options/header.php:2526
+#: framework-customizations/theme/options/header.php:2539
+#: framework-customizations/theme/options/header.php:2552
+#: framework-customizations/theme/options/header.php:2565
+msgid "None"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:2524
+msgid "Order 2"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:2537
+msgid "Order 3"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:2550
+msgid "Order 4"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:2563
+msgid "Order 5"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:2584
+#: framework-customizations/theme/options/header.php:2589
+msgid "Mobile Navigation"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:2609
+msgid "First Level Navigation Font"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:2614
+msgid "First Level Color"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:2619
+msgid "First Level Hover Color"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:2652
+msgid "Navigation Button Color"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:2657
+msgid "Navigation Button Active Color"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:2675
+msgid "Navigation Title Font"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:2690
+#: framework-customizations/theme/options/header.php:2695
+msgid "Header Social Media"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:4722
+#: framework-customizations/theme/options/header.php:4855
+msgid "Social Media Container Margins"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:4809
+msgid "Social Media Buttons Margins"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:4912
+#: framework-customizations/theme/options/header.php:4917
+msgid "Header Title"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:4957
+msgid "Subitle"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:4975
+msgid "Breadcrumb Font"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:4980
+msgid "Breadcrumb Primary Color"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:4985
+msgid "Breadcrumb Secondary Color"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:4990
+msgid "Breadcrumb Primary Background"
+msgstr ""
+
+#: framework-customizations/theme/options/header.php:4995
+msgid "Breadcrumb Secondary Background"
+msgstr ""
+
+#: framework-customizations/theme/options/portfolio.php:6
+msgid "Portfolio"
+msgstr ""
+
+#: framework-customizations/theme/options/portfolio.php:51
+msgid "Related Post Title Font"
+msgstr ""
+
+#: framework-customizations/theme/options/portfolio.php:75
+msgid "Related Post Meta"
+msgstr ""
+
+#: framework-customizations/theme/options/posts/events.php:7
+#: framework-customizations/theme/options/posts/events.php:11
+#: framework-customizations/theme/options/posts/fw-portfolio.php:7
+#: framework-customizations/theme/options/posts/fw-portfolio.php:11
+#: framework-customizations/theme/options/posts/page.php:7
+#: framework-customizations/theme/options/posts/page.php:11
+#: framework-customizations/theme/options/posts/post.php:7
+#: framework-customizations/theme/options/posts/post.php:11
+#: framework-customizations/theme/options/posts/product.php:7
+#: framework-customizations/theme/options/posts/product.php:11
+#: framework-customizations/theme/options/posts/tribe_events.php:7
+#: framework-customizations/theme/options/posts/tribe_events.php:11
+msgid "Sub-title"
+msgstr ""
+
+#: framework-customizations/theme/options/posts/events.php:21
+#: framework-customizations/theme/options/posts/fw-portfolio.php:21
+#: framework-customizations/theme/options/posts/page.php:93
+#: framework-customizations/theme/options/posts/post.php:21
+#: framework-customizations/theme/options/posts/product.php:21
+#: framework-customizations/theme/options/posts/tribe_events.php:21
+msgid "Header Options"
+msgstr ""
+
+#: framework-customizations/theme/options/posts/events.php:186
+#: framework-customizations/theme/options/posts/fw-portfolio.php:186
+#: framework-customizations/theme/options/posts/page.php:258
+#: framework-customizations/theme/options/posts/post.php:186
+#: framework-customizations/theme/options/posts/product.php:186
+#: framework-customizations/theme/options/posts/tribe_events.php:186
+msgid "Page Options"
+msgstr ""
+
+#: framework-customizations/theme/options/posts/events.php:224
+#: framework-customizations/theme/options/posts/fw-portfolio.php:248
+#: framework-customizations/theme/options/posts/page.php:296
+#: framework-customizations/theme/options/posts/post.php:224
+#: framework-customizations/theme/options/posts/product.php:236
+#: framework-customizations/theme/options/posts/tribe_events.php:224
+msgid "Page Footer Settings"
+msgstr ""
+
+#: framework-customizations/theme/options/posts/fw-portfolio.php:227
+#: framework-customizations/theme/options/posts/product.php:227
+msgid "Post Layouts"
+msgstr ""
+
+#: framework-customizations/theme/options/posts/fw-portfolio.php:236
+msgid "Gallery"
+msgstr ""
+
+#: framework-customizations/theme/options/posts/fw-portfolio.php:237
+#: framework-customizations/theme/options/posts/page.php:21
+#: framework-customizations/theme/options/posts/page.php:78
+msgid "Slider"
+msgstr ""
+
+#: framework-customizations/theme/options/posts/fw-portfolio.php:239
+msgid "Post Type"
+msgstr ""
+
+#: framework-customizations/theme/options/posts/page.php:36
+msgid "Header Position"
+msgstr ""
+
+#: framework-customizations/theme/options/posts/page.php:39
+msgid "Absolute"
+msgstr ""
+
+#: framework-customizations/theme/options/posts/page.php:43
+msgid "Relative"
+msgstr ""
+
+#: framework-customizations/theme/options/posts/page.php:61
+msgid "Slider Container"
+msgstr ""
+
+#: framework-customizations/theme/options/posts/page.php:64
+msgid "1200 Pixels Width"
+msgstr ""
+
+#: framework-customizations/theme/options/posts/page.php:65
+msgid "1480 Pixels Width"
+msgstr ""
+
+#: framework-customizations/theme/options/posts/page.php:81
+msgid "Place \"Revolution Slider\" shortcode to show the slider"
+msgstr ""
+
+#: framework-customizations/theme/options/posts/product.php:224
+msgid "33/66 Thumbnail Layout"
+msgstr ""
+
+#: framework-customizations/theme/options/posts/product.php:225
+msgid "50/50 Thumbnail Layout"
+msgstr ""
+
+#: framework-customizations/theme/options/shop.php:6
+#: functions/front_functions.php:518
+msgid "Shop"
+msgstr ""
+
+#: framework-customizations/theme/options/shop.php:11
+#: framework-customizations/theme/options/shop.php:16
+msgid "Shop options"
+msgstr ""
+
+#: framework-customizations/theme/options/shop.php:23
+msgid "Shop Title"
+msgstr ""
+
+#: framework-customizations/theme/options/shop.php:37
+msgid "Shop Columns"
+msgstr ""
+
+#: framework-customizations/theme/options/shop.php:43
+msgid "Products Per Page"
+msgstr ""
+
+#: framework-customizations/theme/options/shop.php:61
+msgid "Price Font"
+msgstr ""
+
+#: framework-customizations/theme/options/shop.php:66
+msgid "Rating Color"
+msgstr ""
+
+#: framework-customizations/theme/options/shop.php:113
+msgid "Button Overlay Effect"
+msgstr ""
+
+#: framework-customizations/theme/options/shop.php:134
+msgid "Alt. Button Text Color"
+msgstr ""
+
+#: framework-customizations/theme/options/shop.php:139
+msgid "Alt. Button Text Hover Color"
+msgstr ""
+
+#: framework-customizations/theme/options/shop.php:144
+msgid "Alt. Button Color"
+msgstr ""
+
+#: framework-customizations/theme/options/shop.php:149
+msgid "Alt. Button Hover Color"
+msgstr ""
+
+#: framework-customizations/theme/options/shop.php:162
+msgid "\"Sale\" Badge Color"
+msgstr ""
+
+#: framework-customizations/theme/options/shop.php:180
+msgid "\"Sale\" Badge Font"
+msgstr ""
+
+#: framework-customizations/theme/options/shop.php:193
+msgid "\"Out of Stock\" Badge Color"
+msgstr ""
+
+#: framework-customizations/theme/options/shop.php:211
+msgid "\"Out of Stock\" Badge Font"
+msgstr ""
+
+#: framework-customizations/theme/options/shop.php:257
+#: framework-customizations/theme/options/shop.php:262
+msgid "Catalog options"
+msgstr ""
+
+#: framework-customizations/theme/options/shop.php:287
+#: framework-customizations/theme/options/shop.php:452
+#: framework-customizations/theme/options/shop.php:650
+msgid "Product Title"
+msgstr ""
+
+#: framework-customizations/theme/options/shop.php:297
+msgid "Product Border"
+msgstr ""
+
+#: framework-customizations/theme/options/shop.php:351
+msgid "Category Title Font"
+msgstr ""
+
+#: framework-customizations/theme/options/shop.php:369
+msgid "Category Counter Font"
+msgstr ""
+
+#: framework-customizations/theme/options/shop.php:374
+msgid "Category Item Color"
+msgstr ""
+
+#: framework-customizations/theme/options/shop.php:384
+msgid "Caregory Border"
+msgstr ""
+
+#: framework-customizations/theme/options/shop.php:426
+#: framework-customizations/theme/options/shop.php:431
+msgid "Product options"
+msgstr ""
+
+#: framework-customizations/theme/options/shop.php:471
+msgid "Heading Font"
+msgstr ""
+
+#: framework-customizations/theme/options/shop.php:495
+msgid "Tab Button Font"
+msgstr ""
+
+#: framework-customizations/theme/options/shop.php:500
+msgid "Button Font Color"
+msgstr ""
+
+#: framework-customizations/theme/options/shop.php:505
+msgid "Button Font Active Color"
+msgstr ""
+
+#: framework-customizations/theme/options/shop.php:534
+msgid "Review Author Font"
+msgstr ""
+
+#: framework-customizations/theme/options/shop.php:549
+#: framework-customizations/theme/options/shop.php:554
+msgid "Checkout options"
+msgstr ""
+
+#: framework-customizations/theme/options/shop.php:575
+#: framework-customizations/theme/options/shop.php:611
+msgid "Page Headings"
+msgstr ""
+
+#: framework-customizations/theme/options/shop.php:585
+#: framework-customizations/theme/options/shop.php:590
+msgid "Cart options"
+msgstr ""
+
+#: framework-customizations/theme/options/shop.php:621
+#: framework-customizations/theme/options/shop.php:694
+msgid "Remove Button"
+msgstr ""
+
+#: framework-customizations/theme/options/shop.php:626
+#: framework-customizations/theme/options/shop.php:699
+msgid "Remove Button Hover"
+msgstr ""
+
+#: framework-customizations/theme/options/shop.php:660
+#: framework-customizations/theme/options/shop.php:665
+msgid "Widget options"
+msgstr ""
+
+#: framework-customizations/theme/options/shop.php:685
+msgid "Product Widget Title"
+msgstr ""
+
+#: framework-customizations/theme/options/tables.php:6
+msgid "Tables"
+msgstr ""
+
+#: framework-customizations/theme/options/tables.php:24
+msgid "Add extra class <strong>primary-theme-style</strong> in Table Settings"
+msgstr ""
+
+#: framework-customizations/theme/options/tables.php:29
+#: framework-customizations/theme/options/tables.php:155
+msgid "Table Color #1"
+msgstr ""
+
+#: framework-customizations/theme/options/tables.php:34
+#: framework-customizations/theme/options/tables.php:160
+msgid "Table Color #2"
+msgstr ""
+
+#: framework-customizations/theme/options/tables.php:57
+#: framework-customizations/theme/options/tables.php:183
+msgid "Table Body Font"
+msgstr ""
+
+#: framework-customizations/theme/options/tables.php:75
+#: framework-customizations/theme/options/tables.php:201
+msgid "Table Heading Font"
+msgstr ""
+
+#: framework-customizations/theme/options/tables.php:127
+#: framework-customizations/theme/options/tables.php:254
+msgid "px"
+msgstr ""
+
+#: framework-customizations/theme/options/tables.php:150
+msgid ""
+"Add extra class <strong>secondary-theme-style</strong> in Table Settings"
+msgstr ""
+
+#: framework-customizations/theme/options/timetable.php:6
+msgid "Timetable"
+msgstr ""
+
+#: framework-customizations/theme/options/timetable.php:11
+#: framework-customizations/theme/options/timetable.php:16
+msgid "Timetable options"
+msgstr ""
+
+#: framework-customizations/theme/options/timetable.php:28
+msgid "Custom Timetable Styles"
+msgstr ""
+
+#: framework-customizations/theme/options/timetable.php:64
+msgid "Table Header"
+msgstr ""
+
+#: framework-customizations/theme/options/timetable.php:69
+msgid "Table Header Color"
+msgstr ""
+
+#: framework-customizations/theme/options/timetable.php:88
+msgid "Table Hours"
+msgstr ""
+
+#: framework-customizations/theme/options/timetable.php:93
+msgid "Table Hours Color"
+msgstr ""
+
+#: framework-customizations/theme/options/timetable.php:111
+msgid "Table Font"
+msgstr ""
+
+#: framework-customizations/theme/options/timetable.php:129
+msgid "Event Title"
+msgstr ""
+
+#: framework-customizations/theme/options/timetable.php:147
+msgid "Event Time"
+msgstr ""
+
+#: framework-customizations/theme/options/timetable.php:152
+msgid "Tooltip Shadow"
+msgstr ""
+
+#: framework-customizations/theme/options/timetable.php:178
+msgid "Tabs Filter Font"
+msgstr ""
+
+#: framework-customizations/theme/options/timetable.php:183
+msgid "Tabs Filter Color"
+msgstr ""
+
+#: framework-customizations/theme/options/timetable.php:188
+msgid "Tabs Filter Active Color"
+msgstr ""
+
+#: framework-customizations/theme/options/timetable.php:193
+msgid "Tabs Filter Background"
+msgstr ""
+
+#: framework-customizations/theme/options/timetable.php:198
+msgid "Tabs Filter Active Background"
+msgstr ""
+
+#: framework-customizations/theme/options/timetable.php:203
+msgid "Tabs Filter Border"
+msgstr ""
+
+#: framework-customizations/theme/options/timetable.php:208
+msgid "Tabs Filter Active Border"
+msgstr ""
+
+#: framework-customizations/theme/options/timetable.php:224
+#: framework-customizations/theme/options/timetable.php:229
+msgid "Event hours shortcode"
+msgstr ""
+
+#: framework-customizations/theme/options/timetable.php:236
+msgid "Text Color"
+msgstr ""
+
+#: functions/class-tgm-plugin-activation.php:334
+msgid "Install Required Plugins"
+msgstr ""
+
+#: functions/class-tgm-plugin-activation.php:335
+msgid "Install Plugins"
+msgstr ""
+
+#. translators: %s: plugin name.
+#: functions/class-tgm-plugin-activation.php:337
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#. translators: %s: plugin name.
+#: functions/class-tgm-plugin-activation.php:339
+#, php-format
+msgid "Updating Plugin: %s"
+msgstr ""
+
+#: functions/class-tgm-plugin-activation.php:340
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: functions/class-tgm-plugin-activation.php:392
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: functions/class-tgm-plugin-activation.php:393
+#: functions/class-tgm-plugin-activation.php:912
+#: functions/class-tgm-plugin-activation.php:2618
+#: functions/class-tgm-plugin-activation.php:3665
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: functions/class-tgm-plugin-activation.php:394
+#: functions/class-tgm-plugin-activation.php:3244
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: functions/class-tgm-plugin-activation.php:395
+msgid "The following plugin was activated successfully:"
+msgstr ""
+
+#. translators: 1: plugin name.
+#: functions/class-tgm-plugin-activation.php:397
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: functions/class-tgm-plugin-activation.php:399
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+
+#. translators: 1: dashboard link.
+#: functions/class-tgm-plugin-activation.php:401
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: functions/class-tgm-plugin-activation.php:402
+msgid "Dismiss this notice"
+msgstr ""
+
+#: functions/class-tgm-plugin-activation.php:403
+msgid ""
+"There are one or more required or recommended plugins to install, update or "
+"activate."
+msgstr ""
+
+#: functions/class-tgm-plugin-activation.php:404
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: functions/class-tgm-plugin-activation.php:607
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr ""
+
+#: functions/class-tgm-plugin-activation.php:608
+msgid "Update Required"
+msgstr ""
+
+#: functions/class-tgm-plugin-activation.php:1019
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug "
+"and renaming did not work."
+msgstr ""
+
+#: functions/class-tgm-plugin-activation.php:1019
+#: functions/class-tgm-plugin-activation.php:1022
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
+msgstr ""
+
+#: functions/class-tgm-plugin-activation.php:1022
+msgid ""
+"The remote plugin package consists of more than one file, but the files are "
+"not packaged in a folder."
+msgstr ""
+
+#. translators: %s: version number
+#: functions/class-tgm-plugin-activation.php:2067
+#, php-format
+msgid "TGMPA v%s"
+msgstr ""
+
+#: functions/class-tgm-plugin-activation.php:2358
+msgid "Required"
+msgstr ""
+
+#: functions/class-tgm-plugin-activation.php:2361
+msgid "Recommended"
+msgstr ""
+
+#: functions/class-tgm-plugin-activation.php:2377
+msgid "WordPress Repository"
+msgstr ""
+
+#: functions/class-tgm-plugin-activation.php:2380
+msgid "External Source"
+msgstr ""
+
+#: functions/class-tgm-plugin-activation.php:2383
+msgid "Pre-Packaged"
+msgstr ""
+
+#: functions/class-tgm-plugin-activation.php:2400
+msgid "Not Installed"
+msgstr ""
+
+#: functions/class-tgm-plugin-activation.php:2404
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: functions/class-tgm-plugin-activation.php:2406
+msgid "Active"
+msgstr ""
+
+#: functions/class-tgm-plugin-activation.php:2412
+msgid "Required Update not Available"
+msgstr ""
+
+#: functions/class-tgm-plugin-activation.php:2415
+msgid "Requires Update"
+msgstr ""
+
+#: functions/class-tgm-plugin-activation.php:2418
+msgid "Update recommended"
+msgstr ""
+
+#. translators: 1: install status, 2: update status
+#: functions/class-tgm-plugin-activation.php:2427
+#, php-format
+msgid "%1$s, %2$s"
+msgstr ""
+
+#. translators: 1: number of plugins.
+#: functions/class-tgm-plugin-activation.php:2473
+#, php-format
+msgid "All <span class=\"count\">(%s)</span>"
+msgstr ""
+
+#: functions/class-tgm-plugin-activation.php:2567
+msgid "unknown"
+msgstr ""
+
+#: functions/class-tgm-plugin-activation.php:2575
+msgid "Installed version:"
+msgstr ""
+
+#: functions/class-tgm-plugin-activation.php:2583
+msgid "Minimum required version:"
+msgstr ""
+
+#: functions/class-tgm-plugin-activation.php:2595
+msgid "Available version:"
+msgstr ""
+
+#: functions/class-tgm-plugin-activation.php:2618
+msgid "No plugins to install, update or activate."
+msgstr ""
+
+#: functions/class-tgm-plugin-activation.php:2632
+msgid "Plugin"
+msgstr ""
+
+#: functions/class-tgm-plugin-activation.php:2633
+msgid "Source"
+msgstr ""
+
+#: functions/class-tgm-plugin-activation.php:2634
+msgid "Type"
+msgstr ""
+
+#: functions/class-tgm-plugin-activation.php:2638
+msgid "Version"
+msgstr ""
+
+#: functions/class-tgm-plugin-activation.php:2639
+msgid "Status"
+msgstr ""
+
+#. translators: %2$s: plugin name in screen reader markup
+#: functions/class-tgm-plugin-activation.php:2688
+#, php-format
+msgid "Install %2$s"
+msgstr ""
+
+#. translators: %2$s: plugin name in screen reader markup
+#: functions/class-tgm-plugin-activation.php:2693
+#, php-format
+msgid "Update %2$s"
+msgstr ""
+
+#. translators: %2$s: plugin name in screen reader markup
+#: functions/class-tgm-plugin-activation.php:2699
+#, php-format
+msgid "Activate %2$s"
+msgstr ""
+
+#: functions/class-tgm-plugin-activation.php:2769
+msgid "Upgrade message from the plugin author:"
+msgstr ""
+
+#: functions/class-tgm-plugin-activation.php:2802
+msgid "Install"
+msgstr ""
+
+#: functions/class-tgm-plugin-activation.php:2808
+msgid "Update"
+msgstr ""
+
+#: functions/class-tgm-plugin-activation.php:2811
+msgid "Activate"
+msgstr ""
+
+#: functions/class-tgm-plugin-activation.php:2842
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: functions/class-tgm-plugin-activation.php:2844
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: functions/class-tgm-plugin-activation.php:2885
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: functions/class-tgm-plugin-activation.php:2887
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: functions/class-tgm-plugin-activation.php:2993
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: functions/class-tgm-plugin-activation.php:3019
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: functions/class-tgm-plugin-activation.php:3243
+msgid "Plugin activation failed."
+msgstr ""
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: functions/class-tgm-plugin-activation.php:3583
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#. translators: 1: plugin name, 2: error message.
+#: functions/class-tgm-plugin-activation.php:3586
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: functions/class-tgm-plugin-activation.php:3588
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: functions/class-tgm-plugin-activation.php:3592
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: functions/class-tgm-plugin-activation.php:3594
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: functions/class-tgm-plugin-activation.php:3594
+#: functions/class-tgm-plugin-activation.php:3602
+msgid "Show Details"
+msgstr ""
+
+#: functions/class-tgm-plugin-activation.php:3594
+#: functions/class-tgm-plugin-activation.php:3602
+msgid "Hide Details"
+msgstr ""
+
+#: functions/class-tgm-plugin-activation.php:3595
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: functions/class-tgm-plugin-activation.php:3597
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: functions/class-tgm-plugin-activation.php:3600
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: functions/class-tgm-plugin-activation.php:3602
+#, php-format
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: functions/class-tgm-plugin-activation.php:3603
+msgid "All installations have been completed."
+msgstr ""
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: functions/class-tgm-plugin-activation.php:3605
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: functions/front_functions.php:46
+msgid "Pingback:"
+msgstr ""
+
+#: functions/front_functions.php:46
+msgid "(Edit)"
+msgstr ""
+
+#: functions/front_functions.php:64
+msgid "posted on"
+msgstr ""
+
+#: functions/front_functions.php:67
+msgid "Reply"
+msgstr ""
+
+#: functions/front_functions.php:72
+msgid "Edit"
+msgstr ""
+
+#: functions/front_functions.php:588
+msgid "Page not found"
+msgstr ""
+
+#: functions/front_functions.php:592
+msgid "Search results"
+msgstr ""
+
+#: functions/front_functions.php:653
+msgid "No products in the cart."
+msgstr ""
+
+#: functions/front_functions.php:655
+msgid "Subtotal:"
+msgstr ""
+
+#: functions/front_functions.php:657
+msgid "View Cart"
+msgstr ""
+
+#: functions/front_functions.php:658
+msgid "Checkout"
+msgstr ""
+
+#: functions/front_functions.php:986 functions/front_functions.php:990
+#: functions/woocommerce_functions.php:206
+#: functions/woocommerce_functions.php:210
+msgid "Search for:"
+msgstr ""
+
+#: functions/front_functions.php:1319
+msgid "Continue Reading"
+msgstr ""
+
+#: functions/init.php:17
+msgid "Trainer"
+msgstr ""
+
+#: functions/init.php:22
+msgid "Psychiatrist"
+msgstr ""
+
+#: functions/init.php:27
+msgid "Gardener"
+msgstr ""
+
+#: functions/init.php:32
+msgid "Musician"
+msgstr ""
+
+#: functions/init.php:37
+msgid "Health Coach"
+msgstr ""
+
+#: functions/init.php:42
+msgid "Finance"
+msgstr ""
+
+#: functions/init.php:47
+msgid "Preview Version"
+msgstr ""
+
+#: functions/init.php:101
+msgid "Primary Menu"
+msgstr ""
+
+#: functions/init.php:108
+msgid "Main Sidebar"
+msgstr ""
+
+#: functions/init.php:110 functions/init.php:160 functions/init.php:170
+msgid "Appears in the sidebar section."
+msgstr ""
+
+#: functions/init.php:118
+msgid "Footer Column 1"
+msgstr ""
+
+#: functions/init.php:120 functions/init.php:130 functions/init.php:140
+#: functions/init.php:150
+msgid "Appears in the footer section, use \"Theme Settings\" for column width."
+msgstr ""
+
+#: functions/init.php:128
+msgid "Footer Column 2"
+msgstr ""
+
+#: functions/init.php:138
+msgid "Footer Column 3"
+msgstr ""
+
+#: functions/init.php:148
+msgid "Footer Column 4"
+msgstr ""
+
+#: functions/init.php:158
+msgid "Shop Sidebar"
+msgstr ""
+
+#: functions/init.php:168
+msgid "Product Post Sidebar"
+msgstr ""
+
+#: functions/tribe_calendar_functions.php:23
+msgid "Add to Google Calendar"
+msgstr ""
+
+#: functions/tribe_calendar_functions.php:23
+msgid "Google Calendar"
+msgstr ""
+
+#: functions/tribe_calendar_functions.php:24
+msgid "Download .ics file"
+msgstr ""
+
+#: functions/tribe_calendar_functions.php:24
+msgid "iCal Export"
+msgstr ""
+
+#: functions/tribe_calendar_functions.php:51
+#, php-format
+msgid "Month's %s"
+msgstr ""
+
+#: functions/tribe_calendar_functions.php:54
+#, php-format
+msgid "Week's %s"
+msgstr ""
+
+#: functions/tribe_calendar_functions.php:57
+#, php-format
+msgid "Day's %s"
+msgstr ""
+
+#: functions/tribe_calendar_functions.php:60
+#, php-format
+msgid "Listed %s"
+msgstr ""
+
+#: functions/tribe_calendar_functions.php:64
+msgid "Export"
+msgstr ""
+
+#: functions/tribe_calendar_functions.php:65
+msgid ""
+"Use this to share calendar data with Google Calendar, Apple iCal and other "
+"compatible apps"
+msgstr ""
+
+#: functions/widget-social_media.php:12
+msgid "A widget that displays links to your social media profiles. "
+msgstr ""
+
+#: functions/widget-social_media.php:301
+msgid "Title:"
+msgstr ""
+
+#: functions/widget-social_media.php:303
+msgid ""
+"Navigate to Use \"Theme Settings\" => \"General\" => \"Social Media Widget\" "
+"for widget options."
+msgstr ""
+
+#: functions/woocommerce_functions.php:165
+msgid "Coupon"
+msgstr ""
+
+#: functions/woocommerce_functions.php:165
+msgid "Coupon code"
+msgstr ""
+
+#: functions/woocommerce_functions.php:165
+msgid "Apply Coupon"
+msgstr ""
+
+#: functions/woocommerce_functions.php:196
+msgid "Out of Stock"
+msgstr ""
+
+#: functions/woocommerce_functions.php:208
+msgid "Search Products"
+msgstr ""
+
+#: image.php:40
+msgid "Previous Image"
+msgstr ""
+
+#: image.php:40
+msgid "Next Image"
+msgstr ""
+
+#: includes/portfolio-related-posts.php:35 includes/single-related-posts.php:33
+msgid "Related Posts"
+msgstr ""
+
+#: includes/portfolio-related-posts.php:54 includes/post-search.php:25
+#: includes/single-related-posts.php:52
+msgid "No Image"
+msgstr ""
+
+#: includes/post-format-post-meta.php:7
+msgid "Comments are off for this post"
+msgstr ""
+
+#: includes/post-search.php:32
+msgid "posted by"
+msgstr ""
+
+#: index.php:72 search.php:67
+msgid "Sorry, no posts matched your criteria."
+msgstr ""
+
+#: search.php:28
+msgid "Not happy with the results below please do another search."
+msgstr ""
+
+#: tribe-events/day/single-event.php:81 tribe-events/list/single-event.php:85
+msgid "Find out more"
+msgstr ""
+
+#: tribe-events/list/nav.php:25
+#, php-format
+msgid "Previous %s"
+msgstr ""
+
+#: tribe-events/list/nav.php:33
+#, php-format
+msgid "Next %s"
+msgstr ""
+
+#: tribe-events/modules/bar.php:30 tribe-events/modules/bar.php:43
+#, php-format
+msgid "Find %s"
+msgstr ""
+
+#: tribe-events/modules/bar.php:55
+msgid "Event Views Navigation"
+msgstr ""
+
+#: tribe-events/modules/bar.php:56
+msgid "View As"
+msgstr ""
+
+#: tribe-events/single-event.php:90
+#, php-format
+msgid "%s Navigation"
+msgstr ""
+
+#: woocommerce/cart/cart-shipping.php:47
+msgid "Shipping costs will be calculated once you have provided your address."
+msgstr ""
+
+#: woocommerce/cart/cart-shipping.php:49
+msgid ""
+"There are no shipping methods available. Please double check your address, "
+"or contact us if you need any help."
+msgstr ""
+
+#: woocommerce/cart/cart-totals.php:27
+msgid "Cart Totals"
+msgstr ""
+
+#: woocommerce/cart/cart-totals.php:32 woocommerce/cart/cart-totals.php:33
+msgid "Subtotal"
+msgstr ""
+
+#: woocommerce/cart/cart-totals.php:65
+#, php-format
+msgid "estimated for %s"
+msgstr ""
+
+#: woocommerce/cart/cart-totals.php:86 woocommerce/cart/cart-totals.php:87
+#: woocommerce/cart/cart.php:38 woocommerce/cart/cart.php:118
+msgid "Total"
+msgstr ""
+
+#: woocommerce/cart/cart.php:35 woocommerce/cart/cart.php:77
+msgid "Product"
+msgstr ""
+
+#: woocommerce/cart/cart.php:36 woocommerce/cart/cart.php:95
+msgid "Price"
+msgstr ""
+
+#: woocommerce/cart/cart.php:37 woocommerce/cart/cart.php:101
+msgid "Quantity"
+msgstr ""
+
+#: woocommerce/cart/cart.php:58
+msgid "Remove this item"
+msgstr ""
+
+#: woocommerce/cart/cart.php:90
+msgid "Available on backorder"
+msgstr ""
+
+#: woocommerce/cart/cart.php:133
+msgid "Update Cart"
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:28
+msgid "You must be logged in to checkout."
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:65
+msgid "Your order"
+msgstr ""

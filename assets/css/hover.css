@@ -1,0 +1,593 @@
+/* version 1.0.1 */
+
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. Menu
+2. Reset
+3. Header Elements
+4. Submenu Types
+5. Megamenu Types
+6. Widgets
+7. Front Blog
+8. Blog Post
+9. Form Elements
+10. Button
+11. Contact Form 7
+12. Woocommrce
+13. Related Post
+14. Search Post
+15. WP Gallery
+16. VC Easy Tables
+
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+1. Menu
+-------------------------------------------------------------------*/
+.wsmenu-submenu li a span .iconAnimArrow{
+	-webkit-transition: right 200ms ease-in-out, left 200ms ease-in-out;
+	-moz-transition: right 200ms ease-in-out, left 200ms ease-in-out;
+	-ms-transition: right 200ms ease-in-out, left 200ms ease-in-out;
+	-o-transition: right 200ms ease-in-out, left 200ms ease-in-out;
+	transition: right 200ms ease-in-out, left 200ms ease-in-out;
+}
+/*.iconItem{
+	-webkit-transition: color 200ms ease-in-out;
+	-moz-transition: color 200ms ease-in-out;
+	-ms-transition: color 200ms ease-in-out;
+	-o-transition: color 200ms ease-in-out;
+	transition: color 200ms ease-in-out;
+}
+.iconArrow{
+	-webkit-transition: color 200ms ease-in-out;
+	-moz-transition: color 200ms ease-in-out;
+	-ms-transition: color 200ms ease-in-out;
+	-o-transition: color 200ms ease-in-out;
+	transition: color 200ms ease-in-out;
+}*/
+.disable-sticky-transition .iconItem{
+	-webkit-transition: all 0ms ease-in-out;
+	-moz-transition: all 0ms ease-in-out;
+	-ms-transition: all 0ms ease-in-out;
+	-o-transition: all 0ms ease-in-out;
+	transition: all 0ms ease-in-out;
+}
+.disable-sticky-transition .iconArrow{
+	-webkit-transition: all 0ms ease-in-out;
+	-moz-transition: all 0ms ease-in-out;
+	-ms-transition: all 0ms ease-in-out;
+	-o-transition: all 0ms ease-in-out;
+	transition: all 0ms ease-in-out;
+}
+
+/*------------------------------------------------------------------
+2. Reset
+-------------------------------------------------------------------*/
+a{
+	-webkit-transition: color 200ms ease-in-out;
+	-moz-transition: color 200ms ease-in-out;
+	-ms-transition: color 200ms ease-in-out;
+	-o-transition: color 200ms ease-in-out;
+	transition: color 200ms ease-in-out;
+}
+
+/*------------------------------------------------------------------
+3. Header Elements
+-------------------------------------------------------------------*/
+.wsmenu-list > li > a{
+	-webkit-transition: color 200ms ease-in-out;
+	-moz-transition: color 200ms ease-in-out;
+	-ms-transition: color 200ms ease-in-out;
+	-o-transition: color 200ms ease-in-out;
+	transition: color 200ms ease-in-out;
+}
+.wsmenu-list > li > a > span{
+	-webkit-transition: background 200ms ease-in-out;
+	-moz-transition: background 200ms ease-in-out;
+	-ms-transition: background 200ms ease-in-out;
+	-o-transition: background 200ms ease-in-out;
+	transition: background 200ms ease-in-out;
+}
+.wsmenu-list > li > a > span:before{
+	-webkit-transition: border 200ms ease-in-out;
+	-moz-transition: border 200ms ease-in-out;
+	-ms-transition: border 200ms ease-in-out;
+	-o-transition: border 200ms ease-in-out;
+	transition: border 200ms ease-in-out;
+}
+.wsmenu-list.menu-btn-animated > li > a > span > span.btn-overlay{
+	-webkit-transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;
+	-moz-transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;
+	-ms-transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;
+	-o-transition: transform 200ms ease-out 0s, opacity 2000ms ease-out 0s;
+	transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;
+}
+.wsmenu-list.menu-btn-animated > li > a:hover > span > span.btn-overlay{
+	-webkit-transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;
+	-moz-transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;
+	-ms-transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;
+	-o-transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;
+	transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;	
+}
+.nav-toogle-btn{
+	-webkit-transition: background 200ms ease-in-out;
+	-moz-transition: background 200ms ease-in-out;
+	-ms-transition: background 200ms ease-in-out;
+	-o-transition: background 200ms ease-in-out;
+	transition: background 200ms ease-in-out;
+}
+.nav-toogle-btn:before{
+	-webkit-transition: border 200ms ease-in-out;
+	-moz-transition: border 200ms ease-in-out;
+	-ms-transition: border 200ms ease-in-out;
+	-o-transition: border 200ms ease-in-out;
+	transition: border 200ms ease-in-out;
+}
+.search-btn > div{
+	-webkit-transition: color 200ms ease-in-out, background 200ms ease-in-out;
+	-moz-transition: color 200ms ease-in-out, background 200ms ease-in-out;
+	-ms-transition: color 200ms ease-in-out, background 200ms ease-in-out;
+	-o-transition: color 200ms ease-in-out, background 200ms ease-in-out;
+	transition: color 200ms ease-in-out, background 200ms ease-in-out;
+}
+.search-btn > div:before{
+	-webkit-transition: border 200ms ease-in-out;
+	-moz-transition: border 200ms ease-in-out;
+	-ms-transition: border 200ms ease-in-out;
+	-o-transition: border 200ms ease-in-out;
+	transition: border 200ms ease-in-out;
+}
+.social-container .social-icons-container > ul > li > a .tooltip-container{
+	-webkit-transition: all 0.25s ease-out;
+	-moz-transition: all 0.25s ease-out;
+	-ms-transition: all 0.25s ease-out;
+	-o-transition: all 0.25s ease-out;
+	transition: all 0.25s ease-out;
+}
+.social-container .social-icons-container > ul > li > a span.bg-overlay{
+	-webkit-transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;
+	-moz-transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;
+	-ms-transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;
+	-o-transition: transform 200ms ease-out 0s, opacity 2000ms ease-out 0s;
+	transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;
+}
+.social-container .social-icons-container > ul > li > a:hover span.bg-overlay{
+	-webkit-transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;
+	-moz-transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;
+	-ms-transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;
+	-o-transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;
+	transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;	
+}
+.shopping-cart-btn-content{
+	-webkit-transition: background 200ms ease-in-out, color 200ms ease-in-out;
+	-moz-transition: background 200ms ease-in-out, color 200ms ease-in-out;
+	-ms-transition: background 200ms ease-in-out, color 200ms ease-in-out;
+	-o-transition: background 200ms ease-in-out, color 200ms ease-in-out;
+	transition: background 200ms ease-in-out, color 200ms ease-in-out;
+}
+.shopping-cart-btn-content:before{
+	-webkit-transition: border 200ms ease-in-out;
+	-moz-transition: border 200ms ease-in-out;
+	-ms-transition: border 200ms ease-in-out;
+	-o-transition: border 200ms ease-in-out;
+	transition: border 200ms ease-in-out;
+}
+.shopping-cart-btn .count{
+	-webkit-transition: all 200ms ease-in-out;
+	-moz-transition: all 200ms ease-in-out;
+	-ms-transition: all 200ms ease-in-out;
+	-o-transition: all 200ms ease-in-out;
+	transition: all 200ms ease-in-out;
+}
+.shopping-cart-dropdown{
+	-webkit-transition: -webkit-transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+	-moz-transition: -moz-transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+	-ms-transition: -ms-transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+	-o-transition: -o-transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+	transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+.shopping-cart-dropdown .item a{
+	-webkit-transition: color 200ms ease-in-out;
+	-moz-transition: color 200ms ease-in-out;
+	-ms-transition: color 200ms ease-in-out;
+	-o-transition: color 200ms ease-in-out;
+	transition: color 200ms ease-in-out;	
+}
+.wpml-btn{
+	-webkit-transition: background 200ms ease-in-out, color 200ms ease-in-out;
+	-moz-transition: background 200ms ease-in-out, color 200ms ease-in-out;
+	-ms-transition: background 200ms ease-in-out, color 200ms ease-in-out;
+	-o-transition: background 200ms ease-in-out, color 200ms ease-in-out;
+	transition: background 200ms ease-in-out, color 200ms ease-in-out;
+}
+.wpml-btn:before{
+	-webkit-transition: border 200ms ease-in-out;
+	-moz-transition: border 200ms ease-in-out;
+	-ms-transition: border 200ms ease-in-out;
+	-o-transition: border 200ms ease-in-out;
+	transition: border 200ms ease-in-out;
+}
+.wpml-dropdown{
+	-webkit-transition: -webkit-transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+	-moz-transition: -moz-transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+	-ms-transition: -ms-transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+	-o-transition: -o-transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+	transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+.wpml-dropdown ul li a{
+	-webkit-transition: color 200ms ease-in-out;
+	-moz-transition: color 200ms ease-in-out;
+	-ms-transition: color 200ms ease-in-out;
+	-o-transition: color 200ms ease-in-out;
+	transition: color 200ms ease-in-out;	
+}
+
+/*------------------------------------------------------------------
+4. Submenu Types
+-------------------------------------------------------------------*/
+.nav-submenu-type-1 .wsmenu-submenu li a .menu-item-textWrap:after{
+	-webkit-transition: right 200ms ease-out 0s, opacity 200ms ease-out 0s;
+	-moz-transition: right 200ms ease-out 0s, opacity 200ms ease-out 0s;
+	-ms-transition: right 200ms ease-out 0s, opacity 200ms ease-out 0s;
+	-o-transition: right 200ms ease-out 0s, opacity 2000ms ease-out 0s;
+	transition: right 200ms ease-out 0s, opacity 200ms ease-out 0s;
+}
+
+/*------------------------------------------------------------------
+5. Megamenu Types
+-------------------------------------------------------------------*/
+.nav-megamenu-type-1 .megamenu .link-list li.menu-item a .menu-item-textWrap:after{
+	-webkit-transition: right 200ms ease-out 0s, opacity 200ms ease-out 0s;
+	-moz-transition: right 200ms ease-out 0s, opacity 200ms ease-out 0s;
+	-ms-transition: right 200ms ease-out 0s, opacity 200ms ease-out 0s;
+	-o-transition: right 200ms ease-out 0s, opacity 2000ms ease-out 0s;
+	transition: right 200ms ease-out 0s, opacity 200ms ease-out 0s;
+}
+
+/*------------------------------------------------------------------
+6. Widgets
+-------------------------------------------------------------------*/
+.widget_search form.search-form input.search-field {
+    -webkit-transition: border 200ms ease-in-out;
+    -moz-transition: border 200ms ease-in-out;
+    -ms-transition: border 200ms ease-in-out;
+    -o-transition: border 200ms ease-in-out;
+    transition: border 200ms ease-in-out;
+}
+form.search-form button#search-submit:before{
+	-webkit-transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;
+	-moz-transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;
+	-ms-transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;
+	-o-transition: transform 200ms ease-out 0s, opacity 2000ms ease-out 0s;
+	transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;
+}
+.widget_categories .postform {
+	-webkit-transition: border-color ease-in-out 200ms, -webkit-box-shadow ease-in-out 200ms;
+	-moz-transition: border-color ease-in-out 200ms, -moz-box-shadow ease-in-out 200ms;
+	-ms-transition: border-color ease-in-out 200ms, -ms-box-shadow ease-in-out 200ms;
+	-o-transition: border-color ease-in-out 200ms, box-shadow ease-in-out 200ms;
+	transition: border-color ease-in-out 200ms, box-shadow ease-in-out 200ms;
+}
+.widget-social-icons-container > ul > li > a .tooltip-container{
+	-webkit-transition: all 0.25s ease-out;
+	-moz-transition: all 0.25s ease-out;
+	-ms-transition: all 0.25s ease-out;
+	-o-transition: all 0.25s ease-out;
+	transition: all 0.25s ease-out;
+}
+.widget-social-icons-container > ul > li > a span.bg-overlay{
+	-webkit-transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;
+	-moz-transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;
+	-ms-transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;
+	-o-transition: transform 200ms ease-out 0s, opacity 2000ms ease-out 0s;
+	transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;
+}
+.widget-social-icons-container > ul > li > a:hover span.bg-overlay{
+	-webkit-transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;
+	-moz-transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;
+	-ms-transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;
+	-o-transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;
+	transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;	
+}
+.widget ul > li > a:after{
+    -webkit-transition: width 200ms ease-in-out;
+    -moz-transition: width 200ms ease-in-out;
+    -ms-transition: width 200ms ease-in-out;
+    -o-transition: width 200ms ease-in-out;
+    transition: width 200ms ease-in-out;
+}
+.widget ul > li > .countWrap{
+	-webkit-transition: background 200ms ease-in-out;
+	-moz-transition: background 200ms ease-in-out;
+	-ms-transition: background 200ms ease-in-out;
+	-o-transition: background 200ms ease-in-out;
+	transition: background 200ms ease-in-out;
+}
+
+/*------------------------------------------------------------------
+7. Front Blog
+-------------------------------------------------------------------*/
+.front-blog-post .post .featured-image img{
+	-webkit-transition: transform 200ms ease-out 0s;
+	-moz-transition: transform 200ms ease-out 0s;
+	-ms-transition: transform 200ms ease-out 0s;
+	-o-transition: transform 200ms ease-out 0s;
+	transition: transform 200ms ease-out 0s;
+}
+.front-blog-post .featured-image .hover-effect{
+	-webkit-transition: opacity 200ms ease-in-out;
+	-moz-transition: opacity 200ms ease-in-out;
+	-ms-transition: opacity 200ms ease-in-out;
+	-o-transition: opacity 200ms ease-in-out;
+	transition: opacity 200ms ease-in-out;
+}
+.front-blog-post .featured-image .hover-effect-btn{
+	-webkit-transition: background 200ms ease-in-out;
+	-moz-transition: background 200ms ease-in-out;
+	-ms-transition: background 200ms ease-in-out;
+	-o-transition: background 200ms ease-in-out;
+	transition: background 200ms ease-in-out;	
+}
+
+/*------------------------------------------------------------------
+8. Blog Post
+-------------------------------------------------------------------*/
+.inner-blog-post .comments-area .comment-list .comment-meta .reply a{
+	-webkit-transition: background 200ms ease-in-out;
+	-moz-transition: background 200ms ease-in-out;
+	-ms-transition: background 200ms ease-in-out;
+	-o-transition: background 200ms ease-in-out;
+	transition: background 200ms ease-in-out;	
+}
+
+/*------------------------------------------------------------------
+9. Form Elements
+-------------------------------------------------------------------*/
+.theme-form {
+	-webkit-transition: border-color ease-in-out 200ms, -webkit-box-shadow ease-in-out 200ms, background 200ms ease-in-out;
+	-moz-transition: border-color ease-in-out 200ms, -moz-box-shadow ease-in-out 200ms, background 200ms ease-in-out;
+	-ms-transition: border-color ease-in-out 200ms, -ms-box-shadow ease-in-out 200ms, background 200ms ease-in-out;
+	-o-transition: border-color ease-in-out 200ms, box-shadow ease-in-out 200ms, background 200ms ease-in-out;
+	transition: border-color ease-in-out 200ms, box-shadow ease-in-out 200ms, background 200ms ease-in-out;
+}
+
+/*------------------------------------------------------------------
+10. Button
+-------------------------------------------------------------------*/
+.lpd_t_btn{
+	-webkit-transition: background 200ms ease-in-out, color 200ms ease-in-out;
+	-moz-transition: background 200ms ease-in-out, color 200ms ease-in-out;
+	-ms-transition: background 200ms ease-in-out, color 200ms ease-in-out;
+	-o-transition: background 200ms ease-in-out, color 200ms ease-in-out;
+	transition: background 200ms ease-in-out, color 200ms ease-in-out;
+}
+.lpd_t_btn.lpd_t_btn-animated:before{
+	-webkit-transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;
+	-moz-transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;
+	-ms-transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;
+	-o-transition: transform 200ms ease-out 0s, opacity 2000ms ease-out 0s;
+	transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;
+}
+.lpd_t_btn.lpd_t_btn-animated:hover:before{
+	-webkit-transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;
+	-moz-transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;
+	-ms-transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;
+	-o-transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;
+	transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;	
+}
+
+/*------------------------------------------------------------------
+11. Contact Form 7
+-------------------------------------------------------------------*/
+select.wpcf7-form-control,
+textarea.wpcf7-form-control,
+input[type="email"].wpcf7-form-control,
+input[type="date"].wpcf7-form-control,
+input[type="number"].wpcf7-form-control,
+input[type="tel"].wpcf7-form-control,
+input[type="url"].wpcf7-form-control,
+input[type="email"].wpcf7-form-control,
+input[type="text"].wpcf7-form-control{
+	-webkit-transition: border-color ease-in-out 200ms, -webkit-box-shadow ease-in-out 200ms, background 200ms ease-in-out;
+	-moz-transition: border-color ease-in-out 200ms, -moz-box-shadow ease-in-out 200ms, background 200ms ease-in-out;
+	-ms-transition: border-color ease-in-out 200ms, -ms-box-shadow ease-in-out 200ms, background 200ms ease-in-out;
+	-o-transition: border-color ease-in-out 200ms, box-shadow ease-in-out 200ms, background 200ms ease-in-out;
+	transition: border-color ease-in-out 200ms, box-shadow ease-in-out 200ms, background 200ms ease-in-out;
+}
+input[type="submit"].wpcf7-form-control{
+	-webkit-transition: background 200ms ease-in-out, color 200ms ease-in-out;
+	-moz-transition: background 200ms ease-in-out, color 200ms ease-in-out;
+	-ms-transition: background 200ms ease-in-out, color 200ms ease-in-out;
+	-o-transition: background 200ms ease-in-out, color 200ms ease-in-out;
+	transition: background 200ms ease-in-out, color 200ms ease-in-out;
+}
+
+/*------------------------------------------------------------------
+12. Woocommrce
+-------------------------------------------------------------------*/
+.woocommerce ul.products li.product-category h3{
+	-webkit-transition: background 200ms ease-in-out, color 200ms ease-in-out;
+	-moz-transition: background 200ms ease-in-out, color 200ms ease-in-out;
+	-ms-transition: background 200ms ease-in-out, color 200ms ease-in-out;
+	-o-transition: background 200ms ease-in-out, color 200ms ease-in-out;
+	transition: background 200ms ease-in-out, color 200ms ease-in-out;
+}
+.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button{
+	-webkit-transition: background 200ms ease-in-out, color 200ms ease-in-out;
+	-moz-transition: background 200ms ease-in-out, color 200ms ease-in-out;
+	-ms-transition: background 200ms ease-in-out, color 200ms ease-in-out;
+	-o-transition: background 200ms ease-in-out, color 200ms ease-in-out;
+	transition: background 200ms ease-in-out, color 200ms ease-in-out;
+}
+.woocommerce a.button:before, .woocommerce button.button:before{
+	-webkit-transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;
+	-moz-transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;
+	-ms-transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;
+	-o-transition: transform 200ms ease-out 0s, opacity 2000ms ease-out 0s;
+	transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;
+}
+.woocommerce a.button:hover:before, .woocommerce button.button:hover:before{
+	-webkit-transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;
+	-moz-transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;
+	-ms-transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;
+	-o-transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;
+	transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;	
+}
+.woocommerce form .form-row input.input-text, .woocommerce form .form-row textarea{
+	-webkit-transition: border-color ease-in-out 200ms, -webkit-box-shadow ease-in-out 200ms;
+	-moz-transition: border-color ease-in-out 200ms, -moz-box-shadow ease-in-out 200ms;
+	-ms-transition: border-color ease-in-out 200ms, -ms-box-shadow ease-in-out 200ms;
+	-o-transition: border-color ease-in-out 200ms, box-shadow ease-in-out 200ms;
+	transition: border-color ease-in-out 200ms, box-shadow ease-in-out 200ms;
+}
+.woocommerce .quantity .qty{
+	-webkit-transition: border-color ease-in-out 200ms, -webkit-box-shadow ease-in-out 200ms;
+	-moz-transition: border-color ease-in-out 200ms, -moz-box-shadow ease-in-out 200ms;
+	-ms-transition: border-color ease-in-out 200ms, -ms-box-shadow ease-in-out 200ms;
+	-o-transition: border-color ease-in-out 200ms, box-shadow ease-in-out 200ms;
+	transition: border-color ease-in-out 200ms, box-shadow ease-in-out 200ms;
+}
+.woocommerce form .form-row select{
+	-webkit-transition: border-color ease-in-out 200ms, -webkit-box-shadow ease-in-out 200ms;
+	-moz-transition: border-color ease-in-out 200ms, -moz-box-shadow ease-in-out 200ms;
+	-ms-transition: border-color ease-in-out 200ms, -ms-box-shadow ease-in-out 200ms;
+	-o-transition: border-color ease-in-out 200ms, box-shadow ease-in-out 200ms;
+	transition: border-color ease-in-out 200ms, box-shadow ease-in-out 200ms;
+}
+.woocommerce a.remove{
+	-webkit-transition: background 200ms ease-in-out;
+	-moz-transition: background 200ms ease-in-out;
+	-ms-transition: background 200ms ease-in-out;
+	-o-transition: background 200ms ease-in-out;
+	transition: background 200ms ease-in-out;
+}
+.woocommerce ul.cart_list li img,
+.woocommerce ul.product_list_widget li img{
+    -webkit-transition: border 200ms ease-in-out;
+    -moz-transition: border 200ms ease-in-out;
+    -ms-transition: border 200ms ease-in-out;
+    -o-transition: border 200ms ease-in-out;
+    transition: border 200ms ease-in-out;
+}
+.widget_product_search form.woocommerce-product-search input.search-field {
+    -webkit-transition: border 200ms ease-in-out;
+    -moz-transition: border 200ms ease-in-out;
+    -ms-transition: border 200ms ease-in-out;
+    -o-transition: border 200ms ease-in-out;
+    transition: border 200ms ease-in-out;
+}
+form.woocommerce-product-search button#search-submit:before{
+	-webkit-transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;
+	-moz-transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;
+	-ms-transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;
+	-o-transition: transform 200ms ease-out 0s, opacity 2000ms ease-out 0s;
+	transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;
+}
+.widget ul > li .countWrap{
+	-webkit-transition: background 200ms ease-in-out;
+	-moz-transition: background 200ms ease-in-out;
+	-ms-transition: background 200ms ease-in-out;
+	-o-transition: background 200ms ease-in-out;
+	transition: background 200ms ease-in-out;
+}
+
+/*------------------------------------------------------------------
+13. Related Post
+-------------------------------------------------------------------*/
+
+.related-post-container .featured-image:before {
+	-webkit-transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1) 0s, opacity 200ms ease-out 0s;
+	-moz-transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1) 0s, opacity 200ms ease-out 0s;
+	-ms-transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1) 0s, opacity 200ms ease-out 0s;
+	-o-transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1) 0s, opacity 2000ms ease-out 0s;
+	transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1) 0s, opacity 200ms ease-out 0s;
+}
+.related-post-container .featured-image .hover-effect{
+	-webkit-transition: opacity 400ms ease-in-out 0s;
+	-moz-transition: opacity 400ms ease-in-out 0s;
+	-ms-transition: opacity 400ms ease-in-out 0s;
+	-o-transition: opacity 400ms ease-in-out 0s;
+	transition: opacity 400ms ease-in-out 0s;
+}
+.related-post-container .featured-image .hover-effect-btn{
+	-webkit-transition: background 200ms ease-in-out;
+	-moz-transition: background 200ms ease-in-out;
+	-ms-transition: background 200ms ease-in-out;
+	-o-transition: background 200ms ease-in-out;
+	transition: background 200ms ease-in-out;
+}
+
+/*------------------------------------------------------------------
+14. Search Post
+-------------------------------------------------------------------*/
+
+.search-post-container .featured-image:before {
+	-webkit-transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1) 0s, opacity 200ms ease-out 0s;
+	-moz-transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1) 0s, opacity 200ms ease-out 0s;
+	-ms-transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1) 0s, opacity 200ms ease-out 0s;
+	-o-transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1) 0s, opacity 2000ms ease-out 0s;
+	transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1) 0s, opacity 200ms ease-out 0s;
+}
+.search-post-container .featured-image .hover-effect{
+	-webkit-transition: opacity 400ms ease-in-out 0s;
+	-moz-transition: opacity 400ms ease-in-out 0s;
+	-ms-transition: opacity 400ms ease-in-out 0s;
+	-o-transition: opacity 400ms ease-in-out 0s;
+	transition: opacity 400ms ease-in-out 0s;
+}
+.search-post-container .featured-image .hover-effect-btn{
+	-webkit-transition: background 200ms ease-in-out;
+	-moz-transition: background 200ms ease-in-out;
+	-ms-transition: background 200ms ease-in-out;
+	-o-transition: background 200ms ease-in-out;
+	transition: background 200ms ease-in-out;
+}
+
+/*------------------------------------------------------------------
+15. WP Gallery
+-------------------------------------------------------------------*/
+
+.gallery-item a:before {
+	-webkit-transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1) 0s, opacity 200ms ease-out 0s;
+	-moz-transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1) 0s, opacity 200ms ease-out 0s;
+	-ms-transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1) 0s, opacity 200ms ease-out 0s;
+	-o-transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1) 0s, opacity 2000ms ease-out 0s;
+	transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1) 0s, opacity 200ms ease-out 0s;
+}
+.gallery-item a .hover-effect{
+	-webkit-transition: opacity 400ms ease-in-out 0s;
+	-moz-transition: opacity 400ms ease-in-out 0s;
+	-ms-transition: opacity 400ms ease-in-out 0s;
+	-o-transition: opacity 400ms ease-in-out 0s;
+	transition: opacity 400ms ease-in-out 0s;
+}
+.gallery-item a .hover-effect-btn{
+	-webkit-transition: background 200ms ease-in-out;
+	-moz-transition: background 200ms ease-in-out;
+	-ms-transition: background 200ms ease-in-out;
+	-o-transition: background 200ms ease-in-out;
+	transition: background 200ms ease-in-out;
+}
+
+/*------------------------------------------------------------------
+16. VC Easy Tables
+-------------------------------------------------------------------*/
+.wpb_vc_table .table_btn{
+	-webkit-transition: background 200ms ease-in-out, color 200ms ease-in-out;
+	-moz-transition: background 200ms ease-in-out, color 200ms ease-in-out;
+	-ms-transition: background 200ms ease-in-out, color 200ms ease-in-out;
+	-o-transition: background 200ms ease-in-out, color 200ms ease-in-out;
+	transition: background 200ms ease-in-out, color 200ms ease-in-out;
+}
+
+/*------------------------------------------------------------------
+25. [abc_icon_heading] shortcode
+-------------------------------------------------------------------*/
+.abc_icon_header .abc_icon_header-iconWrap:before{
+	-webkit-transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;
+	-moz-transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;
+	-ms-transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;
+	-o-transition: transform 200ms ease-out 0s, opacity 2000ms ease-out 0s;
+	transition: transform 200ms ease-out 0s, opacity 200ms ease-out 0s;
+}
