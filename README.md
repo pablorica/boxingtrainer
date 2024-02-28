@@ -59,3 +59,30 @@ Go to *Appareance -> Theme Settings*. There you will find the following options:
  - Timetable
  - Contact Form
  - Tables
+
+### Custom CSS and JS
+
+Go to *Appareance -> Theme Settings -> General -> Custom Css/Js*. There you will find two boxes to add your custom CSS and JS.
+
+There is a copy of the custom codes in the files:
+
+ - `custom-css-js/custom-style.css`
+- `custom-css-js/custom-script.js`
+
+## Content
+
+The content is managed by [WP Bakery](https://wpbakery.com/) 
+The current version is deprecated and shows many JS errors in the console.
+Also, backend mode does not work well in a staging environment.
+
+#### HTML Video
+
+The visual composer does not support HTML5 video tags. It only allows to embed videos from Vimeo or Youtube using iframes.
+However, we can add a video tag using the raw HTML block:
+
+```html 
+<video width="100%" height="100%" autoplay muted loop>
+<source  src="/wp-content/uploads/2024/02/kickboxing_girl.mp4"  type="video/mp4">
+</video>
+
+The column that contains this Raw HTML block must have the following class: `bgvideo-column`
