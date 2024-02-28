@@ -22,7 +22,8 @@
 		$header_title_padding_top = lpd_abcpersonal_front_functions::lpd_abcpersonal_header_title_padding_top();
 		$header_title_padding_bottom = lpd_abcpersonal_front_functions::lpd_abcpersonal_header_title_padding_bottom();
 		$header_title_visibility = lpd_abcpersonal_front_functions::lpd_abcpersonal_header_title_visibility();
-		$header_breadcrumb_visibility = lpd_abcpersonal_front_functions::lpd_abcpersonal_header_breadcrumb_visibility();
+		//$header_breadcrumb_visibility = lpd_abcpersonal_front_functions::lpd_abcpersonal_header_breadcrumb_visibility();
+        $header_breadcrumb_visibility = 'disabled'; // I'm forcing the breadcrumbs to be disabled
 		$header_background_type = lpd_abcpersonal_front_functions::lpd_abcpersonal_header_background_type();
 		$header_background_color = lpd_abcpersonal_front_functions::lpd_abcpersonal_header_background_color();
 		$header_background_image_color = lpd_abcpersonal_front_functions::lpd_abcpersonal_header_background_image_color();
