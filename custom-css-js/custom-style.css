@@ -319,6 +319,29 @@
       display:none;
     }
   }
+
+
+/***********/
+/* Columns */
+/***********/
+
+.window-height-mobile {
+@media all and (max-width: 768px) {
+        min-height: 100vh !important;
+    }
+}
+
+  
+
+/**********/
+/* Images */
+/**********/
+
+.cover-image.vc_column_container  .vc_column-inner {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
   
 /**************/
 /* Video File */
