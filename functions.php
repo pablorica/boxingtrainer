@@ -139,3 +139,36 @@ function lpd_abcpersonal_nav_menu_walker() {
 	
 }
 
+
+/**
+ * Enqueue scripts and styles.
+ *
+ * return void 
+ */
+function codigo_enqueue_scripts() {
+
+
+    // If the Essential Grid plugin is installed and activated, reenqueue the necessary scripts changing the $handle value because is already registered by the Revolution Slider plugin and it is causing conflicts
+    if( class_exists('Essential_Grid')
+    && (defined('EG_PLUGIN_URL')) 
+    ) { 
+
+        //error_log(print_r('Enqueueing Essential_Grid: '. EG_PLUGIN_URL . 'public/assets/js/jquery.themepunch.tools.min.js', true));
+
+        wp_enqueue_script( 
+            'essential-tp-tools', 
+            EG_PLUGIN_URL . 'public/assets/js/jquery.themepunch.tools.min.js', 
+            array( 'jquery', 'themepunchboxext' ), 
+            '2.1.0.2b', 
+            true 
+        );
+
+    }
+}
+
+
+
+add_action( 
+    'wp_enqueue_scripts', 
+    'codigo_enqueue_scripts'
+);
