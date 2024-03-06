@@ -41,8 +41,11 @@ function lpd_abcpersonal_setup() {
 		if(is_admin()){set_revslider_as_theme();}
 	}
 	
+    // The set_ess_grid_as_theme() function was removed in Essential Grid plugin Version 2.2 Artemis (23th February 2018)  because it causes trouble with premium plugin customers
 	if( lpd_abcpersonal_helpers::lpd_abcpersonal_essential_grid_check() ) {
-		if(is_admin()){set_ess_grid_as_theme();}
+        if ( function_exists( 'set_ess_grid_as_theme' )   ) {
+            if(is_admin()){ set_ess_grid_as_theme(); }
+        }
 	}
 }
 
@@ -147,28 +150,29 @@ function lpd_abcpersonal_nav_menu_walker() {
  */
 function codigo_enqueue_scripts() {
 
+//  DEPRECATED: The Essential Grid plugin has been updated and the problem has been fixed
 
     // If the Essential Grid plugin is installed and activated, reenqueue the necessary scripts changing the $handle value because is already registered by the Revolution Slider plugin and it is causing conflicts
-    if( class_exists('Essential_Grid')
-    && (defined('EG_PLUGIN_URL')) 
-    ) { 
+//     if( class_exists('Essential_Grid')
+//         && ( defined('EG_PLUGIN_URL') ) 
+//     ) { 
 
-        //error_log(print_r('Enqueueing Essential_Grid: '. EG_PLUGIN_URL . 'public/assets/js/jquery.themepunch.tools.min.js', true));
+//         error_log(print_r('Enqueueing Essential_Grid: '. EG_PLUGIN_URL . 'public/assets/js/jquery.themepunch.tools.min.js', true));
 
-        wp_enqueue_script( 
-            'essential-tp-tools', 
-            EG_PLUGIN_URL . 'public/assets/js/jquery.themepunch.tools.min.js', 
-            array( 'jquery', 'themepunchboxext' ), 
-            '2.1.0.2b', 
-            true 
-        );
+//         wp_enqueue_script( 
+//             'essential-tp-tools', 
+//             EG_PLUGIN_URL . 'public/assets/js/jquery.themepunch.tools.min.js', 
+//             array( 'jquery', 'themepunchboxext' ), 
+//             '2.1.0.2b', 
+//             true 
+//         );
 
-    }
+//     }
+
 }
 
 
-
-add_action( 
-    'wp_enqueue_scripts', 
-    'codigo_enqueue_scripts'
-);
+// add_action( 
+//     'wp_enqueue_scripts', 
+//     'codigo_enqueue_scripts'
+// );

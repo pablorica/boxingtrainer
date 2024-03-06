@@ -39,5 +39,17 @@
         });
     });
 
+
+    /**
+    * Some Essential Grid elements are overlaped
+    * This code triggers a resize event to fix the problem
+    * 
+    */
+    setTimeout(function(){
+        if ( $('.esg-grid-wrap-container').length ) {
+            $(window).trigger('resize');
+        }
+    }, 1000);
+
 })( jQuery );
 
