@@ -238,7 +238,7 @@
   
   .single-post .featured-image,
   .single-post .post-meta,
-  .single-post .comments-area label.lpd_form_label{
+  .single-post .comments-area .comment-form-comment label.lpd_form_label{
     display: none;
   }
   
