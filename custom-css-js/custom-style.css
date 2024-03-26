@@ -368,3 +368,41 @@
 .bgvideo-column.portrait-video {
     aspect-ratio: 9 / 16;
 }
+
+
+/**************/
+/*** Pop Up ***/
+/**************/
+.pum-theme-enterprise-red .pum-container {
+    //padding: 28px;
+    padding: 0 !important;
+}
+.pum-theme-enterprise-red .pum-container .pum-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.pum-theme-enterprise-red .pum-container .vc_column_container.vc_col-has-fill > .vc_column-inner {
+    padding: 35px;
+}
+
+.pum-theme-enterprise-red .pum-container .vc_column_container.vc_hidden-xs.vc_col-has-fill > .vc_column-inner {
+    padding: 0;
+}
+
+.pum-theme-enterprise-red .pum-container .vc_column_container.vc_hidden-xs.vc_col-has-fill > .vc_column-inner .wpb_wrapper,
+.pum-theme-enterprise-red .pum-container .vc_column_container.vc_hidden-xs.vc_col-has-fill > .vc_column-inner .wpb_wrapper .wpb_single_image,
+.pum-theme-enterprise-red .pum-container .vc_column_container.vc_hidden-xs.vc_col-has-fill > .vc_column-inner .wpb_wrapper .wpb_single_image .vc_single_image-wrapper {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.pum-theme-enterprise-red .pum-container .vc_column_container.vc_hidden-xs.vc_col-has-fill > .vc_column-inner .wpb_wrapper .wpb_single_image .vc_single_image-wrapper {
+    position: relative;
+}
+.pum-theme-enterprise-red .pum-container .vc_column_container.vc_hidden-xs.vc_col-has-fill > .vc_column-inner .wpb_wrapper .wpb_single_image .vc_single_image-wrapper img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
