@@ -152,12 +152,7 @@ function lpd_abcpersonal_nav_menu_walker() {
  * @return array
  */
 function codigo_remove_comment_fields($fields) {
-    //error_log(print_r($fields, true));
-    //$new_fields = $fields;
     unset( $fields['url'] );
-
-    error_log(print_r($fields, true));
-
     return $fields;
 }
 
