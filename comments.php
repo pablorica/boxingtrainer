@@ -76,6 +76,15 @@ if ( post_password_required() ) {
 	    '<input id="url" name="url" type="text" class="theme-form" value="' . esc_attr( $commenter['comment_author_url'] ) .
 	    '" size="30" /></p>',
 	);
+
+    /**
+	 * Filters the default comment form fields.
+	 *
+	 * @since 1.1.0
+	 *
+	 * @param string[] $fields Array of the default comment fields.
+	 */
+	$fields = apply_filters( 'comment_form_default_fields', $fields );
 	
 		comment_form( array(
 			'comment_field' =>  $comment_field,

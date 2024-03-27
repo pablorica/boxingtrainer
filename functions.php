@@ -1,6 +1,6 @@
 <?php
 
-define( 'LPD_ABCPERSONAL_THEME_VERSION', '1.0');
+define( 'LPD_ABCPERSONAL_THEME_VERSION', '1.1.0');
 
 if ( ! isset( $content_width ) ) $content_width = 960;
 
@@ -141,6 +141,35 @@ function lpd_abcpersonal_nav_menu_walker() {
 		new lpd_abcpersonal_nav_menu_walker();
 	
 }
+
+
+/**
+ * Remove fields from the comments form
+ * the filter 'comment_form_default_fields' is what displays on the comment form when you are not logged in.
+ * The 'comment_form_field_comment' filter contains the code for when you are logged in.
+ *
+ * @param array $fields
+ * @return array
+ */
+function codigo_remove_comment_fields($fields) {
+    //error_log(print_r($fields, true));
+    //$new_fields = $fields;
+    unset( $fields['url'] );
+
+    error_log(print_r($fields, true));
+
+    return $fields;
+}
+
+add_filter(
+    'comment_form_default_fields', 
+    'codigo_remove_comment_fields',
+    15, 
+    1
+);
+
+
+
 
 
 /**
