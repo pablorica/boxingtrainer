@@ -25,8 +25,17 @@ class lpd_abcpersonal_front_functions {
 			add_filter( 'excerpt_length',array($this,'lpd_abcpersonal_excerpt_length'));
 			
 			add_filter( 'theme_page_templates', array($this,'lpd_abcpersonal_page_template'));
+             
+            add_filter( 'get_the_archive_title', array($this,'codigo_remove_archive_title_prefixes') , 10, 2 );
 		
 		}
+
+        /*
+        * Remove the prefix from the archive title
+        */
+        function codigo_remove_archive_title_prefixes( $title, $original_title ) { 
+            return $original_title; 
+        }
 		
 		function lpd_abcpersonal_page_template( $page_templates ) {
 		    if( !lpd_abcpersonal_helpers::lpd_abcpersonal_revslider_check() ) {
@@ -547,6 +556,7 @@ class lpd_abcpersonal_front_functions {
 				if( lpd_abcpersonal_helpers::lpd_abcpersonal_unyson_check() ) {
 					$blog_title = fw_get_db_settings_option( 'blog_title' );
 				}
+                $blog_title .= " : ".get_the_archive_title();
 				echo wp_kses_post( $blog_title );
 			
 			elseif( is_tag() ):
@@ -555,6 +565,7 @@ class lpd_abcpersonal_front_functions {
 				if( lpd_abcpersonal_helpers::lpd_abcpersonal_unyson_check() ) {
 					$blog_title = fw_get_db_settings_option( 'blog_title' );
 				}
+                $blog_title .= " : ".get_the_archive_title();
 				echo wp_kses_post( $blog_title );
 			
 			elseif( is_archive()):
