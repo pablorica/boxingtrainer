@@ -3,6 +3,8 @@
  * Appareance -> Theme Settings -> General -> Custom Css/Js -> Custom CSS
 */
 
+
+
 /************/
 /* Header */
 /************/
@@ -462,3 +464,81 @@
     height: 100%;
     object-fit: cover;
 }
+
+
+/*******************/
+/*** Media Feeds ***/
+/*******************/
+.sb-post-item  .sb-post-item-image {
+      object-position: center top;
+}
+
+.sbi_photo img {
+    object-position: center top;
+}
+@media screen and (max-width: 575px) {
+    .sbtt-tiktok-feed .sb-post-block-item {
+        aspect-ratio: 9 / 16;
+    }
+    .sbtt-tiktok-feed .sb-post-block-item .sb-post-item-image-wrap {
+        height: 100% !important
+    }
+    #sb_instagram .sbi_photo_wrap {
+        aspect-ratio: 9 / 16;
+    }
+    #sb_instagram .sbi_photo_wrap .sbi_photo {
+        height: 100% !important;
+    }
+}
+
+
+
+/**************/
+/*** Events ***/
+/**************/
+
+:root {
+    --tec-color-text-primary: rgba(255,255,255,0.9);
+    --tec-color-text-view-selector-list-item-hover: #e76559;
+    --tec-color-text-view-selector-list-item: #e76559;
+}
+
+.tribe-common--breakpoint-medium.tribe-events .tribe-events-l-container {
+    background: transparent;
+}
+.tribe-common a {
+    color: var(--tec-color-text-view-selector-list-item-hover) !important;
+}
+
+
+/**************************/
+/*** Images Gallery Hub ***/
+/**************************/
+
+.esg-grid-wrap-container[data-alias="images-hub"] .esg-overlay {
+    background-color: transparent;
+}
+.esg-grid-wrap-container[data-alias="images-hub"] .eg-washington-element-0 {
+    color: white !important;
+    background: #fc4f3f !important;
+}
+.esg-grid-wrap-container[data-alias="images-hub"] .esg-cc.eec .eg-washington-element-1-a,
+.esg-grid-wrap-container[data-alias="images-hub"] .esg-cc.eec .eg-washington-element-3 {
+    display: none !important;
+}
+
+
+/**************************/
+/**** Share Media Icons ***/
+/**************************/
+/*
+.heateor_sss_sharing_container .heateor_sss_sharing_ul > a {
+    border-bottom:2px solid black !important;
+}
+.heateor_sss_sharing_container .heateor_sss_sharing_ul > a:last-of-type {
+    border-bottom:none !important;
+}
+.heateor_sss_svg {
+    background-color: #fa7265 !important;
+}
+*/
