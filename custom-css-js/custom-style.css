@@ -243,6 +243,8 @@
   .single-post .comments-area .comment-form-comment label.lpd_form_label{
     display: none;
   }
+
+
   
   .single-post .inner-blog-post .inner-page-content{
     padding-left: 20%;
@@ -277,6 +279,33 @@
       padding-right: 10%;
     }
   }
+
+  .related-post-container {
+    margin-bottom: 50px;
+  }
+
+  .related-post-container .featured-image {
+    display: block !important;
+    border: 1px solid white;
+    aspect-ratio: 16 / 9;
+  }
+  .related-post-container-content h4 a {
+    color: white  !important;
+  }
+
+  .related-post-container .no-featured-image {
+    background: url('https://boxingtrainer.london/wp-content/uploads/2024/02/cropped-C138DC32-38AC-4E15-9B57-58DEF60FC4C2_1_201_a.jpeg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid white;
+    aspect-ratio: 16 / 9;
+  }
+  .related-post-container .no-image-label {
+    display: none;
+  }
+
+
 
   /*************************/
   /* Archives */
@@ -478,7 +507,7 @@
 }
 @media screen and (max-width: 575px) {
     .sbtt-tiktok-feed .sb-post-block-item {
-        aspect-ratio: 9 / 16;
+        aspect-ratio: 1 / 1;
     }
     .sbtt-tiktok-feed .sb-post-block-item .sb-post-item-image-wrap {
         height: 100% !important
@@ -488,6 +517,12 @@
     }
     #sb_instagram .sbi_photo_wrap .sbi_photo {
         height: 100% !important;
+    }
+}
+
+@media screen and (min-width: 481px) {
+    [id^=sb_youtube_].sb_youtube.sby_col_2 .sby_items_wrap .sby_item {
+        width: 49% !important;
     }
 }
 
@@ -509,6 +544,75 @@
 .tribe-common a {
     color: var(--tec-color-text-view-selector-list-item-hover) !important;
 }
+
+
+.tribe-events-widget-events-list {
+    padding: 20px !important;
+}
+.tribe-events-widget-events-list__event-row {
+    margin-bottom:40px !important;
+}
+.tribe-events-widget-events-list__header-title {
+    display: none;
+}
+.tribe-events-widget-events-list__event-date-tag-datetime {
+    background: white;
+    border-radius: 5px;
+    margin:5px;
+    max-height: 70px;
+}
+.tribe-events-widget-events-list__event-date-tag-month {
+    background: #fc4f3f !important;
+    border-top-right-radius: 5px !important;
+    border-top-left-radius: 5px !important;
+    color: white !important;
+    font-weight: bold !important;
+}
+.tribe-events-widget-events-list__event-date-tag-daynum  {
+    margin-top: auto !important;
+    margin-bottom: 5px !important;
+    color:black !important;
+}
+
+.tribe-events-widget-events-list__event-details {
+    padding: 0 10px !important;
+    color: white;
+}
+.tribe-events-widget-events-list__event-datetime,
+.tribe-events-widget-events-list__event-title,
+.tribe-events-c-messages__message-list {
+    font-size: 20px;
+    color: #ffffff;
+    line-height: 1.3;
+    text-align: center;
+    font-family: Lato;
+    font-weight: 400;
+    font-style: normal;
+    text-align:left;
+}
+.tribe-events-widget-events-list__event-title  a {
+    font-size: 24px !important;
+    font-weight:bold !important;
+    color: #ffffff !important;
+}
+.tribe-events-widget-events-list__event-title  a:hover {
+    border-bottom: 1px solid white !important;
+}
+.tribe-events-widget-events-list__view-more   a {
+    color: #ffffff !important;
+}
+.tribe-events-widget-events-list__view-more a:hover {
+    border-bottom: 1px solid white !important;
+}
+.tribe-events-c-messages__message .tribe-common-c-svgicon {
+    color: #ffffff !important;
+}
+.tribe-events-c-messages__message .tribe-common-c-svgicon__svg-stroke,
+.tribe-events-c-messages__message .tribe-common-c-svgicon--messages-not-found path {
+    stroke: #ffffff !important;
+}
+
+
 
 
 /**************************/
