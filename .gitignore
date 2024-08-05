@@ -86,6 +86,7 @@ npm-debug.log
 # Ignore compiled files
 js/codigo.*
 css/*.*
+*.min.*
 
 # Ignore potentially dangerous files (dependabot alerts)
 yarn.lock 

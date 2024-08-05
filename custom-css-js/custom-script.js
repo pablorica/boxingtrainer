@@ -1,7 +1,25 @@
 /*
  * This code must to be included in 
  * Appareance -> Theme Settings -> General -> Custom Css/Js -> Custom Js
+ * 
+ * Minifier tool: https://www.toptal.com/developers/javascript-minifier
 */
+
+
+/*
+ * Google Tag Manager: Link Ads campaign data to Google Analytics
+*/
+
+//Create script tag <script async src="https://www.googletagmanager.com/gtag/js?id=G-7Z5L7FGX3E">
+var gtagScript = document.createElement('script');
+gtagScript.async = true;
+gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-7Z5L7FGX3E';
+document.head.appendChild(gtagScript);
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-7Z5L7FGX3E');
 
 
 (function($) {
@@ -51,5 +69,21 @@
         }
     }, 1000);
 
-})( jQuery );
+    /**
+    * Lazy load backend image in main header
+    * 
+    */
+    $( window ).on( "load", function() {
+        if ( $('.site-main-header').length ) {
+            $('.site-main-header').addClass('loaded');
+        }
+        /*
+        setTimeout(function(){
+            if ( $('.site-main-header').length ) {
+                $('.site-main-header').addClass('loaded');
+            }
+        }, 3000);
+        */
+    });
 
+})( jQuery );

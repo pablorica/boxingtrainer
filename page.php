@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-
+<!-- lpd-abcpersonal/page.php -->
 		<div id="main" class="<?php lpd_abcpersonal_front_functions::lpd_abcpersonal_main_class(); ?>">
 
 		    <div class="container">
@@ -55,6 +55,6 @@
 			</div>
 		    
 		</div>
-
+<!-- End lpd-abcpersonal/page.php -->
 
 <?php get_footer(); ?>

@@ -1,8 +1,27 @@
 /*
  * This code must to be included in 
  * Appareance -> Theme Settings -> General -> Custom Css/Js -> Custom CSS
+ *
+ * Minifier tool: https://www.toptal.com/developers/cssminifier
 */
 
+/*************/
+/* Bootstrap */
+/*************/
+.d-none {
+    display: none !important;
+}
+@media all and (min-width: 767px) {
+    .d-md-none {
+        display: none !important;
+    }
+    .d-md-block {
+        display: block !important;
+    }
+    .d-md-flex {
+        display: flex !important;
+    }
+}
 
 
 /************/
@@ -25,39 +44,27 @@
   #menu-header-primary .menu-item-632 {
     display:none;
   }
-  
-  @media all and (min-width: 992px) and (max-width: 1200px) {
-    .menu-item.menu-item-type-post_type.menu-item-object-page {
-      padding-right: 10px !important;
+
+  @media all and (max-width: 351px) {
+    .logo.text-logo #logo{
+      font-size: 26px !important;
     }
   
-    .wsmenu-list > li > a > span {
-      padding-left: 24px !important;
-      padding-right: 24px !important;
-    }
-  }
-  
-  @media all and (max-width: 991px) {
     .animated-arrow {
-        margin-top: 30px !important;
-    }
-  
-    #menu-header-primary .menu-item-631,
-    #menu-header-primary .menu-item-632 {
-      display: block;
-    }
-  
-    .title h2{
-      text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    }
-  
-    .animated-arrow span,
-    .animated-arrow span:before,
-    .animated-arrow span:after{
-      height: 4px !important;
+        margin-top: 25px !important;
     }
   }
+
+  @media all and (max-width: 501px) {
+    .logo.text-logo{
+      margin-left: 0 !important;
+    }
   
+    .logo.text-logo #logo{
+      font-size: 31px !important;
+    }
+  }
+
   @media all and (max-width: 768px) {
     .text-logo #logo {
       text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
@@ -71,26 +78,279 @@
       display: none !important;
     }
   }
+
+  @media all and (max-width: 991px) {
+
+    .wsmenu > #menu-header-primary.wsmenu-list > li > a {
+        padding-right: 20px !important;
+      }
   
-  @media all and (max-width: 501px) {
-    .logo.text-logo{
-      margin-left: 0 !important;
+    #menu-header-primary .menu-item-631,
+    #menu-header-primary .menu-item-632 {
+      display: block;
     }
   
-    .logo.text-logo #logo{
-      font-size: 31px !important;
+    .title h2{
+      text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     }
-  }
-  
-  @media all and (max-width: 351px) {
-    .logo.text-logo #logo{
-      font-size: 26px !important;
-    }
-  
+
     .animated-arrow {
-        margin-top: 25px !important;
+        margin-top: 30px !important;
+    }
+  
+    .animated-arrow span,
+    .animated-arrow span:before,
+    .animated-arrow span:after{
+      height: 4px !important;
     }
   }
+  
+  @media all and (min-width: 992px) and (max-width: 1200px) {
+    .menu-item.menu-item-type-post_type.menu-item-object-page {
+      padding-right: 10px !important;
+    }
+  
+    .wsmenu-list > li > a > span {
+      padding-left: 24px !important;
+      padding-right: 24px !important;
+    }
+  }
+  
+
+
+  
+  .site-main-header .wpb_wrapper,
+  .main-header .wpb_wrapper {
+    text-align:center !important;
+  }
+  @media all and (min-width:992px){
+    .site-main-header .wpb_wrapper{
+      text-align:left !important
+    }
+  }
+  .site-main-header h1,
+  .main-header h1 {
+    font-size: 80px !important;
+    text-align: center !important;
+    color: #ffffff;
+    line-height: 1 !important;
+    text-align: left;
+    font-family: Oswald;
+    font-weight: 700;
+    font-style: normal;
+    padding:0 20px;
+  }
+  @media all and (min-width:576px){
+    .site-main-header h1{
+      font-size:90px !important
+      padding: 0;
+    }
+  }
+  @media all and (min-width:768px){
+    .site-main-header h1{
+      font-size:100px !important
+    }
+  }
+  @media all and (min-width:992px){
+    .site-main-header h1{
+      text-align:left !important
+    }
+  }
+  @media screen and (min-width:1200px){
+    .site-main-header h1{
+      font-size:120px !important
+    }
+  }
+
+  .site-main-header .vc_lpd_button,
+  .main-header .vc_lpd_button {
+    font-size: 25px;
+    letter-spacing: 1px;
+    color: #ffffff;
+    background-color: #fc4f3f;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    font-family: Poppins;
+    font-weight: 600;
+    font-style: normal;
+    padding: 5px 5px;
+    border-radius: 50px;
+    
+  }
+
+  .main-header,
+  .main-header.vc_row-o-equal-height > .vc_column_container {
+    min-height: 80vh !important;
+  }
+  .main-header.vc_row-o-equal-height > .vc_column_container .wpb_wrapper {
+    margin: auto;
+  }
+  .main-header .underline_text {
+    max-width: 70%;
+    margin: 40px auto;
+  }
+  @media all and (min-width: 576px) {
+    .main-header .underline_text {
+        max-width: 50%;
+      }
+  }
+  .main-header .underline_text a {
+    color: #fc4f3f !important;
+  }
+
+  .main-header .vc_icon_element {
+    width:50px !important;
+    height:50px !important;
+    margin: 15px;
+    display: inline-block;
+  }
+  @media all and (min-width: 576px) {
+    .main-header .vc_icon_element {
+        width:108px !important;
+        height:108px !important;
+        margin: 30px;
+      }
+  }
+  @media all and (min-width: 768px) {
+    .main-header .vc_icon_element {
+        width:80px !important;
+        height:80px !important;
+        margin: 15px;
+      }
+  }
+  @media all and (min-width: 1200px) {
+    .main-header .vc_icon_element {
+        width:108px !important;
+        height:108px !important;
+      }
+  }
+  .main-header .vc_icon_element-inner {
+    width:100% !important;
+    height:100% !important;
+  }
+  
+  .main-header .vc_icon_element-icon {
+    width:100% !important;
+    height:100% !important;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .main-header .vc_icon_element-icon.fa-facebook {
+    background-image: url('//boxingtrainer.london/wp-content/uploads/2017/05/facebok-circular-logo-white.png');
+  }
+  .main-header .vc_icon_element-icon.fa-instagram {
+    background-image: url('//boxingtrainer.london/wp-content/uploads/2017/05/instagram-logo-round-white.png');
+  }
+  .main-header .vc_icon_element-icon.fa-twitter {
+    background-image: url('//boxingtrainer.london/wp-content/uploads/2024/04/twitter-x-logo-fill-white.png');
+  }
+  .main-header .vc_icon_element-icon.fa-facebook::before,
+  .main-header .vc_icon_element-icon.fa-instagram::before,
+  .main-header .vc_icon_element-icon.fa-twitter::before {
+    content: "";
+  }
+
+  
+  .site-main-header.loaded .vc_parallax-inner {
+    background-image: url("//boxingtrainer.london/wp-content/uploads/2024/06/PaulCarrollHeader.jpg") !important;
+  }
+  @media all and (max-width: 400px) {
+    .site-main-header {
+      min-height: 50vh !important;
+    }
+    .main-header,
+    .main-header.vc_row-o-equal-height > .vc_column_container {
+        min-height: 70vh !important;
+    }
+    .site-main-header .vc_parallax-inner,
+    .main-header .vc_parallax-inner {  
+      background-position: 10%;
+      background-size: 180%;
+      background-repeat: no-repeat
+    }
+  }
+  @media all and (min-width: 401px) and (max-width: 575px) {
+    .site-main-header {
+      min-height: 40vh !important;
+    }
+    .main-header,
+    .main-header.vc_row-o-equal-height > .vc_column_container {
+        min-height: 70vh !important;
+    }
+    .site-main-header .vc_parallax-inner,
+    .main-header .vc_parallax-inner { 
+      background-position: 10%;
+      background-size: 150%;
+      background-repeat: no-repeat
+    }
+  }
+  @media all and (min-width: 576px) and (orientation: portrait) {
+    .site-main-header {
+      min-height: 40vh !important;
+    }
+    .main-header,
+    .main-header.vc_row-o-equal-height > .vc_column_container {
+        min-height: 70vh !important;
+    }
+    .site-main-header .vc_parallax-inner,
+    .main-header .vc_parallax-inner {  
+      background-position: 10%;
+      background-size: 150%;
+      background-repeat: no-repeat
+    }
+  }
+
+  .main-header .parallax-contain .vc_parallax-inner {
+    background-position: 50% 200px;
+    background-size: 60%;
+    background-repeat: no-repeat;
+  }
+@media all and (min-width: 768px) and (orientation: landscape) {
+    .main-header .parallax-contain .vc_parallax-inner { 
+        background-position: 0 250px;
+        background-size: 70%;
+    }
+}
+@media all and (min-width: 992px) {
+    .main-header .parallax-contain .vc_parallax-inner { 
+        background-position: 0 250px;
+        background-size: 70%;
+    }
+}
+
+
+
+/*****************/
+/** Desktop Nav **/
+/*****************/
+
+@media all and (min-width:992px){
+    .bigmegamenu .menu-wrapper {
+        max-width: 600px;
+        overflow: hidden;
+        height: 120px;
+    }
+    .bigmegamenu .menu-wrapper .wsmenu-list > li {
+      display: inline-block;
+    }
+}
+@media all and (min-width:1200px){
+    .bigmegamenu .menu-wrapper {
+        max-width: 800px;
+    }
+}
+@media all and (min-width:1500px){
+    .bigmegamenu .menu-wrapper {
+      max-width:100%
+    }
+    .bigmegamenu .menu-wrapper .wsmenu-list > li {
+      display: table-cell;
+    }
+}
+  
+  
+  
   
   /*****************/
   /* Mobile Nav */
@@ -361,6 +621,11 @@
   /***********/
 
 
+:root {
+    --tec-color-text-primary: white;
+    --tec-color-text-view-selector-list-item-hover: #fc4f3f;
+    --tec-color-text-view-selector-list-item: #fc4f3f;
+}
 .tribe-common--breakpoint-medium.tribe-events 
 .tribe-events-l-container {
     background: white;
@@ -449,7 +714,7 @@
 /*** Pop Up ***/
 /**************/
 .pum-theme-enterprise-red .pum-container {
-    //padding: 28px;
+    /*padding: 28px;*/
     padding: 0 !important;
 }
 @media only screen and (min-width: 1024px) {
@@ -533,10 +798,12 @@
 /**************/
 
 :root {
-    --tec-color-text-primary: rgba(255,255,255,0.9);
-    --tec-color-text-view-selector-list-item-hover: #e76559;
-    --tec-color-text-view-selector-list-item: #e76559;
+    --tec-color-text-primary: rgba(255,255,255,1);
+    --tec-color-text-view-selector-list-item-hover: #fc4f3f;
+    --tec-color-text-view-selector-list-item: #fc4f3f;
 }
+
+
 
 .tribe-common--breakpoint-medium.tribe-events .tribe-events-l-container {
     background: transparent;
@@ -613,6 +880,28 @@
 }
 
 
+.tribe-events .tribe-events-calendar-month__multiday-event-bar {
+    background-color: var(--tec-color-text-view-selector-list-item);
+}
+.tooltipster-base *[class*='tribe-common'],
+.tooltipster-box *[class*='tribe-common'],
+.tooltipster-base span,
+.tooltipster-box span  {
+    color: black !important;
+}
+.tooltipster-base a[class*='tribe-common'],
+.tooltipster-box a[class*='tribe-common'],
+.tooltipster-base a[class*='tribe-common'] > *,
+.tooltipster-box a[class*='tribe-common'] > *,
+.tooltipster-base *[class*='tribe-common'] a,
+.tooltipster-box *[class*='tribe-common'] a,
+.tooltipster-base *[class*='tribe-common'] a > *,
+.tooltipster-box *[class*='tribe-common'] a > *  {
+    color: #fc4f3f !important;
+}
+
+
+
 
 
 /**************************/
@@ -633,6 +922,22 @@
 
 
 /**************************/
+/********* Reviews ********/
+/**************************/
+#sb-reviews-container-1 {
+    background-color: #ffffff !important;
+    border-radius: 20px !important;
+    padding: 20px !important;
+}
+#sb-reviews-container-1 .sb-item-rating {
+    color: #fc4f3f !important;
+}
+#sb-reviews-container-1 .sb-feed-header-btn {
+    background: #fc4f3f !important;
+}
+
+
+/**************************/
 /**** Share Media Icons ***/
 /**************************/
 /*
@@ -646,3 +951,12 @@
     background-color: #fa7265 !important;
 }
 */
+
+/**************************/
+/**** *** Complianz ** ****/
+/**************************/
+.cookies-per-purpose,
+.cookies-per-purpose h4,
+.cookies-per-purpose h5 {
+    color: #fc4f3f !important;
+} 
