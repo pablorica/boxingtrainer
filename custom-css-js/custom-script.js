@@ -11,6 +11,8 @@
 */
 
 //Create script tag <script async src="https://www.googletagmanager.com/gtag/js?id=G-7Z5L7FGX3E">
+// Google tag is slowing the page speed. We will remove this feature temporarily
+/*
 var gtagScript = document.createElement('script');
 gtagScript.async = true;
 gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-7Z5L7FGX3E';
@@ -20,8 +22,7 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-7Z5L7FGX3E');
-
-
+*/
 (function($) {
 
    /**

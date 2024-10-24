@@ -6,6 +6,110 @@
 */
 
 /*************/
+/* Fonts */
+/*************/
+
+@font-face {
+font-family: 'Lato';
+font-style: normal;
+font-weight: 100;
+font-display: swap;
+src: url('//boxingtrainer.london/wp-content/themes/lpd-abcpersonal/assets/fonts/lato/LatoNormal100.ttf') format('truetype');
+}
+@font-face {
+font-family: 'Lato';
+font-style: normal;
+font-weight: 300;
+font-display: swap;
+src: url('//boxingtrainer.london/wp-content/themes/lpd-abcpersonal/assets/fonts/lato/LatoNormal300.ttf') format('truetype');
+}
+@font-face {
+font-family: 'Lato';
+font-style: normal;
+font-weight: 400;
+font-display: swap;
+src: url('//boxingtrainer.london/wp-content/themes/lpd-abcpersonal/assets/fonts/lato/LatoNormal400.ttf') format('truetype');
+}
+@font-face {
+font-family: 'Lato';
+font-style: normal;
+font-weight: 700;
+font-display: swap;
+src: url('//boxingtrainer.london/wp-content/themes/lpd-abcpersonal/assets/fonts/lato/LatoNormal700.ttf') format('truetype');
+}
+@font-face {
+font-family: 'Oswald';
+font-style: normal;
+font-weight: 300;
+font-display: swap;
+src: url('//boxingtrainer.london/wp-content/themes/lpd-abcpersonal/assets/fonts/oswald/OswaldNormal300.ttf') format('truetype');
+}
+@font-face {
+font-family: 'Oswald';
+font-style: normal;
+font-weight: 400;
+font-display: swap;
+src: url('//boxingtrainer.london/wp-content/themes/lpd-abcpersonal/assets/fonts/oswald/OswaldNormal400.ttf') format('truetype');
+}
+@font-face {
+font-family: 'Oswald';
+font-style: normal;
+font-weight: 500;
+font-display: swap;
+src: url('//boxingtrainer.london/wp-content/themes/lpd-abcpersonal/assets/fonts/oswald/OswaldNormal500.ttf') format('truetype');
+}
+@font-face {
+font-family: 'Oswald';
+font-style: normal;
+font-weight: 600;
+font-display: swap;
+src: url('//boxingtrainer.london/wp-content/themes/lpd-abcpersonal/assets/fonts/oswald/OswaldNormal600.ttf') format('truetype');
+}
+@font-face {
+font-family: 'Oswald';
+font-style: normal;
+font-weight: 700;
+font-display: swap;
+src: url('//boxingtrainer.london/wp-content/themes/lpd-abcpersonal/assets/fonts/oswald/OswaldNormal700.ttf') format('truetype');
+}
+@font-face {
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 300;
+font-display: swap;
+src: url('//boxingtrainer.london/wp-content/themes/lpd-abcpersonal/assets/fonts/poppins/PoppinsNormal300.ttf') format('truetype');
+}
+@font-face {
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-display: swap;
+src: url('//boxingtrainer.london/wp-content/themes/lpd-abcpersonal/assets/fonts/poppins/PoppinsNormal400.ttf') format('truetype');
+}
+@font-face {
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-display: swap;
+src: url('//boxingtrainer.london/wp-content/themes/lpd-abcpersonal/assets/fonts/poppins/PoppinsNormal500.ttf') format('truetype');
+}
+@font-face {
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-display: swap;
+src: url('//boxingtrainer.london/wp-content/themes/lpd-abcpersonal/assets/fonts/poppins/PoppinsNormal600.ttf') format('truetype');
+}
+@font-face {
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-display: swap;
+src: url('//boxingtrainer.london/wp-content/themes/lpd-abcpersonal/assets/fonts/poppins/PoppinsNormal700.ttf') format('truetype');
+}
+
+
+/*************/
 /* Bootstrap */
 /*************/
 .d-none {
@@ -245,16 +349,29 @@
   .main-header .vc_icon_element-icon.fa-twitter {
     background-image: url('//boxingtrainer.london/wp-content/uploads/2024/04/twitter-x-logo-fill-white.png');
   }
+  
   .main-header .vc_icon_element-icon.fa-facebook::before,
   .main-header .vc_icon_element-icon.fa-instagram::before,
   .main-header .vc_icon_element-icon.fa-twitter::before {
     content: "";
   }
 
-  
+  /*
   .site-main-header.loaded .vc_parallax-inner {
+
     background-image: url("//boxingtrainer.london/wp-content/uploads/2024/06/PaulCarrollHeader.jpg") !important;
+    background-image: url("//boxingtrainer.london/wp-content/uploads/2024/09/Paul_Carroll_Boxing_Trainer_BW.jpeg") !important;
   }
+ */
+  
+   /*
+  @media all and (orientation: portrait) and (max-width: 767px) {
+    .site-main-header .vc_parallax-inner {
+        background-image: url("//boxingtrainer.london/wp-content/uploads/2024/06/PaulCarrollHeader.jpg") !important;
+        background-position: 35% center !important;
+    }
+  }
+    */
   @media all and (max-width: 400px) {
     .site-main-header {
       min-height: 50vh !important;
@@ -263,9 +380,9 @@
     .main-header.vc_row-o-equal-height > .vc_column_container {
         min-height: 70vh !important;
     }
-    .site-main-header .vc_parallax-inner,
+    .vc_parallax.site-main-header .vc_parallax-inner,
     .main-header .vc_parallax-inner {  
-      background-position: 10%;
+      background-position: 45%;
       background-size: 180%;
       background-repeat: no-repeat
     }
@@ -278,9 +395,9 @@
     .main-header.vc_row-o-equal-height > .vc_column_container {
         min-height: 70vh !important;
     }
-    .site-main-header .vc_parallax-inner,
+    .vc_parallax.site-main-header .vc_parallax-inner,
     .main-header .vc_parallax-inner { 
-      background-position: 10%;
+      background-position: 45%;
       background-size: 150%;
       background-repeat: no-repeat
     }
@@ -293,9 +410,9 @@
     .main-header.vc_row-o-equal-height > .vc_column_container {
         min-height: 70vh !important;
     }
-    .site-main-header .vc_parallax-inner,
+    .vc_parallax.site-main-header .vc_parallax-inner,
     .main-header .vc_parallax-inner {  
-      background-position: 10%;
+      background-position: 45%;
       background-size: 150%;
       background-repeat: no-repeat
     }

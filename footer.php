@@ -149,13 +149,13 @@ if( lpd_abcpersonal_helpers::lpd_abcpersonal_unyson_check() ) {
 									<div class="container">
 										<div class="row">
 												
-											<div class="<?php echo $footer_col_3_1;?>">
+											<div class="footer-col-1 <?php echo $footer_col_3_1;?>">
 												<?php dynamic_sidebar( 'sidebar-footer-col-1' ); ?>
 											</div>
-											<div class="<?php echo $footer_col_3_2;?>">
+											<div class="footer-col-2 <?php echo $footer_col_3_2;?>">
 												<?php dynamic_sidebar( 'sidebar-footer-col-2' ); ?>
 											</div>
-											<div class="<?php echo $footer_col_3_3;?>">
+											<div class="footer-col-3 <?php echo $footer_col_3_3;?>">
 												<?php dynamic_sidebar( 'sidebar-footer-col-3' ); ?>
 											</div>								
 											
@@ -169,16 +169,16 @@ if( lpd_abcpersonal_helpers::lpd_abcpersonal_unyson_check() ) {
 									<div class="container">
 										<div class="row">
 												
-											<div class="<?php echo $footer_col_4_1;?>">
+											<div class="footer-col-1 <?php echo $footer_col_4_1;?>">
 												<?php dynamic_sidebar( 'sidebar-footer-col-1' ); ?>
 											</div>
-											<div class="<?php echo $footer_col_4_2;?>">
+											<div class="footer-col-2 <?php echo $footer_col_4_2;?>">
 												<?php dynamic_sidebar( 'sidebar-footer-col-2' ); ?>
 											</div>
-											<div class="<?php echo $footer_col_4_3;?>">
+											<div class="footer-col-3 <?php echo $footer_col_4_3;?>">
 												<?php dynamic_sidebar( 'sidebar-footer-col-3' ); ?>
 											</div>
-											<div class="<?php echo $footer_col_4_4;?>">
+											<div class="footer-col-4 <?php echo $footer_col_4_4;?>">
 												<?php dynamic_sidebar( 'sidebar-footer-col-4' ); ?>
 											</div>							
 											
@@ -192,16 +192,16 @@ if( lpd_abcpersonal_helpers::lpd_abcpersonal_unyson_check() ) {
 									<div class="container">
 										<div class="row">
 											
-											<div class="col-md-3">
+											<div class="footer-col-1 col-md-3">
 												<?php dynamic_sidebar( 'sidebar-footer-col-1' ); ?>
 											</div>
-											<div class="col-md-3">
+											<div class="footer-col-2 col-md-3">
 												<?php dynamic_sidebar( 'sidebar-footer-col-2' ); ?>
 											</div>
-											<div class="col-md-3">
+											<div class="footer-col-3 col-md-3">
 												<?php dynamic_sidebar( 'sidebar-footer-col-3' ); ?>
 											</div>
-											<div class="col-md-3">
+											<div class="footer-col-4 col-md-3">
 												<?php dynamic_sidebar( 'sidebar-footer-col-4' ); ?>
 											</div>
 													
@@ -219,16 +219,16 @@ if( lpd_abcpersonal_helpers::lpd_abcpersonal_unyson_check() ) {
 							<div class="container">
 								<div class="row">
 									
-									<div class="col-md-3">
+									<div class="footer-col-1 col-md-3">
 										<?php dynamic_sidebar( 'sidebar-footer-col-1' ); ?>
 									</div>
-									<div class="col-md-3">
+									<div class="footer-col-2 col-md-3">
 										<?php dynamic_sidebar( 'sidebar-footer-col-2' ); ?>
 									</div>
-									<div class="col-md-3">
+									<div class="footer-col-3 col-md-3">
 										<?php dynamic_sidebar( 'sidebar-footer-col-3' ); ?>
 									</div>
-									<div class="col-md-3">
+									<div class="footer-col-4 col-md-3">
 										<?php dynamic_sidebar( 'sidebar-footer-col-4' ); ?>
 									</div>
 											

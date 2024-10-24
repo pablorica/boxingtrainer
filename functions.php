@@ -163,10 +163,6 @@ add_filter(
     1
 );
 
-
-
-
-
 /**
  * Enqueue scripts and styles.
  *
