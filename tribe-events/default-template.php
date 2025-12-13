@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 }
 
-get_header();
+get_header('new');
 ?>
 
 		<div id="main" class="<?php lpd_abcpersonal_front_functions::lpd_abcpersonal_main_class(); ?>">
@@ -80,4 +80,4 @@ get_header();
 
 
 <?php
-get_footer();
+get_footer('new');

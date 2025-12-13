@@ -94,6 +94,12 @@
 		add_image_size( 'lpd-abcpersonal-theme-size-1x1', 860, 860, true ); // 1x1
 		add_image_size( 'lpd-abcpersonal-theme-size-3x4', 645, 860, true ); // 3x4
 		add_image_size( 'lpd-abcpersonal-theme-size-2x3', 574, 860, true ); // 3x2
+
+    // extra sizes for mobile
+    add_image_size('w-480', 480, 0, false);
+    add_image_size('w-640', 640, 0, false);
+    add_image_size('w-960', 960, 0, false);
+    add_image_size('w-1180', 1180, 0, false); // matches your desktop container
 	}
 	
 	function register_menus() {

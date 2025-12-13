@@ -6,6 +6,7 @@ class lpd_abcpersonal_front_functions {
 		
 			add_filter('fw_ext_breadcrumbs_build', array( $this, 'lpd_abcpersonal_breadcrumbs_items') );
 			add_action('wp_head', array( $this, 'lpd_abcpersonal_load_google_fonts'));
+      add_action('wp_head', array( $this, 'lpd_abcpersonal_codigo_get_main_home_img'));
 			add_filter('get_search_form', array( $this, 'lpd_abcpersonal_widget_search_form'), 100 );
 			add_filter('the_content_more_link', array( $this, 'lpd_abcpersonal_read_more_link') );
 			add_filter('body_class', array( $this, 'lpd_abcpersonal_body_classes'));
@@ -457,6 +458,31 @@ class lpd_abcpersonal_front_functions {
 			}
 			
 		}
+
+    /**
+     * Preload main image on homepage for better performance
+     *
+     * @return void
+     *
+     */
+    function lpd_abcpersonal_codigo_get_main_home_img() {
+      if (!is_front_page()) return;
+
+      $id    = get_post_thumbnail_id(get_the_ID());
+      if (!$id) return;
+    
+      $src    = wp_get_attachment_image_url($id, 'w-1180'); // desktop max
+      $srcset = wp_get_attachment_image_srcset($id, 'full');
+      $sizes  = '(max-width: 480px) 412px, (max-width: 768px) 520px, 1180px';
+    
+      echo '<link rel="preload" as="image" 
+          href="' . esc_url($src) . '" 
+          imagesrcset="' . esc_attr($srcset) . '" 
+           imagesizes="' . esc_attr($sizes) . '" 
+           fetchpriority="high" 
+           crossorigin>';
+    }
+    
 				
 		public static function lpd_abcpersonal_get_css_styles( $styles ) {
 			

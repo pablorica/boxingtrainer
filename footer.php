@@ -1,266 +1,191 @@
-<?php
-$footer_switch = $footer_layouts = $footer_bottom_switch = $footer_bottom_content = $footer_background_type = $footer_background_settings = $current_position = $footer_num_columns = $footer_col_3_1 = $footer_col_3_2 = $footer_col_3_3 = $footer_col_3_3 = $footer_col_4_1 = $footer_col_4_2 = $footer_col_4_3 = $footer_col_4_4 = '';
+<?php 
+$twitter_url = get_field('twitter_url', 'option');
+$facebook_url = get_field('facebook_url', 'option');
+$instagram_url = get_field('instagram_url', 'option');
+$tiktok_url = get_field('tiktok_url', 'option');
+$youtube_link = get_field('youtube_link', 'option');							
+?>
+	<footer id="footer-new" class="footer-new">
+		<div class="top-footer-wrap">
+			<div class="container">
+				<div class="row g-0">
+					<?php 
+					if($facebook_url){
+					?>
+						<div class="col-12 col-sm">
+							<div class="link-social-elm">
+								<a target="_blank" title="Facebook" href="<?php  echo $facebook_url ?>">
+									FACEBOOK
+								</a>
+							</div><?php // .link-social-elm ?>
+						</div><?php // .col ?>
+					<?php 
+					} // end if ?>
+					<?php 
+					if($instagram_url){
+					?>
+						<div class="col-12 col-sm">
+							<div class="link-social-elm">
+								<a target="_blank" title="Instagram" href="<?php echo $instagram_url?>">
+									instagram
+								</a>
+							</div><?php // .link-social-elm ?>
+						</div><?php // .col ?>
+					<?php 
+					} // end if ?>
+					<?php 
+					if($twitter_url){
+					?>
+						<div class="col-12 col-sm">
+							<div class="link-social-elm">
+								<a target="_blank" title="Twitter" href="<?php echo $twitter_url ?>">
+									X (Twitter)
+								</a>
+							</div><?php // .link-social-elm ?>
+						</div><?php // .col ?>
+					<?php 
+					} // end if ?>
+					<?php 
+					if($tiktok_url){
+					?>
+						<div class="col-12 col-sm">
+							<div class="link-social-elm">
+								<a target="_blank" title="Tiktok" href="<?php echo $tiktok_url ?>">
+									tiktok
+								</a>
+							</div><?php // .link-social-elm ?>
+						</div><?php // .col ?>
+					<?php 
+					} // end if ?>
+					<?php 
+					if($youtube_link){
+					?>
+						<div class="col-12 col-sm">
+							<div class="link-social-elm">
+								<a target="_blank" title="Youtube" href="<?php echo $youtube_link ?>">
+									youtube
+								</a>
+							</div><?php // .link-social-elm ?>
+						</div><?php // .col ?>
+					<?php 
+					} // end if ?>
+				</div><?php // .row ?>
+			</div><?php // .container ?>
+		</div><?php // .top-footer-wrap ?>
+		<?php 
+		$footer_column_title_1 = get_field('footer_column_title_1', 'option');
+		$footer_column_title_2 = get_field('footer_column_title_2', 'option');
+		$footer_column_title_3 = get_field('footer_column_title_3', 'option');
+		$footer_column_title_4 = get_field('footer_column_title_4', 'option');
 
-if( lpd_abcpersonal_helpers::lpd_abcpersonal_unyson_check() ) {
-	$footer_layouts = fw_get_db_settings_option('footer_layouts');
-	$footer_switch = fw_get_db_settings_option('footer_options/footer_switch');
-	$footer_bottom_switch = lpd_abcpersonal_front_functions::lpd_abcpersonal_footer_bottom_visibility();
-	$footer_bottom_content = fw_get_db_settings_option('footer_bottom_options/enabled/footer_bottom_content');
-	$footer_background_type = fw_get_db_settings_option('footer_options/enabled/footer_background/footer_background_type');
-	$footer_background_settings = fw_get_db_settings_option('footer_options/enabled/footer_background/background_image/footer_background_settings');
-	if( function_exists('fw_ext_sidebars_get_current_position') ) {
-		$current_position = fw_ext_sidebars_get_current_position();
-	}
-	
-	$footer_num_columns = fw_get_db_settings_option('footer_columns/footer_num_columns');
-	$footer_col_3_1 = fw_get_db_settings_option('footer_columns/footer_col_3/footer_col_3_1');
-	$footer_col_3_2 = fw_get_db_settings_option('footer_columns/footer_col_3/footer_col_3_2');
-	$footer_col_3_3 = fw_get_db_settings_option('footer_columns/footer_col_3/footer_col_3_3');
-	$footer_col_4_1 = fw_get_db_settings_option('footer_columns/footer_col_4/footer_col_4_1');
-	$footer_col_4_2 = fw_get_db_settings_option('footer_columns/footer_col_4/footer_col_4_2');
-	$footer_col_4_3 = fw_get_db_settings_option('footer_columns/footer_col_4/footer_col_4_3');
-	$footer_col_4_4 = fw_get_db_settings_option('footer_columns/footer_col_4/footer_col_4_4');
-	
-	if($footer_col_3_1=='col_1_1'){
-		$footer_col_3_1='col-md-12';
-	}elseif($footer_col_3_1=='col_1_2'){
-		$footer_col_3_1='col-md-6';
-	}elseif($footer_col_3_1=='col_1_3'){
-		$footer_col_3_1='col-md-4';
-	}elseif($footer_col_3_1=='col_1_4'){
-		$footer_col_3_1='col-md-3';
-	}elseif($footer_col_3_1=='col_1_6'){
-		$footer_col_3_1='col-md-2';
-	}else{
-		$footer_col_3_1='col-md-4';
-	}
-	
-	if($footer_col_3_2=='col_1_1'){
-		$footer_col_3_2='col-md-12';
-	}elseif($footer_col_3_2=='col_1_2'){
-		$footer_col_3_2='col-md-6';
-	}elseif($footer_col_3_2=='col_1_3'){
-		$footer_col_3_2='col-md-4';
-	}elseif($footer_col_3_2=='col_1_4'){
-		$footer_col_3_2='col-md-3';
-	}elseif($footer_col_3_2=='col_1_6'){
-		$footer_col_3_2='col-md-2';
-	}else{
-		$footer_col_3_2='col-md-4';
-	}
-	
-	if($footer_col_3_3=='col_1_1'){
-		$footer_col_3_3='col-md-12';
-	}elseif($footer_col_3_3=='col_1_2'){
-		$footer_col_3_3='col-md-6';
-	}elseif($footer_col_3_3=='col_1_3'){
-		$footer_col_3_3='col-md-4';
-	}elseif($footer_col_3_3=='col_1_4'){
-		$footer_col_3_3='col-md-3';
-	}elseif($footer_col_3_3=='col_1_6'){
-		$footer_col_3_3='col-md-2';
-	}else{
-		$footer_col_3_3='col-md-4';
-	}
-	
-	if($footer_col_4_1=='col_1_1'){
-		$footer_col_4_1='col-md-12';
-	}elseif($footer_col_4_1=='col_1_2'){
-		$footer_col_4_1='col-md-6';
-	}elseif($footer_col_4_1=='col_1_3'){
-		$footer_col_4_1='col-md-4';
-	}elseif($footer_col_4_1=='col_1_4'){
-		$footer_col_4_1='col-md-3';
-	}elseif($footer_col_4_1=='col_1_6'){
-		$footer_col_4_1='col-md-2';
-	}else{
-		$footer_col_4_1='col-md-4';
-	}
-	
-	if($footer_col_4_2=='col_1_1'){
-		$footer_col_4_2='col-md-12';
-	}elseif($footer_col_4_2=='col_1_2'){
-		$footer_col_4_2='col-md-6';
-	}elseif($footer_col_4_2=='col_1_3'){
-		$footer_col_4_2='col-md-4';
-	}elseif($footer_col_4_2=='col_1_4'){
-		$footer_col_4_2='col-md-3';
-	}elseif($footer_col_4_2=='col_1_6'){
-		$footer_col_4_2='col-md-2';
-	}else{
-		$footer_col_4_2='col-md-4';
-	}
-	
-	if($footer_col_4_3=='col_1_1'){
-		$footer_col_4_3='col-md-12';
-	}elseif($footer_col_4_3=='col_1_2'){
-		$footer_col_4_3='col-md-6';
-	}elseif($footer_col_4_3=='col_1_3'){
-		$footer_col_4_3='col-md-4';
-	}elseif($footer_col_4_3=='col_1_4'){
-		$footer_col_4_3='col-md-3';
-	}elseif($footer_col_4_3=='col_1_6'){
-		$footer_col_4_3='col-md-2';
-	}else{
-		$footer_col_4_3='col-md-4';
-	}
-	
-	if($footer_col_4_4=='col_1_1'){
-		$footer_col_4_4='col-md-12';
-	}elseif($footer_col_4_4=='col_1_2'){
-		$footer_col_4_4='col-md-6';
-	}elseif($footer_col_4_4=='col_1_3'){
-		$footer_col_4_4='col-md-4';
-	}elseif($footer_col_4_4=='col_1_4'){
-		$footer_col_4_4='col-md-3';
-	}elseif($footer_col_4_4=='col_1_6'){
-		$footer_col_4_4='col-md-2';
-	}else{
-		$footer_col_4_4='col-md-4';
-	}
-	
-	
-}?>
-	
-		<?php if($footer_switch=='enabled'){ ?>
-		<div id="footer"
-		<?php if(($footer_layouts=='1480')||($footer_background_type=="background_image")) { ?> class="<?php } ?>
-		<?php if($footer_layouts=='1480') { ?> min-width-1480<?php } ?>
+		$footer_column_text_1 = get_field('footer_column_text_1', 'option');
+		$footer_column_text_3 = get_field('footer_column_text_3', 'option');
+		$footer_column_text_4 = get_field('footer_column_text_4', 'option');
+		$footer_hello_link = get_field('footer_hello_link', 'option');
+		?>
+		<div class="bottom-footer-wrap">
+			<div class="container">
+				<div class="row g-0">
+					<div class="col-12 col-40">
+						<div class="footer-column-wrap">
+							<div class="in-footer-wrap">
+								<?php 
+								if($footer_column_title_1) {
+									?>
+									<h3><?php echo $footer_column_title_1 ?></h3>
+									<?php 
+								}
+								if($footer_column_text_1) {
+									?>
+									<div class="content-wrap">
+										<?php echo wpautop($footer_column_text_1) ?>
+									</div><?php // .content-wrap ?>
+									<?php 
+								}
+								?>	
+							</div><?php // .in-footer-wrap ?>
+						</div><?php // .footer-column-wrap ?>
+					</div><?php // .col ?>
+					<div class="col-12 col-40">
+						<div class="footer-column-wrap">
+							<div class="in-footer-wrap">
+								<?php 
+								if($footer_column_title_2) {
+									?>
+									<h3><?php echo $footer_column_title_2 ?></h3>
+									<?php 
+								}
+								if($footer_column_text_1) {
+									?>
+									<div class="menu-wrap">
+										<?php 
+										wp_nav_menu( array(
+											'theme_location' => 'footer-menu'			
+										));
+										?>
+									</div><?php // .menu-wrap ?>
+									<?php 
+								}
+								?>	
+							</div><?php // .in-footer-wrap ?>
+						</div><?php // .footer-column-wrap ?>
+					</div><?php // .col ?>
+					<div class="col-12 col-20">
+						<div class="footer-column-wrap">
+							<div class="in-footer-wrap">
+								<div class="upper-wrap">
+									<?php 
+									if($footer_column_title_3) {
+										?>
+										<h3><?php echo $footer_column_title_3 ?></h3>
+										<?php 
+									}
+									if($footer_column_text_3) {
+										?>
+										<div class="content-wrap">
+											<?php echo wpautop($footer_column_text_3) ?>
+										</div><?php // .content-wrap ?>
+										<?php 
+									}
+									?>	
+								</div><?php // .upper-wrap ?>
+								<div class="below-wrap">
+									<?php 
+									if($footer_column_title_4) {
+										?>
+										<h3><?php echo $footer_column_title_4 ?></h3>
+										<?php 
+									}
+									if($footer_column_text_4) {
+										?>
+										<div class="content-wrap">
+											<?php echo wpautop($footer_column_text_4) ?>
+										</div><?php // .content-wrap ?>
+										<?php 
+									}
+									?>	
+								</div><?php // .below-wrap ?>
+							</div><?php // .in-footer-wrap ?>
+							<div class="hello-wrap">
+								<?php 
+								if($footer_hello_link) { 
+									?>
+									<a href="<?php echo $footer_hello_link ?>" title="Hello" >
+										<img loading="lazy" width="500px" height="179px" src="<?php echo get_template_directory_uri() ?>/assets/images/hello-logo.png" alt="Hello Logo" />
+									</a>
+									<?php 
+								}
+								?>
+							</div><?php // .hello-wrap ?>
+						</div><?php // .footer-column-wrap ?>
+					</div><?php // .col ?>
+				</div><?php // .row ?>
+			</div><?php // .container ?>
+		</div><?php // .bottom-footer-wrap ?>
+
+	</footer>
 		
-		<?php if($footer_background_type=="background_image") { ?>
-			<?php if($footer_background_settings=='repeat_center') { ?> footer-image-bg
-			<?php }elseif($footer_background_settings=='repeat_top') { ?> footer-image-bg-top
-			<?php }elseif($footer_background_settings=='cover_center') { ?> footer-image-bg-cover
-			<?php } ?>
-		<?php } ?>
-		
-		<?php if(($footer_layouts=='1480')||($footer_background_type=="background_image")) { ?>"<?php } ?>
-		>
-		
-			<?php if ( is_active_sidebar( 'sidebar-footer-col-1' ) || is_active_sidebar( 'sidebar-footer-col-2' ) || is_active_sidebar( 'sidebar-footer-col-3' ) || is_active_sidebar( 'sidebar-footer-col-4' ) ) {?>
-				
-				<?php if( lpd_abcpersonal_helpers::lpd_abcpersonal_unyson_check()) {?>
-				
-						<?php if( lpd_abcpersonal_front_functions::lpd_abcpersonal_footer_visibility()!='disabled') {?>
-						
-							<?php if( $footer_num_columns == 'footer_col_3' ) {?>
-							
-								<div class="middle-section">
-									<div class="container">
-										<div class="row">
-												
-											<div class="footer-col-1 <?php echo $footer_col_3_1;?>">
-												<?php dynamic_sidebar( 'sidebar-footer-col-1' ); ?>
-											</div>
-											<div class="footer-col-2 <?php echo $footer_col_3_2;?>">
-												<?php dynamic_sidebar( 'sidebar-footer-col-2' ); ?>
-											</div>
-											<div class="footer-col-3 <?php echo $footer_col_3_3;?>">
-												<?php dynamic_sidebar( 'sidebar-footer-col-3' ); ?>
-											</div>								
-											
-										</div>
-									</div>
-								</div>
-							
-							<?php }elseif( $footer_num_columns == 'footer_col_4' ) {?>
-							
-								<div class="middle-section">
-									<div class="container">
-										<div class="row">
-												
-											<div class="footer-col-1 <?php echo $footer_col_4_1;?>">
-												<?php dynamic_sidebar( 'sidebar-footer-col-1' ); ?>
-											</div>
-											<div class="footer-col-2 <?php echo $footer_col_4_2;?>">
-												<?php dynamic_sidebar( 'sidebar-footer-col-2' ); ?>
-											</div>
-											<div class="footer-col-3 <?php echo $footer_col_4_3;?>">
-												<?php dynamic_sidebar( 'sidebar-footer-col-3' ); ?>
-											</div>
-											<div class="footer-col-4 <?php echo $footer_col_4_4;?>">
-												<?php dynamic_sidebar( 'sidebar-footer-col-4' ); ?>
-											</div>							
-											
-										</div>
-									</div>
-								</div>
-							
-							<?php }else{?>
-							
-								<div class="middle-section">
-									<div class="container">
-										<div class="row">
-											
-											<div class="footer-col-1 col-md-3">
-												<?php dynamic_sidebar( 'sidebar-footer-col-1' ); ?>
-											</div>
-											<div class="footer-col-2 col-md-3">
-												<?php dynamic_sidebar( 'sidebar-footer-col-2' ); ?>
-											</div>
-											<div class="footer-col-3 col-md-3">
-												<?php dynamic_sidebar( 'sidebar-footer-col-3' ); ?>
-											</div>
-											<div class="footer-col-4 col-md-3">
-												<?php dynamic_sidebar( 'sidebar-footer-col-4' ); ?>
-											</div>
-													
-										</div>
-									</div>
-								</div>
-							
-							<?php }?>
-						
-						<?php } ?>
-						
-					<?php } else{ ?>
-					
-						<div class="middle-section">
-							<div class="container">
-								<div class="row">
-									
-									<div class="footer-col-1 col-md-3">
-										<?php dynamic_sidebar( 'sidebar-footer-col-1' ); ?>
-									</div>
-									<div class="footer-col-2 col-md-3">
-										<?php dynamic_sidebar( 'sidebar-footer-col-2' ); ?>
-									</div>
-									<div class="footer-col-3 col-md-3">
-										<?php dynamic_sidebar( 'sidebar-footer-col-3' ); ?>
-									</div>
-									<div class="footer-col-4 col-md-3">
-										<?php dynamic_sidebar( 'sidebar-footer-col-4' ); ?>
-									</div>
-											
-								</div>
-							</div>
-							
-						</div>
-					
-					<?php } ?>
-					
-				
-			
-			<?php } ?> 
-			
-			<?php if(($footer_bottom_switch!='disabled')&&($footer_bottom_content)){ ?>
-			<div class="bottom-section">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12">
-							<div class="text-container"><?php echo wp_kses_post($footer_bottom_content); ?></div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<?php } ?> 
-			
-		</div>
-		<?php } ?>
-		
-		</div>
-		
-	</div><!-- wsmenucontainer END-->
+</div><!-- wsmenucontainer END-->
 
 <?php wp_footer(); ?>
 </body>

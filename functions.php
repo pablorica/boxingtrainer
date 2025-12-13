@@ -196,3 +196,220 @@ function codigo_enqueue_scripts() {
 //     'wp_enqueue_scripts', 
 //     'codigo_enqueue_scripts'
 // );
+function register_my_menus() {
+	register_nav_menus(
+	  array(
+		'footer-menu' => __( 'Footer Menu' ),
+	  )
+	);
+}
+add_action( 'init', 'register_my_menus' );
+/**/
+function boxingtrainer_enqueue_style() {
+    wp_enqueue_style( 'boxing-fontawesome-style', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css', array(), '6.7.1' );
+	wp_enqueue_style( 'boxing-bootstrap-style', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css', array(), '5.3' );
+	wp_enqueue_style( 'boxing-slick-style', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', array(), '1.8.1' );
+	wp_enqueue_style( 'boxing-style', get_stylesheet_uri(), array(), rand() );
+
+	wp_enqueue_script( 'boxing-match-height', 'https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.2/jquery.matchHeight-min.js', array('jquery'), '0.7.2' );
+	wp_enqueue_script( 'boxing-slick', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array('jquery'), '1.8.1' );
+	wp_enqueue_script( 'boxing-boostrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js', array('jquery'), '5.3' );
+}
+add_action( 'wp_enqueue_scripts', 'boxingtrainer_enqueue_style', 99 );
+//
+function boxingtrainer_head_code(){
+	?>
+	<!-- Lato Fonts -->
+	<link rel="preload" href="//boxingtrainer.london/wp-content/themes/lpd-abcpersonal/assets/fonts/lato/LatoNormal100.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+	<link rel="preload" href="//boxingtrainer.london/wp-content/themes/lpd-abcpersonal/assets/fonts/lato/LatoNormal300.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+	<link rel="preload" href="//boxingtrainer.london/wp-content/themes/lpd-abcpersonal/assets/fonts/lato/LatoNormal400.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+	<link rel="preload" href="//boxingtrainer.london/wp-content/themes/lpd-abcpersonal/assets/fonts/lato/LatoNormal700.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+
+	<!-- Oswald Fonts -->
+	<link rel="preload" href="//boxingtrainer.london/wp-content/themes/lpd-abcpersonal/assets/fonts/oswald/OswaldNormal300.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+	<link rel="preload" href="//boxingtrainer.london/wp-content/themes/lpd-abcpersonal/assets/fonts/oswald/OswaldNormal400.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+	<link rel="preload" href="//boxingtrainer.london/wp-content/themes/lpd-abcpersonal/assets/fonts/oswald/OswaldNormal500.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+	<link rel="preload" href="//boxingtrainer.london/wp-content/themes/lpd-abcpersonal/assets/fonts/oswald/OswaldNormal600.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+	<link rel="preload" href="//boxingtrainer.london/wp-content/themes/lpd-abcpersonal/assets/fonts/oswald/OswaldNormal700.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+
+	<!-- Poppins Fonts -->
+	<link rel="preload" href="//boxingtrainer.london/wp-content/themes/lpd-abcpersonal/assets/fonts/poppins/PoppinsNormal300.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+	<link rel="preload" href="//boxingtrainer.london/wp-content/themes/lpd-abcpersonal/assets/fonts/poppins/PoppinsNormal400.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+	<link rel="preload" href="//boxingtrainer.london/wp-content/themes/lpd-abcpersonal/assets/fonts/poppins/PoppinsNormal500.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+	<link rel="preload" href="//boxingtrainer.london/wp-content/themes/lpd-abcpersonal/assets/fonts/poppins/PoppinsNormal600.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+	<link rel="preload" href="//boxingtrainer.london/wp-content/themes/lpd-abcpersonal/assets/fonts/poppins/PoppinsNormal700.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+	<?php
+}
+add_action( 'wp_head', 'boxingtrainer_head_code', 1 );
+// 
+add_action( 'save_post', 'rewrite_page_content_on_save', 20); 
+function rewrite_page_content_on_save ( $post_id ) {
+
+	// Use a global variable as a flag
+    global $is_updating;
+
+    if ( isset( $is_updating ) && $is_updating ) {
+        return;
+    }
+    
+	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
+        return;
+    }
+
+	 // Check the current user's permissions
+	 if ( ! current_user_can( 'edit_post', $post_id ) ) {
+        return;
+    }
+	
+	if ( wp_is_post_revision( $post_id ) || wp_is_post_autosave( $post_id ) ) {
+        return;
+    }
+
+	$template_file = get_post_meta( $post_id, '_wp_page_template', true );
+	if($template_file != 'template-page-gift-page.php'){
+		return ;
+	} 
+
+	// Set the flag to true before updating
+    $is_updating = true;
+
+	$content = "";
+
+	$banner_text_1 = get_field( 'banner_text_1' );
+	$banner_text_2 = get_field( 'banner_text_2' );
+
+	$book_links = get_field( 'book_links' );
+
+    $text_section_1_content = get_field( 'text_section_1_content', $post_id);
+	$text_section_1_main_text = get_field( 'text_section_1_main_text', $post_id );
+	$text_section_1_before_content_1 = get_field( 'text_section_1_before_content_1', $post_id );
+	$text_section_1_title_1 = '<h3>' . get_field( 'text_section_1_title_1', $post_id ) . '</h3>';
+	$text_section_1_content_1 = get_field( 'text_section_1_content_1', $post_id );
+
+	$text_section_1_before_content_2 = get_field( 'text_section_1_before_content_2', $post_id );
+	$text_section_1_title_2 = '<h3>' . get_field( 'text_section_1_title_2', $post_id ) . '</h3>';
+	$text_section_1_content_2 = get_field( 'text_section_1_content_2', $post_id );
+
+	$text_section_1_bottom_text = get_field( 'text_section_1_bottom_text', $post_id );
+
+	// Append ACF content to the analyzed content
+	if($banner_text_1) {
+		$content .= ' <h1>' . $banner_text_1 . '</h1>';
+	}
+	if($banner_text_2) {
+		$content .= ' <h2>' . $banner_text_1 . '</h2>';
+	}
+	if(!empty($book_links)) {
+		ob_start();
+		foreach($book_links as $bl) { 
+			$title = $bl['title'];
+			$per_session = $bl['per_session'];
+			$text = $bl['text'];
+			$image = $bl['image'];
+			$book_link = $bl['book_link'];
+			$book_button_label = $bl['book_button_label'];
+			$i++;
+			?>
+			<div class="col-12 col-lg-4">
+				<div class="book-item-wrap">
+					<?php 
+					if($i == 1){
+						?>
+						<img class="holly-elm holly-1" src="<?php echo get_template_directory_uri() ?>/assets/images/holly-transparent-background.png" alt="Holly 1" />
+						<?php 
+					}
+					if($i == 3){
+						?>
+						<img class="holly-elm holly-3" src="<?php echo get_template_directory_uri() ?>/assets/images/holly-transparent-background.png" alt="Holly 2" />
+						<?php 
+					}
+					?>
+					<div class="book-in-wrap">
+						<div class="t-c-wrap">
+							<?php 
+							if($title) {
+								?>
+								<h3 class="t-wrap">
+									<?php echo $title ?> <span><?php echo ($per_session ? $per_session : 'PER SESSION') ?></span>
+								</h3><?php // t-wrap ?>
+								<?php 
+							}
+							if($text) {
+								?>
+								<div class="c-wrap">
+									<?php echo wpautop($text) ?>
+								</div><?php // .c-wrap ?>
+								<?php 
+							}
+							?>
+						</div><?php // .t-c-wrap ?>
+						<div class="i-b-wrap">
+							<?php 
+							if($image) {
+								?>
+								<img src="<?php echo $image ?>" alt="<?php echo $title ?>" />
+								<?php
+							} 
+							if($book_link){
+								?>
+								<div class="button-wrap">
+									<a class="btn-book" href="<?php echo $book_link ?>" title="<?php echo ($book_button_label ? $book_button_label : 'Book Now') ?>" >
+										<?php echo ($book_button_label ? $book_button_label : 'BOOK NOW') ?>
+									</a>
+								</div><?php // .button-wrap ?>
+								<?php 
+							}
+							?>
+						</div><?php // .i-b-wrap ?>
+					</div><?php // .book-in-wrap ?>
+				</div><?php // .book-item-wrap ?>
+			</div><?php // .col ?>
+		<?php 
+		} // end foreach 
+		$temp = ob_get_clean();
+
+		if($temp) {
+			$content .= ' ' . $temp;
+		}
+	}
+
+	if ( $text_section_1_content ) {
+		$content .= ' ' . $text_section_1_content;
+	}
+	if ( $text_section_1_main_text ) {
+		$content .= ' ' . $text_section_1_main_text;
+	}
+	if ( $text_section_1_before_content_1 ) {
+		$content .= ' ' . $text_section_1_before_content_1;
+	}
+	if ( $text_section_1_title_1 ) {
+		$content .= ' ' . $text_section_1_title_1;
+	}
+	if ( $text_section_1_content_1 ) {
+		$content .= ' ' . $text_section_1_content_1;
+	}
+
+	if ( $text_section_1_before_content_2 ) {
+		$content .= ' ' . $text_section_1_before_content_2;
+	}
+	if ( $text_section_1_title_2 ) {
+		$content .= ' ' . $text_section_1_title_2;
+	}
+	if ( $text_section_1_content_2 ) {
+		$content .= ' ' . $text_section_1_content_2;
+	}
+
+	if ( $text_section_1_bottom_text ) {
+		$content .= ' ' . $text_section_1_bottom_text;
+	}
+
+    if ( $content  ) {
+        wp_update_post( [
+            'ID'           => $post_id,
+            'post_content' => $content,
+        ] );
+    }
+
+	// Reset the flag after updating
+    $is_updating = false;
+};

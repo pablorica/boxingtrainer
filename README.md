@@ -86,3 +86,169 @@ However, we can add a video tag using the raw HTML block:
 </video>
 
 The column that contains this Raw HTML block must have the following class: `bgvideo-column`
+
+
+---
+
+# Performance improvements (mobile) — 18 Sep 2025
+
+Mobile PageSpeed Insights now scores **93/100** (up from \~76).
+Primary focus: faster LCP on mobile and a leaner critical path.
+
+## Summary of changes
+
+* **Hero (LCP) image**
+
+  * No lazy-load; `loading="eager"`, `fetchpriority="high"`, `decoding="async"`.
+  * Accurate `sizes` so phones don’t over-download:
+
+    ```
+    (max-width: 480px) 412px, (max-width: 768px) 520px, 1180px
+    ```
+  * Preloaded in `<head>` with matching `imagesrcset`/`imagesizes`.
+  * Excluded from NitroPack’s lazy-loading.
+
+* **Responsive image variants**
+
+  * Added intermediate widths to improve browser choice on DPR 2–3 devices:
+
+    * 480, **640**, **960**, 1180.
+  * Regenerated thumbnails so these appear in `srcset`.
+
+* **CSS & fonts**
+
+  * Inline **Critical CSS**; defer the rest.
+  * Reduced render-blocking font work:
+
+    * Preconnect to `fonts.gstatic.com` (and CDN).
+    * `font-display: swap`.
+    * Only preload one above-the-fold face/weight.
+  * Where possible, defer/replace icon fonts with SVGs.
+
+* **JS & below-the-fold**
+
+  * Defer/delay non-critical scripts.
+  * Use `content-visibility: auto` for large below-the-fold sections.
+
+* **Caching/optimization**
+
+  * Using **NitroPack** (image optimisation, minification, caching).
+    SiteGround cache intentionally **disabled** to avoid duplication/conflict.
+
+
+## Code snippets
+
+### 1) Hero image markup (template)
+
+```php
+<?php 
+if (has_post_thumbnail()) :
+  $post_thumbnail_id = get_post_thumbnail_id(get_the_ID());
+  $attachment = wp_get_attachment_image_src($post_thumbnail_id, 'full');
+  $srcset = wp_get_attachment_image_srcset($post_thumbnail_id, 'full');
+  $sizes  = '(max-width: 480px) 412px, (max-width: 768px) 520px, 1180px';
+?>
+  <img
+    alt="Main Home Image"
+    class="main-home-image"
+    src="<?php echo esc_url(get_the_post_thumbnail_url(get_the_ID(), 'full')); ?>"
+    srcset="<?php echo esc_attr($srcset); ?>"
+    sizes="<?php echo esc_attr($sizes); ?>"
+    width="<?php echo (int) $attachment[1]; ?>"
+    height="<?php echo (int) $attachment[2]; ?>"
+    loading="eager"
+    decoding="async"
+    fetchpriority="high"
+  />
+<?php endif; ?>
+```
+
+### 2) Extra responsive widths (in `functions.php`)
+
+```php
+add_action('after_setup_theme', function () {
+  add_image_size('w-480',  480,  0, false);
+  add_image_size('w-640',  640,  0, false);
+  add_image_size('w-960',  960,  0, false);
+  add_image_size('w-1180', 1180, 0, false); // desktop container max
+});
+```
+
+Then regenerate:
+
+* WP-CLI: `wp media regenerate` (or “Regenerate Thumbnails” plugin).
+
+In this particular case we just needed to regenerate the hero image (ID 3070):
+
+```bash
+wp media regenerate 3070
+```
+
+### 3) Preload the hero (in `wp_head`)
+
+```php
+add_action('wp_head', function () {
+  if (!is_front_page()) return;
+  $id = get_post_thumbnail_id(get_the_ID());
+  if (!$id) return;
+
+  $src    = wp_get_attachment_image_url($id, 'w-1180');
+  $srcset = wp_get_attachment_image_srcset($id, 'full');
+  $sizes  = '(max-width: 480px) 412px, (max-width: 768px) 520px, 1180px';
+
+  echo '<link rel="preload" as="image" href="' . esc_url($src) . '" imagesrcset="' .
+       esc_attr($srcset) . '" imagesizes="' . esc_attr($sizes) .
+       '" fetchpriority="high" crossorigin>';
+});
+```
+
+## Further optimizations
+
+### Head hints (top of `<head>`)
+
+```html
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn-ilcfgkh.nitrocdn.com" crossorigin> <!-- when CDN enabled -->
+<link rel="preconnect" href="https://boxingtrainer.london" crossorigin>
+```
+
+### Defer non-critical CSS (if not handled by optimizer)
+
+```html
+<link rel="preload" as="style" href="/path/combined.css">
+<link rel="stylesheet" href="/path/combined.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="/path/combined.css"></noscript>
+```
+
+### Below-the-fold sections
+
+```css
+.section-below-fold {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 1000px; /* reserve space to prevent layout shift */
+}
+```
+
+## NitroPack configuration
+
+* **Images**: WebP/AVIF on; **exclude** `.main-home-image` from lazy; keep compression \~60–70 quality for mobile candidates.
+* **CSS**: Critical CSS enabled; combine/defer non-critical.
+* **JS**: Defer/delay non-critical; load heavy widgets on interaction.
+* **Caching**: Nitro cache on. SiteGround cache **off** (by design).
+
+
+## Verification checklist
+
+* PSI/Lighthouse (Mobile) shows **LCP element** = hero image; **LCP resource** is **preloaded** and **not lazy-loaded**.
+* DevTools → Elements: `sizes` present and matches layout slot widths.
+* DevTools → Console:
+
+  ```js
+  document.querySelector('.main-home-image').currentSrc
+  ```
+
+  returns a \~640–960w asset on DPR 2 phones.
+* Fonts load with `font-display: swap`; only one above-the-fold preload.
+* Initial render blocked by ≤1 CSS file (plus inline critical).
+
+

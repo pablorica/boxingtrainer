@@ -2,7 +2,7 @@
 	/**
 	* Template name: Slider Template
 	**/
-	 get_header(); ?>
+	 get_header('new'); ?>
 
 		<div id="main" class="<?php lpd_abcpersonal_front_functions::lpd_abcpersonal_main_class(); ?>">
 
@@ -61,4 +61,4 @@
 		</div>
 
 
-<?php get_footer(); ?>
+<?php get_footer('new'); ?>

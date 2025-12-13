@@ -67,8 +67,16 @@ function lpd_abcpersonal_enqueue_font( $handle, $args = array() ) {
 	if ( ! lpd_abcpersonal_font_is_registered( $handle ) )
 		lpd_abcpersonal_register_font( $handle, $args );
 
+	wp_style_add_data( "{$handle}-font", 'rel', 'preload' );
 	wp_enqueue_style( "{$handle}-font" );
+	
 }
+
+// function preload_all_styles($html, $handle, $href, $media) {
+//     $html = '<link rel="preload" as="style" href="' . esc_url($href) . '" onload="this.onload=null;this.rel=\'stylesheet\';" />';
+//     return $html;
+// }
+// add_filter('style_loader_tag', 'preload_all_styles', 9999, 4);
 
 /**
  * Dequeues a font.
@@ -138,7 +146,9 @@ function lpd_abcpersonal_font_is_enqueued( $handle ) {
 function lpd_abcpersonal_create_font_url( $handle, $family, $subset ) {
 
 	$url    = '';
-	$args   = array();
+	$args   = array(
+		'display' => 'swap'
+	);
 
 	$family = apply_filters( "{$handle}_font_family", $family );
 	$subset = apply_filters( "{$handle}_font_subset", $subset );
