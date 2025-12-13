@@ -475,7 +475,7 @@ function codigo_add_rewrite_rules( $rules ) {
   $new['blog/([^/]+)/(.+)/?$'] = 'index.php?name=$matches[2]'; // Matches the post name
   return array_merge( $new, $rules ); // Ensures our rules come first
 }
-add_filter( 'rewrite_rules_array', 'codigo_add_rewrite_rules' );
+//add_filter( 'rewrite_rules_array', 'codigo_add_rewrite_rules' );
 /**
  * Handle the '%primary_category%' placeholder in the post URL.
  *
@@ -500,4 +500,4 @@ function codigo_filter_post_link( $permalink, $post ) {
 
   return $permalink;
 }
-add_filter( 'post_link', 'codigo_filter_post_link', 10, 2 );
+//add_filter( 'post_link', 'codigo_filter_post_link', 10, 2 );
