@@ -218,26 +218,34 @@ function boxingtrainer_enqueue_style() {
 add_action( 'wp_enqueue_scripts', 'boxingtrainer_enqueue_style', 99 );
 //
 function boxingtrainer_head_code(){
+  $sitefonts = [
+    'lato/LatoNormal100.ttf',
+    'lato/LatoNormal300.ttf',
+    'lato/LatoNormal400.ttf',
+    'lato/LatoNormal700.ttf',
+    'oswald/OswaldNormal300.ttf',
+    'oswald/OswaldNormal400.ttf',
+    'oswald/OswaldNormal500.ttf',
+    'oswald/OswaldNormal600.ttf',
+    'oswald/OswaldNormal700.ttf',
+    'poppins/PoppinsNormal300.ttf',
+    'poppins/PoppinsNormal400.ttf',
+    'poppins/PoppinsNormal500.ttf',
+    'poppins/PoppinsNormal600.ttf',
+    'poppins/PoppinsNormal700.ttf',
+  ];
+  foreach($sitefonts as $font){
+    ?>
+    <link
+      rel="preload"
+      href="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/fonts/'.$font); ?>"
+      as="font"
+      type="font/ttf"
+      crossorigin="anonymous"
+    >
+    <?php
+  }
 	?>
-	<!-- Lato Fonts -->
-	<link rel="preload" href="//boxingtrainer.london/wp-content/themes/lpd-abcpersonal/assets/fonts/lato/LatoNormal100.ttf" as="font" type="font/ttf" crossorigin="anonymous">
-	<link rel="preload" href="//boxingtrainer.london/wp-content/themes/lpd-abcpersonal/assets/fonts/lato/LatoNormal300.ttf" as="font" type="font/ttf" crossorigin="anonymous">
-	<link rel="preload" href="//boxingtrainer.london/wp-content/themes/lpd-abcpersonal/assets/fonts/lato/LatoNormal400.ttf" as="font" type="font/ttf" crossorigin="anonymous">
-	<link rel="preload" href="//boxingtrainer.london/wp-content/themes/lpd-abcpersonal/assets/fonts/lato/LatoNormal700.ttf" as="font" type="font/ttf" crossorigin="anonymous">
-
-	<!-- Oswald Fonts -->
-	<link rel="preload" href="//boxingtrainer.london/wp-content/themes/lpd-abcpersonal/assets/fonts/oswald/OswaldNormal300.ttf" as="font" type="font/ttf" crossorigin="anonymous">
-	<link rel="preload" href="//boxingtrainer.london/wp-content/themes/lpd-abcpersonal/assets/fonts/oswald/OswaldNormal400.ttf" as="font" type="font/ttf" crossorigin="anonymous">
-	<link rel="preload" href="//boxingtrainer.london/wp-content/themes/lpd-abcpersonal/assets/fonts/oswald/OswaldNormal500.ttf" as="font" type="font/ttf" crossorigin="anonymous">
-	<link rel="preload" href="//boxingtrainer.london/wp-content/themes/lpd-abcpersonal/assets/fonts/oswald/OswaldNormal600.ttf" as="font" type="font/ttf" crossorigin="anonymous">
-	<link rel="preload" href="//boxingtrainer.london/wp-content/themes/lpd-abcpersonal/assets/fonts/oswald/OswaldNormal700.ttf" as="font" type="font/ttf" crossorigin="anonymous">
-
-	<!-- Poppins Fonts -->
-	<link rel="preload" href="//boxingtrainer.london/wp-content/themes/lpd-abcpersonal/assets/fonts/poppins/PoppinsNormal300.ttf" as="font" type="font/ttf" crossorigin="anonymous">
-	<link rel="preload" href="//boxingtrainer.london/wp-content/themes/lpd-abcpersonal/assets/fonts/poppins/PoppinsNormal400.ttf" as="font" type="font/ttf" crossorigin="anonymous">
-	<link rel="preload" href="//boxingtrainer.london/wp-content/themes/lpd-abcpersonal/assets/fonts/poppins/PoppinsNormal500.ttf" as="font" type="font/ttf" crossorigin="anonymous">
-	<link rel="preload" href="//boxingtrainer.london/wp-content/themes/lpd-abcpersonal/assets/fonts/poppins/PoppinsNormal600.ttf" as="font" type="font/ttf" crossorigin="anonymous">
-	<link rel="preload" href="//boxingtrainer.london/wp-content/themes/lpd-abcpersonal/assets/fonts/poppins/PoppinsNormal700.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 	<?php
 }
 add_action( 'wp_head', 'boxingtrainer_head_code', 1 );
@@ -301,6 +309,7 @@ function rewrite_page_content_on_save ( $post_id ) {
 	}
 	if(!empty($book_links)) {
 		ob_start();
+    $i = 0;
 		foreach($book_links as $bl) { 
 			$title = $bl['title'];
 			$per_session = $bl['per_session'];
@@ -413,3 +422,82 @@ function rewrite_page_content_on_save ( $post_id ) {
 	// Reset the flag after updating
     $is_updating = false;
 };
+
+
+
+
+/** 
+ * Get the primary term ID for a given taxonomy and post. 
+ * It works for YOAST SEO and AIOSEO
+ *
+ * @param string $taxonomy
+ * @param int    $post_id
+ * @return int
+ */
+function get_primary_term_id ( 
+  $taxonomy = 'category', 
+  $post_id = null 
+) {
+  $post_id = $post_id ?: get_the_ID();
+
+  // Yoast
+  // Check if Yoast SEO plugin is installed and active
+  if ( class_exists('WPSEO_Options') && function_exists( 'yoast_get_primary_term_id' ) ) {
+      $term_id = yoast_get_primary_term_id( $taxonomy, $post_id );
+      if ( $term_id ) {
+          return (int) $term_id;
+      }
+  }
+
+  // AIOSEO
+  $aioseo_term = get_post_meta(
+      $post_id,
+      "_aioseo_primary_term_{$taxonomy}",
+      true
+  );
+
+  if ( $aioseo_term ) {
+      return (int) $aioseo_term;
+  }
+
+  return 0;
+}
+
+/**
+ * Add custom rewrite rules for the URL structure:
+ * /blog/%primary_category%/%postname%/
+ *
+ * @param array $rules Existing rewrite rules
+ * @return array
+ */
+function codigo_add_rewrite_rules( $rules ) {
+  $new = array();
+  $new['blog/([^/]+)/(.+)/?$'] = 'index.php?name=$matches[2]'; // Matches the post name
+  return array_merge( $new, $rules ); // Ensures our rules come first
+}
+add_filter( 'rewrite_rules_array', 'codigo_add_rewrite_rules' );
+/**
+ * Handle the '%primary_category%' placeholder in the post URL.
+ *
+ * @param string $permalink The permalink of the post.
+ * @param WP_Post $post The post object.
+ * @return string Modified permalink.
+ */
+function codigo_filter_post_link( $permalink, $post ) {
+
+  $primary_category = get_primary_term_id( 'category', $post->ID );
+
+  if ( !$primary_category ) {
+      // Fallback to the first category if no primary category is set
+      $categories = get_the_category( $post->ID );
+      $primary_category = $categories[0]->term_id;
+  }
+
+  if ( $primary_category && term_exists( (int) $primary_category ) ) {
+      $category = get_term( $primary_category );
+      $permalink = str_replace( '%primary_category%', $category->slug, $permalink );
+  }
+
+  return $permalink;
+}
+add_filter( 'post_link', 'codigo_filter_post_link', 10, 2 );

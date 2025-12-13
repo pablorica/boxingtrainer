@@ -3,6 +3,10 @@
 A clean slate Wordpress theme template with Bootstrap(5). Based in WP theme LPD ABCPersonal (https://themesinfo.com/wp-theme-lpd-abcpersonal-ewuv)
 
 
+[![version](https://img.shields.io/badge/version-1.1.2-green.svg)](https://semver.org)
+
+
+
 ## Unyson Framework
 
 The theme comes with the [Unyson Framework](https://unyson.io/), which is an extension package with some features for the theme.
@@ -89,51 +93,6 @@ The column that contains this Raw HTML block must have the following class: `bgv
 
 
 ---
-
-# Performance improvements (mobile) — 18 Sep 2025
-
-Mobile PageSpeed Insights now scores **93/100** (up from \~76).
-Primary focus: faster LCP on mobile and a leaner critical path.
-
-## Summary of changes
-
-* **Hero (LCP) image**
-
-  * No lazy-load; `loading="eager"`, `fetchpriority="high"`, `decoding="async"`.
-  * Accurate `sizes` so phones don’t over-download:
-
-    ```
-    (max-width: 480px) 412px, (max-width: 768px) 520px, 1180px
-    ```
-  * Preloaded in `<head>` with matching `imagesrcset`/`imagesizes`.
-  * Excluded from NitroPack’s lazy-loading.
-
-* **Responsive image variants**
-
-  * Added intermediate widths to improve browser choice on DPR 2–3 devices:
-
-    * 480, **640**, **960**, 1180.
-  * Regenerated thumbnails so these appear in `srcset`.
-
-* **CSS & fonts**
-
-  * Inline **Critical CSS**; defer the rest.
-  * Reduced render-blocking font work:
-
-    * Preconnect to `fonts.gstatic.com` (and CDN).
-    * `font-display: swap`.
-    * Only preload one above-the-fold face/weight.
-  * Where possible, defer/replace icon fonts with SVGs.
-
-* **JS & below-the-fold**
-
-  * Defer/delay non-critical scripts.
-  * Use `content-visibility: auto` for large below-the-fold sections.
-
-* **Caching/optimization**
-
-  * Using **NitroPack** (image optimisation, minification, caching).
-    SiteGround cache intentionally **disabled** to avoid duplication/conflict.
 
 
 ## Code snippets
@@ -252,3 +211,14 @@ add_action('wp_head', function () {
 * Initial render blocked by ≤1 CSS file (plus inline critical).
 
 
+## Copyright and License
+
+Copyright 2025 Codigo Wordpress Theme released under the [MIT](https://github.com/pablorica/sparemytime/blob/main/LICENSE) license.
+
+## Versioning
+
+We use [SemVer](https://semver.org/) for versioning. For the versions available, [list of tags can be found in this page](https://github.com/pablorica/boxingtrainer/tags).
+
+### Changelog
+
+[CHANGELOG.md](https://github.com/pablorica/boxingtrainer/blob/main/CHANGELOG.md)
