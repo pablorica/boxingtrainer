@@ -24,6 +24,11 @@ function btl_tab(string $key, string $label): array {
     return ['key' => "field_tab_{$key}", 'label' => $label, 'type' => 'tab', 'placement' => 'left'];
 }
 function btl_rep(string $key, string $label, array $sub, array $extra = []): array {
+    // Namespace sub-field keys with the parent key: ACF field keys must be globally unique.
+    $sub = array_map(function (array $f) use ($key): array {
+        $f['key'] = "field_{$key}_{$f['name']}";
+        return $f;
+    }, $sub);
     return btl_f($key, $label, 'repeater', array_merge([
         'layout' => 'row', 'button_label' => 'Add item', 'sub_fields' => $sub,
     ], $extra));
@@ -67,6 +72,12 @@ acf_add_local_field_group([
     'title'  => 'Homepage 2026 content',
     'fields' => [
 
+        btl_tab('btl_nav', 'Header / navigation'),
+        btl_rep('btl_nav_links', 'Navigation links', [
+            btl_f('label', 'Label', 'text'),
+            btl_f('url',   'URL', 'url'),
+        ]),
+
         btl_tab('btl_hero', 'Hero'),
         btl_f('btl_hero_image', 'Hero background image', 'image', ['return_format' => 'id', 'preview_size' => 'medium',
               'instructions' => 'Landscape, min 2400px wide. Subject centre-right; headline sits on the left.']),
@@ -93,6 +104,7 @@ acf_add_local_field_group([
         ], ['min' => 4, 'max' => 4]),
 
         btl_tab('btl_training', 'Training options'),
+        btl_f('btl_training_heading', 'Section heading (H2)', 'text', ['default_value' => 'One coach. Four ways to train.']),
         btl_f('btl_training_intro', 'Intro line', 'text', ['default_value' =>
               'Choose a starting point. Every session is still built around your goals, fitness level and experience.']),
         btl_rep('btl_pathways', 'Pathway cards', [
@@ -110,6 +122,7 @@ acf_add_local_field_group([
         ]),
 
         btl_tab('btl_who', 'Who this is for'),
+        btl_f('btl_who_heading', 'Section heading (H2)', 'text', ['default_value' => 'Training built around you']),
         btl_rep('btl_who_cards', 'Audience cards (clickable)', [
             btl_f('title', 'Title', 'text'),
             btl_f('text',  'Text', 'textarea', ['rows' => 2]),
@@ -143,6 +156,8 @@ acf_add_local_field_group([
               ['default_value' => 'Daily Express, Boxing Day feature, Hyde Park London']),
 
         btl_tab('btl_testi', 'Testimonials'),
+        btl_f('btl_testi_heading', 'Section heading (H2) — line breaks allowed', 'textarea', ['rows' => 2,
+              'default_value' => "Trusted by beginners,\nprofessionals & names you know"]),
         btl_rep('btl_testimonials', 'Testimonials (use real reviews only)', [
             btl_f('stars', 'Stars (1–5)', 'number', ['min' => 1, 'max' => 5, 'default_value' => 5]),
             btl_f('quote', 'Quote (verbatim from the review)', 'textarea', ['rows' => 3]),
@@ -151,6 +166,8 @@ acf_add_local_field_group([
         ]),
         btl_f('btl_celebrity_line', 'Celebrity line', 'text', ['default_value' =>
               'High-profile clients include Geri Halliwell-Horner, Ben Shephard and Anthony Costa.']),
+        btl_f('btl_success_url', '"All success stories" URL', 'url',
+              ['default_value' => 'https://boxingtrainer.london/success-stories/']),
 
         btl_tab('btl_first', 'First session'),
         btl_f('btl_first_heading', 'Heading', 'text', ['default_value' => 'Friendly, structured and built around you']),
@@ -161,6 +178,7 @@ acf_add_local_field_group([
         ]),
 
         btl_tab('btl_about', 'About Paul'),
+        btl_f('btl_about_heading', 'Section heading (H2)', 'text', ['default_value' => 'Paul Carroll']),
         btl_f('btl_about_image', 'Portrait image', 'image', ['return_format' => 'id']),
         btl_f('btl_about_lead',  'Lead paragraph', 'textarea', ['rows' => 3]),
         btl_rep('btl_about_creds', 'Credential list', [
@@ -173,9 +191,12 @@ acf_add_local_field_group([
         btl_f('btl_about_cta_url',   'Button URL', 'url', ['default_value' => 'https://boxingtrainer.london/about/']),
 
         btl_tab('btl_where', 'Where sessions happen'),
+        btl_f('btl_where_heading_main',   'Heading — main part', 'text', ['default_value' => 'Sessions happen']),
+        btl_f('btl_where_heading_accent', 'Heading — orange part', 'text', ['default_value' => 'wherever suits you']),
         btl_rep('btl_where_items', 'Location types', [ btl_f('label', 'Label', 'text') ]),
 
         btl_tab('btl_areas', 'Areas covered'),
+        btl_f('btl_areas_heading', 'Section heading (H2)', 'text', ['default_value' => 'Mobile coaching across London']),
         btl_f('btl_areas_intro', 'Intro line', 'textarea', ['rows' => 2]),
         btl_rep('btl_area_links', 'Area links', [
             btl_f('label', 'Label', 'text'),
@@ -185,6 +206,9 @@ acf_add_local_field_group([
         btl_f('btl_areas_all_url',   '"All areas" URL', 'url', ['default_value' => 'https://boxingtrainer.london/areas-covered/']),
 
         btl_tab('btl_guides', 'Guides'),
+        btl_f('btl_guides_heading', 'Section heading (H2)', 'text', ['default_value' => 'Boxing & training guides']),
+        btl_f('btl_guides_browse_label', '"Browse all" label', 'text', ['default_value' => 'Browse all guides']),
+        btl_f('btl_guides_browse_url', '"Browse all" URL', 'url', ['default_value' => 'https://boxingtrainer.london/fitness-blog/']),
         btl_rep('btl_featured_guides', 'Featured guide cards', [
             btl_f('image',    'Image (clean photo, no embedded text)', 'image', ['return_format' => 'id']),
             btl_f('category', 'Category label', 'text'),
@@ -220,6 +244,18 @@ acf_add_local_field_group([
               ['default_value' => 'Now welcoming new clients for 1-to-1 boxing personal training across London.']),
         btl_f('btl_cta_label',   'Button label', 'text', ['default_value' => 'Book your 1-to-1 session']),
         btl_f('btl_cta_url',     'Button URL (blank = site-wide booking URL)', 'url'),
+
+        btl_tab('btl_footer', 'Footer'),
+        btl_f('btl_footer_blurb', 'Footer blurb', 'textarea', ['rows' => 3, 'default_value' =>
+              'Indoor and outdoor 1-to-1 boxing personal training across London, run by Paul Carroll — former British University Heavyweight Champion.']),
+        btl_rep('btl_footer_site_links', 'Footer — Site column links', [
+            btl_f('label', 'Label', 'text'),
+            btl_f('url',   'URL', 'url'),
+        ]),
+        btl_rep('btl_footer_training_links', 'Footer — Training column links', [
+            btl_f('label', 'Label', 'text'),
+            btl_f('url',   'URL', 'url'),
+        ]),
     ],
     'location' => [[[ 'param' => 'page_template', 'operator' => '==', 'value' => 'btl-home-2026.php' ]]],
     'style'    => 'seamless',
