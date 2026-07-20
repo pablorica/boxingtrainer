@@ -97,7 +97,24 @@ wp post create --post_type=page --post_title="Home 2026" --post_status=draft --p
 wp eval-file btl-seed-home.php 123 /path/to/images
 ```
 
-It assigns the template, fills the options page, populates every field and repeater with the extracted mockup content (your final version — I parsed it directly, so your link fixes, renamed images, and real testimonial names all carry over), imports the images with alt text, and reports progress per image. Idempotent by design: re-running overwrites field values but never duplicates images (matched by filename), and a missing image file just warns and leaves that field empty rather than aborting — so you can seed, drop in a missing file, and re-run.
+It assigns the template, fills the options page, populates every field and repeater with the extracted mockup content imports the images with alt text, and reports progress per image. 
+Idempotent by design: re-running overwrites field values but never duplicates images (matched by filename), and a missing image file just warns and leaves that field empty rather than aborting — so you can seed, drop in a missing file, and re-run.
 
-On SiteGround, same command via SSH — wp is preinstalled there; upload the script and images folder anywhere (e.g. ~/btl-seed/), cd into the WordPress root or pass --path, and run it against the real page ID. Since it's idempotent, testing in Local first then running identically in production is exactly the right workflow.
-One honest caveat: update_field() with repeater rows keyed by sub-field keys is the documented-correct approach for never-saved fields, but ACF has historic quirks here — so after seeding in Local, open the page in wp-admin and check the repeaters render their rows properly (pathways showing 4 rows with images, FAQs showing 8) before trusting it on SiteGround. If any repeater comes up empty in the editor despite the script reporting success, tell me which one and I'll adjust the row format. And once Local looks right, you're at the finish line: seed production, AIOSEO meta + Rich Results screenshots for Paul, CWV pass, the redirect one-liner, front-page switch, noindex off.
+On SiteGround, same command via SSH — wp is preinstalled there; 
+
+### Feed Images
+
+Upload the script and images folder anywhere (e.g. ~/btl-seed/), 
+```bash
+cd wordpress/wp-content/plugins/btl-homepage/seed-package
+wp eval-file btl-seed-home.php <Page ID> seed-images
+
+## In Docker
+docker compose run --rm wpcli eval-file /var/www/html/wp-content/plugins/btl-homepage/seed-package/btl-seed-home.php <Page ID> /var/www/html/wp-content/plugins/btl-homepage/seed-package/seed-images 
+```
+cd into the WordPress root or pass --path, and run it against the real page ID. 
+Since it's idempotent, testing in Local first then running identically in production is exactly the right workflow.
+
+One honest caveat: update_field() with repeater rows keyed by sub-field keys is the documented-correct approach for never-saved fields, but ACF has historic quirks here — so after seeding in Local, open the page in wp-admin and check the repeaters render their rows properly (pathways showing 4 rows with images, FAQs showing 8) before trusting it on SiteGround. 
+
+If any repeater comes up empty in the editor despite the script reporting success, tell me which one and I'll adjust the row format. And once Local looks right, you're at the finish line: seed production, AIOSEO meta + Rich Results screenshots for Paul, CWV pass, the redirect one-liner, front-page switch, noindex off.

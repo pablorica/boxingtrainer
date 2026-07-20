@@ -43,7 +43,31 @@ $poster_url = $poster ? wp_get_attachment_image_url((int) $poster, 'full')
     <div class="nav-cta">
       <a class="nav-phone" href="tel:<?php echo esc_attr($opt('btl_phone_tel')); ?>"><?php echo $e($opt('btl_phone_display')); ?></a>
       <a class="btn btn-accent" href="<?php echo $booking('btl_hero_cta_url'); ?>">Book a session</a>
-      <div class="burger"><i></i><i></i><i></i></div>
+      <button id="btl-burger"
+        class="burger" 
+        type="button" 
+        aria-label="Open menu" 
+        aria-expanded="false" 
+        aria-controls="btl-mobile-menu"
+      >
+        <i></i>
+        <i></i>
+        <i></i>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="btl-mobile-menu" hidden>
+    <?php if ($nav): ?>
+    <nav aria-label="Mobile">
+      <?php foreach ($nav as $n): ?>
+        <a href="<?php echo $u($n['url']); ?>"><?php echo $e($n['label']); ?></a>
+      <?php endforeach; ?>
+    </nav>
+    <?php endif; ?>
+    <div class="mobile-menu-cta">
+      <a class="btn btn-accent" href="<?php echo $booking('btl_hero_cta_url'); ?>">Book a session</a>
+      <a class="btn btn-ghost" href="<?php echo $u($opt('btl_whatsapp_url')); ?>">WhatsApp Paul</a>
+      <a class="mobile-phone" href="tel:<?php echo esc_attr($opt('btl_phone_tel')); ?>">✆ <?php echo $e($opt('btl_phone_display')); ?></a>
     </div>
   </div>
 </header>
@@ -65,7 +89,7 @@ $poster_url = $poster ? wp_get_attachment_image_url((int) $poster, 'full')
     </div>
     <div class="hero-trust">
       <span><span class="stars">★★★★★</span> <b><?php echo $e($opt('btl_google_score')); ?></b>
-        from <?php echo (int) $opt('btl_google_count'); ?> Google Reviews —
+        from <?php echo $e($opt('btl_google_count')); ?> Google Reviews —
         <a href="<?php echo $u($opt('btl_google_url')); ?>">read verified feedback</a></span>
       <span><b><?php echo $e($opt('btl_trustpilot_score')); ?></b> on
         <a href="<?php echo $u($opt('btl_trustpilot_url')); ?>">Trustpilot</a></span>
@@ -78,10 +102,21 @@ $poster_url = $poster ? wp_get_attachment_image_url((int) $poster, 'full')
 <div class="press">
   <div class="wrap">
     <span class="press-label">As featured in</span>
-    <?php foreach ($logos as $l):
+    <?php /* foreach ($logos as $l):
         if (empty($l['logo'])) continue;
         $href = $l['url'] ?: '#daily-express-quote'; ?>
       <a href="<?php echo $u($href); ?>" aria-label="<?php echo esc_attr($l['alt']); ?>">
+        <img src="<?php echo $u($l['logo']['url']); ?>" alt="<?php echo esc_attr($l['alt'] ?: $l['logo']['alt']); ?>" loading="lazy">
+      </a>
+    <?php endforeach; */ ?>
+    <?php foreach ($logos as $l):
+        if (empty($l['logo'])) continue;
+        $href = $l['url'] ?: '#daily-express-quote';
+        $file = $l['logo']['filename'] ?? basename($l['logo']['url']);
+        $slug = sanitize_html_class(preg_replace('/^logo-/', '', pathinfo($file, PATHINFO_FILENAME)));
+        ?>
+      <a class="press-logo press-logo-<?php echo esc_attr($slug); ?>"
+         href="<?php echo $u($href); ?>" aria-label="<?php echo esc_attr($l['alt']); ?>">
         <img src="<?php echo $u($l['logo']['url']); ?>" alt="<?php echo esc_attr($l['alt'] ?: $l['logo']['alt']); ?>" loading="lazy">
       </a>
     <?php endforeach; ?>
@@ -230,7 +265,7 @@ $poster_url = $poster ? wp_get_attachment_image_url((int) $poster, 'full')
     </div>
     <?php endif; ?>
     <div class="proof-links">
-      <a class="pill-link" href="<?php echo $u($opt('btl_google_url')); ?>">★ <?php echo $e($opt('btl_google_score')); ?> · <?php echo (int) $opt('btl_google_count'); ?> Google Reviews</a>
+      <a class="pill-link" href="<?php echo $u($opt('btl_google_url')); ?>">★ <?php echo $e($opt('btl_google_score')); ?> · <?php echo $e($opt('btl_google_count')); ?> Google Reviews</a>
       <a class="pill-link" href="<?php echo $u($opt('btl_trustpilot_url')); ?>">★ <?php echo $e($opt('btl_trustpilot_score')); ?> on Trustpilot</a>
       <a class="pill-link" href="<?php echo $u(get_field('btl_success_url')); ?>">All success stories</a>
     </div>

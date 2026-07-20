@@ -159,6 +159,10 @@ wordpress/wp-content/themes/*
 !safari-pinned-tab.svg
 !site.webmanifest
 
+# VS Code
+!.stubs
+
+
 # Docker
 #!docker-compose.yml
 #!Caddyfile

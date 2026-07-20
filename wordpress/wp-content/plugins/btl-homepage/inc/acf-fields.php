@@ -56,7 +56,7 @@ acf_add_local_field_group([
         btl_f('btl_booking_url',     'Booking / enquiry URL (used by all "Book" buttons)', 'url',
               ['default_value' => 'https://boxingtrainer.london/contact/']),
         btl_f('btl_google_score',    'Google review score', 'text', ['default_value' => '5.0']),
-        btl_f('btl_google_count',    'Google review count', 'number', ['default_value' => 52]),
+        btl_f('btl_google_count', 'Google review count', 'text', ['default_value' => '50+']),
         btl_f('btl_google_url',      'Google reviews link', 'url',
               ['default_value' => 'https://share.google/QUETiLFrIFNpZxGsX']),
         btl_f('btl_trustpilot_score','Trustpilot score', 'text', ['default_value' => '4.5']),
@@ -233,7 +233,7 @@ acf_add_local_field_group([
             'instructions' => 'ON: FAQPage JSON-LD is generated automatically from the questions above, so the schema always matches the visible FAQs. Turn OFF if you prefer to manage FAQ schema manually in the AIOSEO Custom Schema box (it will never output twice).',
         ]),
 
-        btl_tab('btl_seo', 'SEO content block'),
+        btl_tab('btl_seo', 'Bottom block'),
         btl_f('btl_seo_heading', 'Heading', 'text', ['default_value' => 'Boxing personal training in London']),
         btl_f('btl_seo_content', 'Content (internal links welcome)', 'wysiwyg',
               ['toolbar' => 'basic', 'media_upload' => 0]),

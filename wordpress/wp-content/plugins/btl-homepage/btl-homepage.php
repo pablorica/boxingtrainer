@@ -2,14 +2,15 @@
 /**
  * Plugin Name: BTL Homepage 2026
  * Description: Boxing Trainer London homepage — template, content fields and assets. Theme-independent so it survives the future theme migration.
- * Version:     1.0.0
+ * Version:     1.0.9
  * Author:      Codigo (Pablo)
  * Requires PHP: 8.0
  */
 
 if (!defined('ABSPATH')) exit;
 
-define('BTL_HP_VERSION', '1.0.0');
+
+define('BTL_HP_VERSION', '1.0.9');
 define('BTL_HP_PATH', plugin_dir_path(__FILE__));
 define('BTL_HP_URL',  plugin_dir_url(__FILE__));
 const BTL_HP_TEMPLATE = 'btl-home-2026.php';
@@ -18,6 +19,8 @@ const BTL_HP_TEMPLATE = 'btl-home-2026.php';
 add_action('acf/init', function () {
     require_once BTL_HP_PATH . 'inc/acf-fields.php';
 });
+
+require_once BTL_HP_PATH . 'inc/cleanup.php';
 
 /* Admin notice if ACF Pro is missing */
 add_action('admin_notices', function () {

@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
 
+## [1.2.1] - 2026-07-20
+
+### Added
+
+- `.stubs` folder
+- `.editorconfig`file
+  
+### Updated
+
+- Custom Plugin: BTL Homepage 2026
+- 
+
 ## [1.2.0] - 2026-07-16
 
 ### Added

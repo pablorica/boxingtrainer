@@ -1,0 +1,14 @@
+Place these files (exact names) in the images dir before running the seeder:
+
+  hero.jpg
+  geri-video-thumbnail.jpg
+  paul.jpg
+  img-coaching.png
+  img-padwork.png
+  img-sparring.png
+  img-hoodie.png
+  guide-1.jpg
+  guide-2.jpg
+  guide-3.jpg
+
+The three logo SVGs in seed-images/ go in the same folder.
