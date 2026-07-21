@@ -377,7 +377,7 @@ $poster_url = $poster ? wp_get_attachment_image_url((int) $poster, 'full')
     <?php endif; ?>
     <?php if ($mg = get_field('btl_more_guides')): ?>
     <div class="more-guides">
-      <h5><?php echo $e(get_field('btl_more_guides_title')); ?></h5>
+      <h3><?php echo $e(get_field('btl_more_guides_title')); ?></h3>
       <div class="row">
         <?php foreach ($mg as $m): ?>
         <a class="pill-link" href="<?php echo $u($m['url']); ?>"><?php echo $e($m['label']); ?></a>

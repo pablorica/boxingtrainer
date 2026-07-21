@@ -64,7 +64,7 @@ btl-homepage/
 
 1) Upload the plugin and activate 
 2) Add the content-filling session in wp-admin:
-   1) Repeaters can't prefill, so `pathways/who-cards/FAQs/testimonials/areas/nav/footer` must get pasted once from the mockup 
+   1) Repeaters can't prefill, so `pathways/who-cards/FAQs/testimonials/areas/nav/footer` must get pasted once from the "Feed Content"
    2) Images (hero, four pathway cards, portrait, three guides, three press logos) must get uploaded to the media library with alt text and selected in their fields. 
    3) Compare the staging page against the preview side by side. Two known **deltas** to expect: 
       1) fonts load via the enqueued Google Fonts (check Oswald/Inter actually render), 
@@ -94,7 +94,7 @@ wp post create --post_type=page --post_title="Home 2026" --post_status=draft --p
 # 3. Prepare the images folder: your 10 final image files (exact names in
 #    REQUIRED-IMAGES.txt) + the 3 logo SVGs from seed-images/
 # 4. Seed:
-wp eval-file btl-seed-home.php 123 /path/to/images
+wp eval-file btl-seed-home.php <page_id> /path/to/images
 ```
 
 It assigns the template, fills the options page, populates every field and repeater with the extracted mockup content imports the images with alt text, and reports progress per image. 
@@ -107,7 +107,15 @@ On SiteGround, same command via SSH — wp is preinstalled there;
 Upload the script and images folder anywhere (e.g. ~/btl-seed/), 
 ```bash
 cd wordpress/wp-content/plugins/btl-homepage/seed-package
-wp eval-file btl-seed-home.php <Page ID> seed-images
+wp eval-file btl-seed-home.php <Page ID> seed-package/seed-images
+
+## In Siteground
+cd ~/www/boxingtrainer.london/public_html/
+wp eval-file /home/u655-cwxrryebznxq/www/boxingtrainer.london/public_html/wp-content/plugins/btl-homepage/seed-package/btl-seed-home.php 4814 /home/u655-cwxrryebznxq/www/boxingtrainer.london/public_html/wp-content/plugins/btl-homepage/seed-package/seed-images
+
+## Remove seeder after populating
+rm -R ~/www/boxingtrainer.london/public_html/wp-content/plugins/btl-homepage/seed-package/
+
 
 ## In Docker
 docker compose run --rm wpcli eval-file /var/www/html/wp-content/plugins/btl-homepage/seed-package/btl-seed-home.php <Page ID> /var/www/html/wp-content/plugins/btl-homepage/seed-package/seed-images 

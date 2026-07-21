@@ -2,7 +2,7 @@
 /**
  * Plugin Name: BTL Homepage 2026
  * Description: Boxing Trainer London homepage — template, content fields and assets. Theme-independent so it survives the future theme migration.
- * Version:     1.0.9
+ * Version:     1.0.10
  * Author:      Codigo (Pablo)
  * Requires PHP: 8.0
  */
@@ -10,7 +10,7 @@
 if (!defined('ABSPATH')) exit;
 
 
-define('BTL_HP_VERSION', '1.0.9');
+define('BTL_HP_VERSION', '1.0.10');
 define('BTL_HP_PATH', plugin_dir_path(__FILE__));
 define('BTL_HP_URL',  plugin_dir_url(__FILE__));
 const BTL_HP_TEMPLATE = 'btl-home-2026.php';

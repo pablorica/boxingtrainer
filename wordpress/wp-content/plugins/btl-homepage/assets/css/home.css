@@ -365,8 +365,16 @@
     font-family:'Inter',sans-serif;font-weight:700;margin-bottom:8px;}
   .g-card p{font-size:13.5px;color:var(--soft);flex:1;margin-bottom:16px;}
   .more-guides{margin-top:30px;}
-  .more-guides h5{font-family:'Oswald',sans-serif;font-weight:600;font-size:12px;letter-spacing:2.5px;
-    text-transform:uppercase;color:var(--softer);margin-bottom:14px;}
+  .more-guides h3, 
+  .more-guides h5 {
+    font-family:'Oswald',sans-serif;
+    font-weight:600;
+    font-size:12px;
+    letter-spacing:2.5px;
+    text-transform:uppercase;
+    color:var(--softer);
+    margin-bottom:14px;
+  }
   .more-guides .row{display:flex;flex-wrap:wrap;gap:10px;}
 
   /* FAQ */
