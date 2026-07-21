@@ -140,10 +140,14 @@ wordpress/wp-content/themes/*
 !SAGE.md
 !SASS.md
 !VUE.md
+!PYTHON.md
 !composer.json
 !theme.json
 # Migration file
 !*.sql.gz
+
+# Python compressor
+!package-plugin.py
 
 # track example files, if they exist
 !*.example
@@ -169,7 +173,6 @@ wordpress/wp-content/themes/*
 
 
 # Wordpress: track these mu-plugins, plugins, and themes
-
 
 # WPML Plugin: These files were updated to prevent fatal errors caused by incompatibilities between the WPML plugin and SAGE
 #!wp-content/plugins/wpml-string-translation/

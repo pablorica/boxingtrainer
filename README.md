@@ -3,7 +3,19 @@
 A clean slate Wordpress theme template with Bootstrap(5). Based in WP theme LPD ABCPersonal (https://themesinfo.com/wp-theme-lpd-abcpersonal-ewuv)
 
 
-[![version](https://img.shields.io/badge/version-1.2.1-green.svg)](https://semver.org)
+[![version](https://img.shields.io/badge/version-1.2.2-green.svg)](https://semver.org)
+
+
+## Plugin Compressor 
+
+Small script that creates a `.zip` package of a WordPress plugin.
+
+- [PYTHON.md](https://github.com/pablorica/boxingtrainer/blob/main/PYTHON.md)
+
+
+## BTL Homepage 2026
+
+ Custom plugin to generate the 2026 pages
 
 
 

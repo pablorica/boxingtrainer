@@ -6,6 +6,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.2.2] - 2026-07-21
+
+### Added
+
+- Plugin compressor made in Python
 
 ## [1.2.1] - 2026-07-20
 
