@@ -45,7 +45,7 @@ class lpd_abcpersonal_front_functions {
 		    return $page_templates;
 		}
 		
-		function lpd_abcpersonal_comments_callback( $comment, $args, $depth) {
+		public static function lpd_abcpersonal_comments_callback( $comment, $args, $depth) {
 			$GLOBALS['comment'] = $comment;
 			switch ( $comment->comment_type ) :
 				case 'pingback' :

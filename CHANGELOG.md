@@ -6,6 +6,18 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.2.3] - 2026-07-22
+
+### Fix
+
+- Resolved a PHP fatal error affecting certain blog posts. 
+  - The custom comments callback (`lpd_abcpersonal_comments_callback`) was being called statically by `wp_list_comments()`, but the method was declared as non-static. Updated the callback method to `public static`, restoring normal rendering of affected posts and preventing intermittent layout issues caused by the fatal error.
+
+### Added
+
+- New `.stubs` files
+
+
 ## [1.2.2] - 2026-07-21
 
 ### Added
