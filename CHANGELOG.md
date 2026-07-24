@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.2.4] - 2026-07-24
+
+### Update
+
+- *About -> Photo* alignment
+
 ## [1.2.3] - 2026-07-22
 
 ### Fix
@@ -34,7 +40,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Updated
 
 - Custom Plugin: BTL Homepage 2026
-- 
+
 
 ## [1.2.0] - 2026-07-16
 

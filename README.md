@@ -3,7 +3,7 @@
 A clean slate Wordpress theme template with Bootstrap(5). Based in WP theme LPD ABCPersonal (https://themesinfo.com/wp-theme-lpd-abcpersonal-ewuv)
 
 
-[![version](https://img.shields.io/badge/version-1.2.3-green.svg)](https://semver.org)
+[![version](https://img.shields.io/badge/version-1.2.4-green.svg)](https://semver.org)
 
 
 ## Plugin Compressor 
