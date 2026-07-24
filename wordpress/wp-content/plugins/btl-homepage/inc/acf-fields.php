@@ -5,7 +5,7 @@
  *
  * - PHP-registered (version-controlled), prefixed btl_ to avoid collisions with existing field groups.
  * - One field group with tabs per section, assigned to btl-home-2026.php.
- * - Options page for site-wide values (reviews, contact) used in several places.
+ * - Options page for site-wide values (header nav, footer, contact, reviews) shared by every BTL template.
  * - FAQ schema auto-generation is toggleable per Paul's manual-AIOSEO workflow.
  */
 
@@ -37,7 +37,7 @@ function btl_rep(string $key, string $label, array $sub, array $extra = []): arr
 /* ---------- options page: site-wide settings ---------- */
 if (function_exists('acf_add_options_page')) {
     acf_add_options_page([
-        'page_title' => 'Site-wide Settings — reviews & contact',
+        'page_title' => 'Site-wide Settings — header, footer, contact & reviews',
         'menu_title' => 'Site-wide Settings',
         'menu_slug'  => 'btl-global',
         'capability' => 'edit_pages',
@@ -49,21 +49,47 @@ acf_add_local_field_group([
     'key'    => 'group_btl_global',
     'title'  => 'Site-wide values (used across the site)',
     'fields' => [
+
+        btl_tab('btl_g_contact', 'Contact'),
         btl_f('btl_phone_display',   'Phone (display)', 'text', ['default_value' => '07790 210 031']),
         btl_f('btl_phone_tel',       'Phone (tel: link format)', 'text', ['default_value' => '07790210031']),
         btl_f('btl_whatsapp_url',    'WhatsApp link', 'url', ['default_value' => 'https://wa.me/447790210031']),
         btl_f('btl_email',           'Email', 'email', ['default_value' => 'boxingtrainerlondon@icloud.com']),
         btl_f('btl_booking_url',     'Booking / enquiry URL (used by all "Book" buttons)', 'url',
               ['default_value' => 'https://boxingtrainer.london/contact/']),
+
+        btl_tab('btl_g_reviews', 'Reviews'),
         btl_f('btl_google_score',    'Google review score', 'text', ['default_value' => '5.0']),
-        btl_f('btl_google_count', 'Google review count', 'text', ['default_value' => '50+']),
+        btl_f('btl_google_count',    'Google review count', 'text', ['default_value' => '50+']),
         btl_f('btl_google_url',      'Google reviews link', 'url',
               ['default_value' => 'https://share.google/QUETiLFrIFNpZxGsX']),
         btl_f('btl_trustpilot_score','Trustpilot score', 'text', ['default_value' => '4.5']),
         btl_f('btl_trustpilot_url',  'Trustpilot link', 'url',
               ['default_value' => 'https://uk.trustpilot.com/review/boxingtrainer.london']),
+
+        /* Moved here from group_btl_home_2026 in v1.1.2.
+           Field keys are unchanged (field_btl_nav_links and its sub-fields), so
+           existing values migrate cleanly and nothing in the templates changes. */
+        btl_tab('btl_g_nav', 'Header / navigation'),
+        btl_rep('btl_nav_links', 'Navigation links', [
+            btl_f('label', 'Label', 'text'),
+            btl_f('url',   'URL', 'url'),
+        ], ['instructions' => 'Shown in the desktop header and the mobile menu on every BTL template.']),
+
+        btl_tab('btl_g_footer', 'Footer'),
+        btl_f('btl_footer_blurb', 'Footer blurb', 'textarea', ['rows' => 3, 'default_value' =>
+              'Indoor and outdoor 1-to-1 boxing personal training across London, run by Paul Carroll — former British University Heavyweight Champion.']),
+        btl_rep('btl_footer_site_links', 'Footer — Site column links', [
+            btl_f('label', 'Label', 'text'),
+            btl_f('url',   'URL', 'url'),
+        ]),
+        btl_rep('btl_footer_training_links', 'Footer — Training column links', [
+            btl_f('label', 'Label', 'text'),
+            btl_f('url',   'URL', 'url'),
+        ]),
     ],
     'location' => [[[ 'param' => 'options_page', 'operator' => '==', 'value' => 'btl-global' ]]],
+    'style'    => 'seamless',
 ]);
 
 /* ---------- homepage field group ---------- */
@@ -71,12 +97,6 @@ acf_add_local_field_group([
     'key'    => 'group_btl_home_2026',
     'title'  => 'Homepage 2026 content',
     'fields' => [
-
-        btl_tab('btl_nav', 'Header / navigation'),
-        btl_rep('btl_nav_links', 'Navigation links', [
-            btl_f('label', 'Label', 'text'),
-            btl_f('url',   'URL', 'url'),
-        ]),
 
         btl_tab('btl_hero', 'Hero'),
         btl_f('btl_hero_image', 'Hero background image', 'image', ['return_format' => 'id', 'preview_size' => 'medium',
@@ -244,18 +264,6 @@ acf_add_local_field_group([
               ['default_value' => 'Now welcoming new clients for 1-to-1 boxing personal training across London.']),
         btl_f('btl_cta_label',   'Button label', 'text', ['default_value' => 'Book your 1-to-1 session']),
         btl_f('btl_cta_url',     'Button URL (blank = site-wide booking URL)', 'url'),
-
-        btl_tab('btl_footer', 'Footer'),
-        btl_f('btl_footer_blurb', 'Footer blurb', 'textarea', ['rows' => 3, 'default_value' =>
-              'Indoor and outdoor 1-to-1 boxing personal training across London, run by Paul Carroll — former British University Heavyweight Champion.']),
-        btl_rep('btl_footer_site_links', 'Footer — Site column links', [
-            btl_f('label', 'Label', 'text'),
-            btl_f('url',   'URL', 'url'),
-        ]),
-        btl_rep('btl_footer_training_links', 'Footer — Training column links', [
-            btl_f('label', 'Label', 'text'),
-            btl_f('url',   'URL', 'url'),
-        ]),
     ],
     'location' => [[[ 'param' => 'page_template', 'operator' => '==', 'value' => 'btl-home-2026.php' ]]],
     'style'    => 'seamless',
