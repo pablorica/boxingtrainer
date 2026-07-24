@@ -92,7 +92,10 @@ add_action('wp_enqueue_scripts', function () {
     $slug = btl_current_template();
     if ($slug === '') return;
 
-    $tpl = btl_templates()[$slug];
+    $tpl    = btl_templates()[$slug];
+    // 'btl-home-2026.php' -> 'btl-home-2026'. Already btl- prefixed, which is
+    // what cleanup.php's allowlist matches on — keep it that way.
+    $handle = sanitize_key(str_replace('.php', '', $slug));
 
     // Google Fonts (Oswald + Inter, as approved in the design)
     wp_enqueue_style('btl-fonts',
@@ -105,10 +108,10 @@ add_action('wp_enqueue_scripts', function () {
 
     // Per-template additions (declared as dependent on base so order is guaranteed)
     if (!empty($tpl['css'])) {
-        wp_enqueue_style('btl-' . sanitize_key($slug), BTL_HP_URL . $tpl['css'], ['btl-base'], BTL_HP_VERSION);
+        wp_enqueue_style($handle, BTL_HP_URL . $tpl['css'], ['btl-base'], BTL_HP_VERSION);
     }
     if (!empty($tpl['js'])) {
-        wp_enqueue_script('btl-' . sanitize_key($slug), BTL_HP_URL . $tpl['js'], ['btl-base'], BTL_HP_VERSION, ['strategy' => 'defer']);
+        wp_enqueue_script($handle, BTL_HP_URL . $tpl['js'], ['btl-base'], BTL_HP_VERSION, ['strategy' => 'defer']);
     }
 });
 

@@ -1,8 +1,8 @@
 <?php
 /**
- * BTL Homepage 2026 — asset cleanup.
+ * BTL Site 2026 — asset cleanup.
  *
- * The homepage template is standalone: it renders its own header/footer and needs
+ * The BTL templates are standalone: they render their own header/footer and need
  * none of the theme's or page-builder plugins' CSS/JS. Those assets (two different
  * Bootstrap versions, the theme's 56KB inline Customizer CSS, Visual Composer,
  * Revolution Slider, Essential Grid, social-feed plugins, etc.) override the design
@@ -15,17 +15,27 @@
 
 if (!defined('ABSPATH')) exit;
 
-/** Is the current request our standalone homepage template? */
+/** Is the current request one of our standalone BTL templates? */
 function btl_hp_is_template(): bool {
     if (is_admin()) return false;
-    return is_singular('page') && get_page_template_slug() === 'btl-home-2026.php';
+    return btl_current_template() !== '';
+}
+
+/**
+ * Any handle starting with this prefix is ours and is always allowed.
+ *
+ * This is what stops the allowlist going stale: every BTL asset handle is
+ * btl- prefixed (btl-base, btl-fonts, btl-home-2026, btl-packages-2026...),
+ * so adding a stylesheet or a new template needs no change here.
+ */
+function btl_hp_is_own_handle(string $handle): bool {
+    return str_starts_with($handle, 'btl-');
 }
 
 /** Styles allowed to load on the homepage template. */
 function btl_hp_allowed_styles(): array {
     return apply_filters('btl_hp_allowed_styles', [
-        'btl-hp',        // our stylesheet
-        'btl-hp-fonts',  // Oswald + Inter
+        // our own btl-* handles are allowed by prefix, see btl_hp_is_own_handle()
         'admin-bar',     // logged-in admin bar (harmless, and looks broken without it)
         'dashicons',     // admin bar icons
     ]);
@@ -34,7 +44,7 @@ function btl_hp_allowed_styles(): array {
 /** Scripts allowed to load on the homepage template. */
 function btl_hp_allowed_scripts(): array {
     return apply_filters('btl_hp_allowed_scripts', [
-        'btl-hp',                        // our JS (hero + video facade)
+        // our own btl-* handles are allowed by prefix, see btl_hp_is_own_handle()
         'monsterinsights-frontend-script', // analytics — must never be removed
         'admin-bar',
         'jquery-core',                   // kept so stray inline snippets don't throw
@@ -52,12 +62,12 @@ add_action('wp_enqueue_scripts', function () {
 
     $keep_styles = btl_hp_allowed_styles();
     foreach ((array) wp_styles()->queue as $handle) {          // copy: we modify the queue
-        if (!in_array($handle, $keep_styles, true)) wp_dequeue_style($handle);
+        if (!btl_hp_is_own_handle($handle) && !in_array($handle, $keep_styles, true)) wp_dequeue_style($handle);
     }
 
     $keep_scripts = btl_hp_allowed_scripts();
     foreach ((array) wp_scripts()->queue as $handle) {
-        if (!in_array($handle, $keep_scripts, true)) wp_dequeue_script($handle);
+        if (!btl_hp_is_own_handle($handle) && !in_array($handle, $keep_scripts, true)) wp_dequeue_script($handle);
     }
 }, 9999);
 
@@ -67,12 +77,12 @@ add_action('wp_enqueue_scripts', function () {
  * ------------------------------------------------------------------------ */
 add_filter('style_loader_tag', function ($tag, $handle) {
     if (!btl_hp_is_template()) return $tag;
-    return in_array($handle, btl_hp_allowed_styles(), true) ? $tag : '';
+    return (btl_hp_is_own_handle($handle) || in_array($handle, btl_hp_allowed_styles(), true)) ? $tag : '';
 }, 9999, 2);
 
 add_filter('script_loader_tag', function ($tag, $handle) {
     if (!btl_hp_is_template()) return $tag;
-    return in_array($handle, btl_hp_allowed_scripts(), true) ? $tag : '';
+    return (btl_hp_is_own_handle($handle) || in_array($handle, btl_hp_allowed_scripts(), true)) ? $tag : '';
 }, 9999, 2);
 
 /* ---------------------------------------------------------------------------
@@ -103,7 +113,7 @@ add_action('wp', function () {
  * ------------------------------------------------------------------------ */
 add_filter('body_class', function (array $classes): array {
     if (!btl_hp_is_template()) return $classes;
-    $allow_prefixes = ['btl-home-2026', 'page-id-', 'page-template', 'logged-in', 'admin-bar', 'wp-singular', 'page'];
+    $allow_prefixes = ['btl-', 'page-id-', 'page-template', 'logged-in', 'admin-bar', 'wp-singular', 'page'];
     return array_values(array_filter($classes, function ($c) use ($allow_prefixes) {
         foreach ($allow_prefixes as $p) {
             if ($c === $p || str_starts_with($c, $p)) return true;
