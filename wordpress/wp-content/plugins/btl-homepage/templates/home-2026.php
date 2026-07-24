@@ -20,57 +20,11 @@ $vid_id     = $yt_id((string) get_field('btl_video_youtube'));
 $poster     = get_field('btl_video_poster');
 $poster_url = $poster ? wp_get_attachment_image_url((int) $poster, 'full')
                       : ($vid_id ? "https://img.youtube.com/vi/{$vid_id}/maxresdefault.jpg" : '');
-?><!DOCTYPE html>
-<html <?php language_attributes(); ?>>
-<head>
-<meta charset="<?php bloginfo('charset'); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<?php wp_head(); ?>
-</head>
-<body <?php body_class('btl-home-2026'); ?>>
-<?php wp_body_open(); ?>
 
-<header>
-  <div class="wrap nav">
-    <a class="logo" href="<?php echo $u(home_url('/')); ?>">Boxing Trainer <span>London</span></a>
-    <?php if ($nav = get_field('btl_nav_links')): ?>
-    <nav class="menu">
-      <?php foreach ($nav as $n): ?>
-        <a href="<?php echo $u($n['url']); ?>"><?php echo $e($n['label']); ?></a>
-      <?php endforeach; ?>
-    </nav>
-    <?php endif; ?>
-    <div class="nav-cta">
-      <a class="nav-phone" href="tel:<?php echo esc_attr($opt('btl_phone_tel')); ?>"><?php echo $e($opt('btl_phone_display')); ?></a>
-      <a class="btn btn-accent" href="<?php echo $booking('btl_hero_cta_url'); ?>">Book a session</a>
-      <button id="btl-burger"
-        class="burger" 
-        type="button" 
-        aria-label="Open menu" 
-        aria-expanded="false" 
-        aria-controls="btl-mobile-menu"
-      >
-        <i></i>
-        <i></i>
-        <i></i>
-      </button>
-    </div>
-  </div>
-  <div class="mobile-menu" id="btl-mobile-menu" hidden>
-    <?php if ($nav): ?>
-    <nav aria-label="Mobile">
-      <?php foreach ($nav as $n): ?>
-        <a href="<?php echo $u($n['url']); ?>"><?php echo $e($n['label']); ?></a>
-      <?php endforeach; ?>
-    </nav>
-    <?php endif; ?>
-    <div class="mobile-menu-cta">
-      <a class="btn btn-accent" href="<?php echo $booking('btl_hero_cta_url'); ?>">Book a session</a>
-      <a class="btn btn-ghost" href="<?php echo $u($opt('btl_whatsapp_url')); ?>">WhatsApp Paul</a>
-      <a class="mobile-phone" href="tel:<?php echo esc_attr($opt('btl_phone_tel')); ?>">✆ <?php echo $e($opt('btl_phone_display')); ?></a>
-    </div>
-  </div>
-</header>
+$btl_body_class = 'btl-home-2026';
+require BTL_HP_PATH . 'templates/parts/head.php';
+require BTL_HP_PATH . 'templates/parts/header.php';
+?>
 
 <!-- HERO -->
 <div class="hero">
@@ -421,53 +375,19 @@ $poster_url = $poster ? wp_get_attachment_image_url((int) $poster, 'full')
 <!-- CTA -->
 <div class="cta">
   <div class="wrap">
-    <div>
+    <div class="cta-text">
       <h2><?php echo $e(get_field('btl_cta_heading')); ?></h2>
       <p><?php echo $e(get_field('btl_cta_text')); ?></p>
     </div>
     <div class="cta-actions">
       <a class="btn btn-white" href="<?php echo $booking('btl_cta_url'); ?>"><?php echo $e(get_field('btl_cta_label')); ?></a>
-      <span class="phone">✆ <?php echo $e($opt('btl_phone_display')); ?> · WhatsApp</span>
+      <span class="phone">✆
+        <a href="tel:<?php echo esc_attr(btl_opt('btl_phone_tel')); ?>"><?php echo $e(btl_opt('btl_phone_display')); ?></a>
+        ·
+        <a href="<?php echo esc_url(btl_opt('btl_whatsapp_url')); ?>">WhatsApp</a>
+      </span>
     </div>
   </div>
 </div>
 
-<!-- FOOTER -->
-<footer>
-  <div class="wrap">
-    <div class="f-grid">
-      <div>
-        <a class="logo" href="<?php echo $u(home_url('/')); ?>">Boxing Trainer <span>London</span></a>
-        <p><?php echo $e(get_field('btl_footer_blurb')); ?></p>
-      </div>
-      <div>
-        <h4>Site</h4>
-        <?php if ($fs = get_field('btl_footer_site_links')): ?>
-        <ul><?php foreach ($fs as $l): ?><li><a href="<?php echo $u($l['url']); ?>"><?php echo $e($l['label']); ?></a></li><?php endforeach; ?></ul>
-        <?php endif; ?>
-      </div>
-      <div>
-        <h4>Training</h4>
-        <?php if ($ft = get_field('btl_footer_training_links')): ?>
-        <ul><?php foreach ($ft as $l): ?><li><a href="<?php echo $u($l['url']); ?>"><?php echo $e($l['label']); ?></a></li><?php endforeach; ?></ul>
-        <?php endif; ?>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <ul>
-          <li>Phone / WhatsApp — <?php echo $e($opt('btl_phone_display')); ?></li>
-          <li><?php echo $e($opt('btl_email')); ?></li>
-          <li>Central, South, East &amp; West London</li>
-        </ul>
-      </div>
-    </div>
-    <div class="f-bottom">
-      <span>© <?php echo esc_html(date('Y')); ?> Boxing Trainer London. All rights reserved.</span>
-      <span>Privacy · Terms</span>
-    </div>
-  </div>
-</footer>
-
-<?php wp_footer(); ?>
-</body>
-</html>
+<?php require BTL_HP_PATH . 'templates/parts/footer.php'; ?>
