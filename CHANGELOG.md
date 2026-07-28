@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.2.5] - 2026-07-28
+
+### Update
+
+- *Home -> Hero* `hero-enhanced` class hardcoded into the HTML
+
 ## [1.2.4] - 2026-07-24
 
 ### Update

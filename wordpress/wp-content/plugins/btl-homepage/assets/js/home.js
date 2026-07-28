@@ -64,8 +64,10 @@
   /*
     The text remains visible when JavaScript is disabled.
     We only hide it after confirming JavaScript is running.
+    No working well in remote, so we put 'hero-enhanced' harcoded in the HTML tag
+    //hero.classList.add('hero-enhanced');
   */
-  hero.classList.add('hero-enhanced');
+  
 
   function revealHero() {
     window.setTimeout(function () {

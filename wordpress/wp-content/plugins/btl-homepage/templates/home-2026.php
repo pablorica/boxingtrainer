@@ -27,7 +27,7 @@ require BTL_HP_PATH . 'templates/parts/header.php';
 ?>
 
 <!-- HERO -->
-<div class="hero">
+<div class="hero hero-enhanced">
   <div class="hero-media">
     <?php echo wp_get_attachment_image((int) get_field('btl_hero_image'), 'full', false, [
         'fetchpriority' => 'high', 'loading' => 'eager',
