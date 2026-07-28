@@ -42,66 +42,50 @@
   .hero-trust b{color:#fff;}
   .hero-trust a{color:var(--accent);}
   /*
-    Hero reveal — robust against deferred JS (e.g. NitroPack delaying
-    scripts until first interaction).
+    Hero reveal — pure CSS, no class gate, no JavaScript.
 
-    The hidden/pre-animation state is applied from first paint via html.js,
-    which is set synchronously in <head> before any deferred script or paint.
-    That means there is never a visible hero for a late-running script to
-    reverse. .hero-ready is add-only and is the single one-way switch to the
-    revealed state; once set it is never removed, so the animation cannot
-    play backwards no matter when the script executes.
+    Why no .js / .hero-ready gate: NitroPack defers any script that toggles
+    a class (including a one-line html.js flip) until first interaction, and
+    it drops non-critical keyframes from its inlined critical CSS. Either of
+    those alone breaks a JS-gated or stylesheet-only reveal on the cached
+    page. An ungated CSS animation runs the moment .hero-inner is painted,
+    so it is immune to both — provided the keyframes are in critical CSS,
+    which is why the hero animation is ALSO inlined in templates/parts/head.php.
+    (Keeping it here as well is harmless: same rules, and it covers the
+    uncached render and any context where the inline block is absent.)
 
-    If JS is disabled entirely, html.js is absent and the hero is simply
-    fully visible (no hidden state ever applied).
+    animation-fill-mode:both holds the first keyframe before the animation
+    starts, so there is no flash of the final state before it runs.
   */
-  .js .hero .hero-inner{
-    opacity:0;
-    transform:translateY(28px);
+  .hero-inner{
+    animation:btlHeroReveal 800ms ease 400ms both;
+  }
+  .hero-media img{
+    animation:btlHeroZoom 1500ms cubic-bezier(.2,.7,.2,1) 100ms both;
+  }
+  .hero-media::after{
+    animation:btlHeroFade 900ms ease 100ms both;
   }
 
-  .js .hero .hero-media img{
-    transform:scale(1.025);
-    transition:transform 1400ms cubic-bezier(.2,.7,.2,1);
+  @keyframes btlHeroReveal{
+    from{opacity:0;transform:translateY(28px);}
+    to{opacity:1;transform:translateY(0);}
   }
-
-  .js .hero.hero-ready .hero-inner{
-    opacity:1;
-    transform:translateY(0);
-    transition:
-      opacity 800ms ease,
-      transform 900ms cubic-bezier(.2,.7,.2,1);
+  @keyframes btlHeroZoom{
+    from{transform:scale(1.025);}
+    to{transform:scale(1);}
   }
-
-  .js .hero.hero-ready .hero-media::after{
-    opacity:1;
-  }
-
-  .js .hero.hero-ready .hero-media img{
-    transform:scale(1);
+  @keyframes btlHeroFade{
+    from{opacity:0;}
+    to{opacity:1;}
   }
 
 /* Avoid motion for visitors who have requested reduced animation */
 @media (prefers-reduced-motion: reduce){
-  .hero-inner,
-  .hero-media img,
-  .hero-media::after{
-    transition:none !important;
-    transform:none !important;
-  }
-
-  /* Force the fully-revealed state regardless of the js/hero-ready classes */
-  .js .hero .hero-inner{
+  .hero-inner,.hero-media img,.hero-media::after{
+    animation:none !important;
     opacity:1 !important;
     transform:none !important;
-  }
-
-  .js .hero .hero-media img{
-    transform:none !important;
-  }
-
-  .js .hero .hero-media::after{
-    opacity:1 !important;
   }
 }
 
