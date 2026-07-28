@@ -60,6 +60,7 @@ Revised sequence:
 wp db export btl-before-globals-$(date +%F).sql
 
 ## In Siteground
+ssh BoxingTrainer  
 cd ~/www/boxingtrainer.london/public_html/
 wp db export btl-before-globals-$(date +%F).sql
 
@@ -78,6 +79,11 @@ wp post list --post_type=page --meta_key=_wp_page_template \
 cd ~/www/boxingtrainer.london/public_html/
 wp post list --post_type=page --meta_key=_wp_page_template \
   --meta_value=btl-home-2026.php --fields=ID,post_title
++------+------------+
+| ID   | post_title |
++------+------------+
+| 4814 | Home 2026  |
++------+------------+
 
 ## In Docker
 cd ~/Dockers/boxingtrainer
@@ -119,6 +125,10 @@ foreach (["btl_nav_links","btl_footer_blurb","btl_footer_site_links","btl_footer
     update_field($f, $v, "option");
     WP_CLI::success("$f migrated");
 }'
+Success: btl_nav_links migrated
+Success: btl_footer_blurb migrated
+Success: btl_footer_site_links migrated
+Success: btl_footer_training_links migrated
 
 ## In Docker
 cd ~/Dockers/boxingtrainer
