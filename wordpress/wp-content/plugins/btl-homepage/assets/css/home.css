@@ -42,23 +42,30 @@
   .hero-trust b{color:#fff;}
   .hero-trust a{color:var(--accent);}
   /*
-    Hero is fully visible by default.
-    Animation is activated only when JavaScript adds .hero-enhanced.
+    Hero reveal — robust against deferred JS (e.g. NitroPack delaying
+    scripts until first interaction).
+
+    The hidden/pre-animation state is applied from first paint via html.js,
+    which is set synchronously in <head> before any deferred script or paint.
+    That means there is never a visible hero for a late-running script to
+    reverse. .hero-ready is add-only and is the single one-way switch to the
+    revealed state; once set it is never removed, so the animation cannot
+    play backwards no matter when the script executes.
+
+    If JS is disabled entirely, html.js is absent and the hero is simply
+    fully visible (no hidden state ever applied).
   */
-  .hero-enhanced .hero-inner{
+  .js .hero .hero-inner{
     opacity:0;
     transform:translateY(28px);
   }
 
-  .hero-enhanced .hero-media img{
+  .js .hero .hero-media img{
     transform:scale(1.025);
-  }
-
-  .hero-media img{
     transition:transform 1400ms cubic-bezier(.2,.7,.2,1);
   }
 
-  .hero-enhanced.hero-ready .hero-inner{
+  .js .hero.hero-ready .hero-inner{
     opacity:1;
     transform:translateY(0);
     transition:
@@ -66,11 +73,11 @@
       transform 900ms cubic-bezier(.2,.7,.2,1);
   }
 
-  .hero-enhanced.hero-ready .hero-media::after{
+  .js .hero.hero-ready .hero-media::after{
     opacity:1;
   }
 
-  .hero-enhanced.hero-ready .hero-media img{
+  .js .hero.hero-ready .hero-media img{
     transform:scale(1);
   }
 
@@ -83,12 +90,18 @@
     transform:none !important;
   }
 
-  .hero-enhanced .hero-inner{
-    opacity:1;
+  /* Force the fully-revealed state regardless of the js/hero-ready classes */
+  .js .hero .hero-inner{
+    opacity:1 !important;
+    transform:none !important;
   }
 
-  .hero-enhanced .hero-media::after{
-    opacity:1;
+  .js .hero .hero-media img{
+    transform:none !important;
+  }
+
+  .js .hero .hero-media::after{
+    opacity:1 !important;
   }
 }
 

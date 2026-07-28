@@ -17,6 +17,7 @@ $btl_body_class = $btl_body_class ?? '';
 <head>
 <meta charset="<?php bloginfo('charset'); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.className+=" js";</script>
 <?php wp_head(); ?>
 </head>
 <body <?php body_class($btl_body_class); ?>>

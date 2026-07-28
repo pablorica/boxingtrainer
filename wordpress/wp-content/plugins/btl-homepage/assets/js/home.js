@@ -61,6 +61,8 @@
 
   if (!hero || !heroMedia) return;
 
+  // .js on <html> already applies the pre-animation state from first paint;
+  // this class is kept only for backwards compatibility and is now cosmetic.
   hero.classList.add('hero-enhanced');
 
   var revealed = false;
