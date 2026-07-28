@@ -57,34 +57,82 @@
 /* Hero reveal */
 (function () {
   var hero = document.querySelector('.hero');
-  var heroImage = document.querySelector('.hero-media img');
+  var heroMedia = document.querySelector('.hero-media');
 
-  if (!hero || !heroImage) return;
+  if (!hero || !heroMedia) return;
+
+  hero.classList.add('hero-enhanced');
+
+  var revealed = false;
+  var revealTimer;
+
+  function revealHero(delay) {
+    if (revealed) return;
+
+    window.clearTimeout(revealTimer);
+
+    revealTimer = window.setTimeout(function () {
+      if (revealed) return;
+
+      revealed = true;
+      hero.classList.add('hero-ready');
+    }, delay || 0);
+  }
+
+  function forceRevealHero() {
+    if (revealed) return;
+
+    window.clearTimeout(revealTimer);
+
+    revealed = true;
+    hero.classList.add('hero-ready');
+  }
+
+  function watchImage(image) {
+    if (!image) return;
+
+    if (image.complete && image.naturalWidth > 0) {
+      revealHero(100);
+      return;
+    }
+
+    image.addEventListener('load', function () {
+      revealHero(100);
+    }, { once: true });
+
+    image.addEventListener('error', forceRevealHero, { once: true });
+  }
+
+  watchImage(heroMedia.querySelector('img'));
+
+  var observer = new MutationObserver(function () {
+    var image = heroMedia.querySelector('img');
+
+    watchImage(image);
+
+    if (image && image.complete && image.naturalWidth > 0) {
+      observer.disconnect();
+    }
+  });
+
+  observer.observe(heroMedia, {
+    childList: true,
+    subtree: true,
+    attributes: true,
+    attributeFilter: [
+      'src',
+      'srcset',
+      'data-src',
+      'data-srcset'
+    ]
+  });
 
   /*
-    The text remains visible when JavaScript is disabled.
-    We only hide it after confirming JavaScript is running.
-    No working well in remote, so we put 'hero-enhanced' harcoded in the HTML tag
-    //hero.classList.add('hero-enhanced');
-  */
-  
-
-  function revealHero() {
-    window.setTimeout(function () {
-      hero.classList.add('hero-ready');
-    }, 550);
-  }
-
-  if (heroImage.complete) {
-    revealHero();
-  } else {
-    heroImage.addEventListener('load', revealHero, { once: true });
-
-    /*
-      Fallback: never leave the content hidden if the image fails.
-    */
-    heroImage.addEventListener('error', function () {
-      hero.classList.add('hero-ready');
-    }, { once: true });
-  }
+   * Never keep the hero hidden for more than 1.2 seconds,
+   * even if NitroPack delays the image.
+   */
+  window.setTimeout(function () {
+    observer.disconnect();
+    forceRevealHero();
+  }, 1200);
 })();
