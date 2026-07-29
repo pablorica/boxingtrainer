@@ -179,7 +179,7 @@ wordpress/wp-content/themes/*
 
 
 # Plugins
-!wordpress/wp-content/plugins/btl-homepage
+!wordpress/wp-content/plugins/btl-plugin
 
 
 # Theme

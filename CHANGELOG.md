@@ -11,7 +11,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 
 - Custom Plugin: Training Packages seeder
-- 
+
+### Update
+
+ - Custom plugin: Folder renamed to `btl-plugin`
 
 ## [1.3.0] - 2026-07-29
 
