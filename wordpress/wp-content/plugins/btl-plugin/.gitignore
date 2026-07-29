@@ -1,3 +1,4 @@
 # ignore image files
 *.jpg
+*.jpeg
 *.png
