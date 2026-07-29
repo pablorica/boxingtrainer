@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.3.1] - 2026-07-29
+
+### Added
+
+- Custom Plugin: Training Packages seeder
+- 
+
 ## [1.3.0] - 2026-07-29
 
 ### Added
