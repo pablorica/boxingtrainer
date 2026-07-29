@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.3.0] - 2026-07-29
+
+### Added
+
+- Custom Plugin: BTL Training Packages 2026
+
 ## [1.2.6] - 2026-07-28
 
 ### Update
