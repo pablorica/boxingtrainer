@@ -351,7 +351,7 @@ $data = [
                 ['text' => "Implementation shaped around the site's existing SEO content"],
             ],
             'links'       => [
-                ['label' => 'Visit Códigó', 'url' => 'https://codigo.co.uk/', 'secondary' => 0],
+                ['label' => 'Visit Codigo', 'url' => 'https://codigo.co.uk/', 'secondary' => 0],
             ],
         ],
     ],

@@ -6,15 +6,22 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.3.2] - 2026-07-29
+
+### Fixed
+
+- Custom Plugin: Typo
+
+### Update
+
+ - Custom plugin: Folder renamed to `btl-plugin`
+
 ## [1.3.1] - 2026-07-29
 
 ### Added
 
 - Custom Plugin: Training Packages seeder
 
-### Update
-
- - Custom plugin: Folder renamed to `btl-plugin`
 
 ## [1.3.0] - 2026-07-29
 
