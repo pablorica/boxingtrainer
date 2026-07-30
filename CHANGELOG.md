@@ -8,6 +8,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [1.3.2] - 2026-07-29
 
+### Added
+
+- Custom Plugin: HTML Template
+
+## [1.3.2] - 2026-07-29
+
 ### Fixed
 
 - Custom Plugin: Typo

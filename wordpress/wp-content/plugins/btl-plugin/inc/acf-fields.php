@@ -512,6 +512,30 @@ acf_add_local_field_group([
     'hide_on_screen' => ['the_content'],
 ]);
 
+/* ---------- HTML template: single full-page HTML field ----------
+   One plain textarea, deliberately not a WYSIWYG: a WYSIWYG (and wpautop)
+   would strip or reformat pasted markup. new_lines => '' is essential — it
+   stops ACF converting newlines to <br>/<p>, so the HTML is returned exactly
+   as pasted and btl_render_user_html() controls all output handling. */
+acf_add_local_field_group([
+    'key'    => 'group_btl_html_template',
+    'title'  => 'Full-page HTML',
+    'fields' => [
+        btl_f('btl_page_html', 'Page HTML', 'textarea', [
+            'rows'      => 24,
+            'new_lines' => '',
+            'instructions' =>
+                'Paste the full HTML for this page here. It renders automatically inside the site header and footer, '
+                . 'so start straight at your content (no &lt;html&gt;, &lt;head&gt; or &lt;body&gt; tags needed). '
+                . 'HTML only: &lt;script&gt;, &lt;style&gt; and &lt;link&gt; tags are removed for safety, so if you need to style '
+                . 'something use inline style="..." attributes. Use the AI prompt guide before generating HTML, so the output drops in cleanly.',
+        ]),
+    ],
+    'location' => [[[ 'param' => 'page_template', 'operator' => '==', 'value' => 'btl-html-template.php' ]]],
+    'style'    => 'seamless',
+    'hide_on_screen' => ['the_content'],
+]);
+
 /* ---------- FAQ schema: auto from the same fields Paul edits, toggleable, duplicate-safe ---------- */
 add_filter('aioseo_schema_output', function ($graphs) {
     // Runs wherever the template is used — including the pre-launch staging page,

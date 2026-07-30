@@ -42,7 +42,8 @@ EXCLUDED_PATHS = {
     "yarn.lock",
     "composer.lock",
     "README.md",
-    "seed-package"
+    "home-seed",
+    "training-packages-seed"
 }
 
 

@@ -136,6 +136,7 @@ cd into the WordPress root or pass --path, and run it against the real page ID.
     --fields=ID,post_title,post_status
 
   ## In Siteground
+  ssh BoxingTrainer
   cd ~/www/boxingtrainer.london/public_html/
   wp post list --post_type=page \
     --meta_key=_wp_page_template --meta_value=btl-packages-2026.php \
@@ -150,9 +151,8 @@ cd into the WordPress root or pass --path, and run it against the real page ID.
 +------+------------------------+-------------+
 | ID   | post_title             | post_status |
 +------+------------------------+-------------+
-| 4089 | Training Packages 2026 | publish     |
+| 4873 | Training Packages 2026 | publish     |
 +------+------------------------+-------------+
-
 ```
 
 2. Upload the seeder
@@ -164,10 +164,9 @@ tar -czvf training-packages-seed.tar.gz training-packages-seed/
 scp training-packages-seed.tar.gz BoxingTrainer:/home/u655-cwxrryebznxq/www/boxingtrainer.london/public_html/wp-content/plugins/btl-plugin/
 
 ## In Siteground
-  cd ~/www/boxingtrainer.london/public_html/
-  wp post list --post_type=page \
-    --meta_key=_wp_page_template --meta_value=btl-packages-2026.php \
-    --fields=ID,post_title,post_status
+ssh BoxingTrainer
+cd ~/www/boxingtrainer.london/public_html/wp-content/plugins/btl-plugin/
+tar -xzvf training-packages-seed.tar.gz
 
 ```
 3. Dry run (prints what it would write, changes nothing):
@@ -176,8 +175,9 @@ scp training-packages-seed.tar.gz BoxingTrainer:/home/u655-cwxrryebznxq/www/boxi
 wp eval-file seed-packages.php <PAGE_ID> dry
 
 ## In Siteground
+ssh BoxingTrainer
 cd ~/www/boxingtrainer.london/public_html/
-wp eval-file /home/u655-cwxrryebznxq/www/boxingtrainer.london/public_html/wp-content/plugins/btl-plugin/training-packages-seed/seed-packages.php <PAGE_ID> dry
+wp eval-file /home/u655-cwxrryebznxq/www/boxingtrainer.london/public_html/wp-content/plugins/btl-plugin/training-packages-seed/seed-packages.php 4873 dry
 
 
 ## In Docker
@@ -255,6 +255,7 @@ btl_pkg_hero_h1_main             "Boxing Training Packages"
   btl_pkg_schema_low               "65"
   btl_pkg_schema_high              "4000"
   btl_pkg_schema_offers            [8 row(s)]
+  Success: DRY RUN — 72 fields would be written to page 4873. Images to set by hand: btl_pkg_hero_image, btl_pkg_about_image. No changes made.
 ``` 
 
 4. Real run:
@@ -263,8 +264,9 @@ btl_pkg_hero_h1_main             "Boxing Training Packages"
 wp eval-file seed-packages.php <PAGE_ID> 
 
 ## In Siteground
+ssh BoxingTrainer
 cd ~/www/boxingtrainer.london/public_html/
-wp eval-file seed-packages.php <PAGE_ID> 
+wp eval-file /home/u655-cwxrryebznxq/www/boxingtrainer.london/public_html/wp-content/plugins/btl-plugin/training-packages-seed/seed-packages.php 4873
 
 ## In Docker
 docker compose run --rm wpcli eval-file /var/www/html/wp-content/plugins/btl-plugin/training-packages-seed/seed-packages.php 4089
@@ -278,11 +280,8 @@ Success: Seeded 72 fields on page 4089. Set the two images by hand (btl_pkg_hero
 rm -R training-packages-seed
 
 ## In Siteground
-cd ~/www/boxingtrainer.london/public_html/
-rm -R ~/www/boxingtrainer.london/public_html/wp-content/plugins/btl-plugin/training-packages-seed/
-
-## In Docker
-rm -R /Users/pablo/Dockers/boxingtrainer/wordpress/wp-content/plugins/btl-plugin/training-packages-seed/
-
+ssh BoxingTrainer
+cd ~/www/boxingtrainer.london/public_html/wp-content/plugins/btl-plugin/
+rm -R training-packages-seed/
 
 ``` 

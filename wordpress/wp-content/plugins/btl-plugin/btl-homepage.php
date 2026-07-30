@@ -2,7 +2,7 @@
 /**
  * Plugin Name: BTL Site 2026
  * Description: Boxing Trainer London — 2026 page templates, content fields and assets. Theme-independent so it survives the future theme migration.
- * Version:     1.2.0
+ * Version:     1.3.0
  * Author:      Pablo Rica
  * Author URI:  https://codigo.co.uk/
  * Requires PHP: 8.0
@@ -16,7 +16,7 @@
 if (!defined('ABSPATH')) exit;
 
 
-define('BTL_HP_VERSION', '1.2.0');
+define('BTL_HP_VERSION', '1.3.0');
 define('BTL_HP_PATH', plugin_dir_path(__FILE__));
 define('BTL_HP_URL',  plugin_dir_url(__FILE__));
 
@@ -43,6 +43,17 @@ function btl_templates(): array {
             'label' => 'BTL Training Packages 2026',
             'file'  => 'templates/packages-2026.php',
             'css'   => 'assets/css/packages.css',
+            'js'    => '',
+        ],
+
+        /* Blank-canvas template: a single client-managed HTML field rendered
+           inside the site chrome. Used first for Gift Vouchers, then any page
+           Paul wants to manage himself. No per-template JS by design — this
+           template is HTML-only (scripts are stripped on render). */
+        'btl-html-template.php' => [
+            'label' => 'BTL HTML Template 2026',
+            'file'  => 'templates/html-template.php',
+            'css'   => 'assets/css/html-template.css',
             'js'    => '',
         ],
     ];
@@ -179,4 +190,60 @@ function btl_shared_text(string $field): string {
 
     $home = btl_home_page_id();
     return $home ? (string) get_field($field, $home) : '';
+}
+
+/* ---------- HTML Template: client-managed HTML rendering ---------- */
+
+/**
+ * Allowed tags/attributes for the client-managed HTML field.
+ *
+ * Starts from WordPress' 'post' allowlist (headings, paragraphs, lists, links,
+ * images, tables, blockquotes, figures, etc.) — which already excludes script,
+ * style, link, iframe, form and object — then guarantees inline style/class/id
+ * survive on every element, because the AI-prompt guidance tells Paul to style
+ * with inline style="" attributes. KSES still sanitises the style value itself,
+ * strips on* event handlers and javascript: URLs.
+ *
+ * To allow embeds later (e.g. a YouTube/Maps iframe) this is the one place to
+ * change — add an 'iframe' entry with an explicit src allowlist.
+ */
+function btl_user_html_allowed_tags(): array {
+    $tags = wp_kses_allowed_html('post');
+    foreach ($tags as $tag => &$attrs) {
+        if (!is_array($attrs)) $attrs = [];
+        $attrs['style'] = true;
+        $attrs['class'] = true;
+        $attrs['id']    = true;
+    }
+    unset($attrs);
+    return $tags;
+}
+
+/**
+ * Sanitise and render the client-managed HTML field.
+ *
+ * Pipeline:
+ *  1. Remove <script> and <style> blocks entirely (tag AND contents), so their
+ *     code/CSS can never run, and never print to the page as visible text —
+ *     which is what wp_kses() alone would wrongly do (it drops the tag but keeps
+ *     the text between it).
+ *  2. Drop stray document-level / external-asset tags (html, head, body, link,
+ *     meta, base, title, doctype) in case a full HTML document was pasted.
+ *  3. wp_kses() against the allowlist above: keeps a safe HTML subset, sanitises
+ *     inline styles, strips event handlers and dangerous protocols.
+ *  4. do_shortcode() so genuine shortcodes still work (harmless if there are none).
+ *
+ * Combined with the containment CSS in html-template.css and the per-template
+ * asset cleanup, whatever is pasted stays on its own page: it cannot load
+ * scripts, leak global CSS into the site chrome, or affect any other page.
+ */
+function btl_render_user_html(string $raw): string {
+    if (trim($raw) === '') return '';
+
+    $clean = preg_replace('#<(script|style|head|title)\b[^>]*>.*?</\1>#is', '', $raw);
+    $clean = preg_replace('#</?(?:html|head|body|link|meta|base|title|!doctype)\b[^>]*>#i', '', (string) $clean);
+
+    $clean = wp_kses((string) $clean, btl_user_html_allowed_tags());
+
+    return do_shortcode($clean);
 }

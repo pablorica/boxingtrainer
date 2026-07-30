@@ -1,0 +1,98 @@
+/* BTL HTML Template 2026 — styling for the client-managed HTML field.
+ *
+ * Two jobs:
+ *  1) DEFAULTS — give pasted, unstyled semantic HTML sensible, on-brand
+ *     appearance on the site's DARK theme (bg #0c0f12). Without this, an
+ *     AI's default black-on-white markup would be near-invisible here.
+ *  2) CONTAINMENT — guarantee that whatever is pasted cannot overflow the
+ *     page or break the layout on mobile: width caps beat inline widths,
+ *     media scales down, wide tables scroll instead of pushing the page.
+ *
+ * Everything is scoped to .btl-user-html so it only ever touches the field's
+ * content, never the shared header/footer chrome. Site tokens (--accent, --white,
+ * --soft, --line, --max) come from base.css.
+ */
+
+.btl-html-main{
+  padding:clamp(48px,7vw,96px) 0;
+}
+
+/* ---------- on-brand defaults for unstyled content ---------- */
+.btl-user-html{
+  color:var(--soft);
+  font-size:17px;
+  line-height:1.7;
+}
+.btl-user-html > *:first-child{margin-top:0;}
+.btl-user-html > *:last-child{margin-bottom:0;}
+
+/* Headings inherit the site's Oswald styling from base.css; add spacing + colour. */
+.btl-user-html h1,
+.btl-user-html h2,
+.btl-user-html h3,
+.btl-user-html h4,
+.btl-user-html h5,
+.btl-user-html h6{color:var(--white);margin:1.6em 0 .5em;}
+.btl-user-html h1{font-size:clamp(32px,5vw,52px);}
+
+.btl-user-html p,
+.btl-user-html ul,
+.btl-user-html ol{margin:0 0 1.1em;}
+.btl-user-html li{margin:.3em 0;}
+
+.btl-user-html a{
+  color:var(--accent);
+  text-decoration:underline;
+  text-underline-offset:2px;
+}
+
+.btl-user-html strong,
+.btl-user-html b{color:var(--white);}
+
+.btl-user-html blockquote{
+  margin:1.5em 0;
+  padding:.4em 0 .4em 1.2em;
+  border-left:3px solid var(--accent);
+  color:var(--white);
+}
+
+.btl-user-html hr{
+  border:0;
+  border-top:1px solid var(--line);
+  margin:2.4em 0;
+}
+
+.btl-user-html figure{margin:1.5em 0;}
+.btl-user-html figcaption{
+  color:var(--softer);
+  font-size:14px;
+  margin-top:.6em;
+}
+
+/* ---------- containment: nothing pasted may break the layout ----------
+ *
+ * The !important on max-width is load-bearing: it beats an inline
+ * style="max-width:1200px" or style="width:1400px" that AI output often
+ * carries, so a fixed-width block can never force a horizontal scrollbar
+ * on mobile. Everything else stays overridable by Paul's inline styles.
+ */
+.btl-user-html{overflow-wrap:break-word;}
+.btl-user-html *{max-width:100% !important;}
+
+.btl-user-html img,
+.btl-user-html video,
+.btl-user-html svg{height:auto;}
+.btl-user-html img{display:block;}
+
+.btl-user-html table{
+  display:block;
+  width:100%;
+  overflow-x:auto;              /* wide tables scroll inside the column, not the page */
+  border-collapse:collapse;
+}
+.btl-user-html th,
+.btl-user-html td{
+  border:1px solid var(--line);
+  padding:8px 12px;
+  text-align:left;
+}
