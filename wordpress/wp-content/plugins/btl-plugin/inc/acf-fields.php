@@ -61,6 +61,9 @@ acf_add_local_field_group([
         btl_tab('btl_g_reviews', 'Reviews'),
         btl_f('btl_google_score',    'Google review score', 'text', ['default_value' => '5.0']),
         btl_f('btl_google_count',    'Google review count', 'text', ['default_value' => '50+']),
+        btl_f('btl_google_count_schema', 'Google review count — number only (for star rating)', 'number',
+              ['default_value' => 54, 'min' => 0,
+               'instructions' => 'Your exact current number of Google reviews, digits only (e.g. 54). This is what drives the ★ star rating in search results, so keep it matching your real Google total. The "Google review count" field above ("50+") is only the on-page display text and is never used for schema.']),
         btl_f('btl_google_url',      'Google reviews link', 'url',
               ['default_value' => 'https://share.google/QUETiLFrIFNpZxGsX']),
         btl_f('btl_trustpilot_score','Trustpilot score', 'text', ['default_value' => '4.5']),
@@ -613,3 +616,99 @@ add_filter('aioseo_schema_output', function ($graphs) {
     $graphs[] = $service;
     return $graphs;
 }, 21);
+
+/* ---------- Homepage: star rating (Product + AggregateRating) + graph tidy-up ----------
+   Operates on the assembled AIOSEO graph (priority 30 — after AIOSEO and the two
+   filters above), so it works regardless of whether a node came from AIOSEO, this
+   plugin, or Paul's Custom Schema box. Three jobs:
+
+     1. Point WebSite.publisher at the Organization instead of AIOSEO's author node,
+        but only when an Organization node is actually present, so we never create a
+        dangling reference.
+     2. Remove AIOSEO's duplicate author Person (#person, the gravatar one) when the
+        canonical Paul (#paul-carroll) is already in the graph. Kills the "two Pauls"
+        split without stripping author schema on pages that legitimately only have the
+        author node (e.g. blog posts).
+     3. On the homepage only, add a Product carrying the genuine Google rating so the
+        stars can show. The numbers come from the Site-wide Reviews fields, so they
+        follow whatever Paul enters — nothing hard-coded, and the rating stays honest
+        to his real Google total.
+
+   The closing de-dupe collapses any two nodes sharing an @id (first wins). It does
+   NOT merge the two Persons above (different @ids); it's the safety net that makes
+   re-enabling Custom Schema collision-proof. */
+add_filter('aioseo_schema_output', function ($graphs) {
+    if (!is_array($graphs)) return $graphs;
+
+    $org_id    = home_url('/#organization');
+    $person_id = home_url('/#paul-carroll');
+    $author_id = home_url('/#person');   // AIOSEO's gravatar "represented person" node
+
+    // What's present on this page?
+    $has_org = false;
+    $has_canonical_person = false;
+    foreach ($graphs as $g) {
+        if (!is_array($g)) continue;
+        $id = $g['@id'] ?? '';
+        if ($id === $org_id)    $has_org = true;
+        if ($id === $person_id) $has_canonical_person = true;
+    }
+
+    // (1) publisher -> Organization   (2) drop duplicate author Person
+    foreach ($graphs as $i => $g) {
+        if (!is_array($g)) continue;
+        $types = (array) ($g['@type'] ?? []);
+        $id    = $g['@id'] ?? '';
+
+        if ($has_org && in_array('WebSite', $types, true)) {
+            $graphs[$i]['publisher'] = ['@id' => $org_id];
+        }
+        if ($has_canonical_person && $id === $author_id && in_array('Person', $types, true)) {
+            unset($graphs[$i]);
+        }
+    }
+    $graphs = array_values($graphs);
+
+    // (3) homepage Product with the real Google rating
+    if (function_exists('get_field') && is_page_template('btl-home-2026.php')) {
+        $score = trim((string) get_field('btl_google_score', 'option'));                        // "5.0"
+        $count = preg_replace('/\D/', '', (string) get_field('btl_google_count_schema', 'option')); // digits only
+
+        $has_product = false;
+        foreach ($graphs as $g) {
+            if (is_array($g) && in_array('Product', (array) ($g['@type'] ?? []), true)) { $has_product = true; break; }
+        }
+
+        if (!$has_product && $score !== '' && $count !== '' && (int) $count > 0) {
+            $graphs[] = [
+                '@type'       => 'Product',
+                '@id'         => home_url('/#product'),
+                'name'        => 'Private 1-to-1 Boxing Personal Training London',
+                'description' => 'Private 1-to-1 boxing personal training in London with Paul Carroll — technique, padwork, footwork, defence, fitness, strength and conditioning.',
+                'image'       => ['@id' => home_url('/#primaryimage')],
+                'brand'       => ['@type' => 'Brand', 'name' => 'Boxing Trainer London'],
+                'category'    => 'Boxing personal training',
+                'isRelatedTo' => ['@id' => home_url('/#service')],
+                'aggregateRating' => [
+                    '@type'       => 'AggregateRating',
+                    'ratingValue' => $score,
+                    'bestRating'  => '5',
+                    'worstRating' => '1',
+                    'ratingCount' => $count,
+                    'reviewCount' => $count,
+                ],
+            ];
+        }
+    }
+
+    // (4) safety net: collapse accidental duplicate @ids (first wins)
+    $seen = [];
+    foreach ($graphs as $i => $g) {
+        if (is_array($g) && isset($g['@id'])) {
+            if (isset($seen[$g['@id']])) unset($graphs[$i]);
+            else $seen[$g['@id']] = true;
+        }
+    }
+
+    return array_values($graphs);
+}, 30);

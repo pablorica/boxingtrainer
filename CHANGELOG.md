@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.3.4] - 2026-07-31
+
+### Added
+
+- Custom Plugin: Adding Google Reviewsw Count to Schema
+
 ## [1.3.3] - 2026-07-29
 
 ### Added
