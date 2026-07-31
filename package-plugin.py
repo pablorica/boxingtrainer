@@ -43,7 +43,8 @@ EXCLUDED_PATHS = {
     "composer.lock",
     "README.md",
     "home-seed",
-    "training-packages-seed"
+    "training-packages-seed",
+    "html-seed"
 }
 
 

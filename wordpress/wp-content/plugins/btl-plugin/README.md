@@ -285,3 +285,8 @@ cd ~/www/boxingtrainer.london/public_html/wp-content/plugins/btl-plugin/
 rm -R training-packages-seed/
 
 ``` 
+
+
+### HTML template
+
+Just copy and paste the HTML code saved in  `html-seed/btl-html-template-test.html` in the editor box of the template.

@@ -1,0 +1,68 @@
+<!-- ============================================================
+     BTL HTML Template — test paste
+     Paste ALL of this into the "Page HTML" field, save, and view the page.
+     (Don't open this file in a browser to judge it — with no site CSS it
+     won't look right. It's only meaningful pasted into the template.)
+     The commented hazards below prove the safeguards work.
+     ============================================================ -->
+
+<!-- SAFETY TEST 1 — this style block tries to wreck the WHOLE site
+     (white background, black text on the shared header/footer). It must be
+     stripped. If the chrome stays dark, stripping works. -->
+<style>
+  body { background:#ffffff !important; }
+  header, footer, .wrap { color:#000 !important; }
+  h1, h2 { color:red !important; }
+</style>
+
+<!-- SAFETY TEST 2 — this script must never run. No popup = stripped. -->
+<script>alert('If you see this popup, SCRIPT stripping FAILED');</script>
+
+<h1>Boxing Gift Vouchers</h1>
+
+<p>Give someone the gift of real 1-to-1 boxing training with Paul Carroll.
+Every voucher is valid for 12 months and suits all levels, from complete
+beginners to experienced boxers. <a href="/contact/">Get in touch to buy one</a>.</p>
+
+<h2>How it works</h2>
+<ol>
+  <li>Choose how many sessions you'd like to gift.</li>
+  <li><a href="/contact/">Send us a message</a> with the recipient's name.</li>
+  <li>We'll send a personalised voucher you can print or forward.</li>
+</ol>
+
+<h2>Voucher options</h2>
+<table>
+  <thead>
+    <tr><th>Voucher</th><th>Sessions</th><th>Best for</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Taster</td><td>1</td><td>First-timers</td></tr>
+    <tr><td>Starter</td><td>5</td><td>Building a habit</td></tr>
+    <tr><td>Committed</td><td>10</td><td>Real progress</td></tr>
+  </tbody>
+</table>
+
+<blockquote>
+  "The best birthday present I've ever been given. I was nervous at first,
+  but Paul made it brilliant from the very first session." — A happy recipient
+</blockquote>
+
+<!-- SAFETY TEST 3 — this onclick handler must be stripped. Clicking = nothing. -->
+<p onclick="alert('onclick FAILED')">Tap-test paragraph (clicking this should do nothing at all).</p>
+
+<!-- SAFETY TEST 4 — a javascript: link must be neutralised. -->
+<p><a href="javascript:alert('protocol FAILED')">This link should be completely inert.</a></p>
+
+<!-- CONTAINMENT TEST — this 1400px-wide block must NOT create horizontal scroll
+     on mobile. The template caps it at the column width. -->
+<div style="width:1400px; background:#171c22; border:1px solid rgba(255,255,255,.1); padding:20px;">
+  Fixed 1400px-wide block — it should shrink to fit the column and never overflow the page sideways.
+</div>
+
+<!-- IMAGE TEST — a very wide external placeholder image must scale down to the
+     column, not push the layout. Swap or delete if your local blocks externals. -->
+<p><img src="https://placehold.co/1600x400/FF5722/ffffff?text=Wide+Image+Test" alt="Wide test image"></p>
+
+<h2>Ready to book?</h2>
+<p>Questions about vouchers? <a href="/contact/">Contact Paul</a> and he'll sort it out.</p>
