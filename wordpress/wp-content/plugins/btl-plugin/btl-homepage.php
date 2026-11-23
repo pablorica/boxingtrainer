@@ -2,7 +2,7 @@
 /**
  * Plugin Name: BTL Site 2026
  * Description: Boxing Trainer London — 2026 page templates, content fields and assets. Theme-independent so it survives the future theme migration.
- * Version:     1.4.0
+ * Version:     1.4.1
  * Author:      Pablo Rica
  * Author URI:  https://codigo.co.uk/
  * Requires PHP: 8.0
@@ -16,7 +16,7 @@
 if (!defined('ABSPATH')) exit;
 
 
-define('BTL_HP_VERSION', '1.4.0');
+define('BTL_HP_VERSION', '1.4.1');
 define('BTL_HP_PATH', plugin_dir_path(__FILE__));
 define('BTL_HP_URL',  plugin_dir_url(__FILE__));
 
