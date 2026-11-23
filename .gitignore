@@ -161,7 +161,7 @@ wordpress/wp-content/themes/*
 !site.webmanifest
 
 # VS Code
-!.stubs
+#!.stubs
 
 
 # Docker
