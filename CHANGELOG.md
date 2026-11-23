@@ -6,6 +6,16 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.3.5] - 2026-11-23
+
+### Fixed
+
+- Custom Plugin: Home press logos (HELLO!, Women's Health, Daily Express) now output `width` and `height` attributes, so their space is reserved while loading (PageSpeed "unsized images" / CLS). Rendered size unchanged — still set by `home.css`.
+
+### Added
+
+- Custom Plugin: `btl_image_dims()` helper — returns the intrinsic width/height of an ACF image. Uses the attachment metadata for raster images and reads the root `<svg>` `width`/`height` or `viewBox` for SVGs (cached).
+
 ## [1.3.4] - 2026-07-31
 
 ### Added

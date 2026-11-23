@@ -68,10 +68,11 @@ require BTL_HP_PATH . 'templates/parts/header.php';
         $href = $l['url'] ?: '#daily-express-quote';
         $file = $l['logo']['filename'] ?? basename($l['logo']['url']);
         $slug = sanitize_html_class(preg_replace('/^logo-/', '', pathinfo($file, PATHINFO_FILENAME)));
+        $dims = btl_image_dims($l['logo']);
         ?>
       <a class="press-logo press-logo-<?php echo esc_attr($slug); ?>"
          href="<?php echo $u($href); ?>" aria-label="<?php echo esc_attr($l['alt']); ?>">
-        <img src="<?php echo $u($l['logo']['url']); ?>" alt="<?php echo esc_attr($l['alt'] ?: $l['logo']['alt']); ?>" loading="lazy">
+        <img src="<?php echo $u($l['logo']['url']); ?>"<?php if ($dims): ?> width="<?php echo (int) $dims[0]; ?>" height="<?php echo (int) $dims[1]; ?>"<?php endif; ?> alt="<?php echo esc_attr($l['alt'] ?: $l['logo']['alt']); ?>" loading="lazy">
       </a>
     <?php endforeach; ?>
   </div>

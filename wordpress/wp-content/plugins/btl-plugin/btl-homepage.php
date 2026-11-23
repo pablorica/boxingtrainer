@@ -247,3 +247,49 @@ function btl_render_user_html(string $raw): string {
 
     return do_shortcode($clean);
 }
+
+/**
+ * Intrinsic width/height for an ACF image array, so templates can output
+ * width/height attributes and the browser reserves the space before load (CLS).
+ *
+ * Raster images: WordPress already stores the size in the attachment metadata.
+ * SVGs: WordPress stores no size (ACF reports 0 or 1), so read the root <svg>
+ * element's width/height or, failing that, its viewBox. Only the ratio matters —
+ * the CSS still decides the rendered size.
+ *
+ * @return array{0:int,1:int}|null [width, height] or null if unknown.
+ */
+function btl_image_dims($image): ?array {
+    if (!is_array($image)) return null;
+
+    $w = (int) ($image['width']  ?? 0);
+    $h = (int) ($image['height'] ?? 0);
+    if ($w > 1 && $h > 1) return [$w, $h];
+
+    $id   = (int) ($image['ID'] ?? $image['id'] ?? 0);
+    $file = $id ? get_attached_file($id) : '';
+    if (!$file || strtolower(pathinfo($file, PATHINFO_EXTENSION)) !== 'svg' || !is_readable($file)) return null;
+
+    $cache_key = 'btl_svg_dims_' . $id . '_' . filemtime($file);
+    $cached    = wp_cache_get($cache_key, 'btl');
+    if (is_array($cached)) return $cached;
+
+    // The root <svg> tag sits at the top of the file; no need to read it all.
+    $head = (string) file_get_contents($file, false, null, 0, 8192);
+    if (!preg_match('/<svg\b[^>]*>/is', $head, $tag)) return null;
+    $tag = $tag[0];
+
+    $num  = fn(string $attr) => preg_match('/\s' . $attr . '\s*=\s*["\']\s*([\d.]+)\s*(px)?\s*["\']/i', $tag, $m) ? (float) $m[1] : 0.0;
+    $sw   = $num('width');
+    $sh   = $num('height');
+
+    if (!($sw > 0 && $sh > 0) && preg_match('/\sviewBox\s*=\s*["\']\s*[-\d.]+[\s,]+[-\d.]+[\s,]+([\d.]+)[\s,]+([\d.]+)/i', $tag, $vb)) {
+        $sw = (float) $vb[1];
+        $sh = (float) $vb[2];
+    }
+    if (!($sw > 0 && $sh > 0)) return null;
+
+    $dims = [max(1, (int) round($sw)), max(1, (int) round($sh))];
+    wp_cache_set($cache_key, $dims, 'btl', DAY_IN_SECONDS);
+    return $dims;
+}

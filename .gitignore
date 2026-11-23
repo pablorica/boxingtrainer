@@ -135,16 +135,13 @@ wordpress/wp-content/themes/*
 !.phpcs.xml.dist
 !README.md
 !CHANGELOG.md
-!DOCKER.md
-!SERVER.md
-!SAGE.md
-!SASS.md
-!VUE.md
-!PYTHON.md
 !composer.json
 !theme.json
 # Migration file
 !*.sql.gz
+
+# Documents
+!docs/
 
 # Python compressor
 !package-plugin.py
