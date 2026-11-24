@@ -6,6 +6,20 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.3.7] - 2026-11-24
+
+### Fixed
+
+- Custom Plugin: Complianz cookie banner allowed on BTL templates. The asset cleanup allowlist now accepts handles starting with `cmplz` (filterable via `btl_hp_allowed_prefixes`); previously the banner CSS/JS would have been stripped on Home, Training Packages and HTML-template pages.
+
+### Added
+
+- Custom Plugin: Footer legal links on BTL templates, replacing the plain-text "Privacy · Terms" placeholder: Privacy Policy (WordPress privacy page setting), Cookie Policy (`/cookie-policy-uk/`) and "Manage cookies" (reopens the Complianz banner). Each link only shows when its page is published / Complianz is active.
+
+### Update
+
+- Custom Plugin: version bumped to 1.4.3.
+
 ## [1.3.6] - 2026-11-24
 
 ### Fixed

@@ -13,6 +13,13 @@ $btl_training = btl_shared_field('btl_footer_training_links');
 $btl_phone    = btl_opt('btl_phone_display');
 $btl_tel      = btl_opt('btl_phone_tel');
 $btl_email    = btl_opt('btl_email');
+
+/* Legal links. Each one only shows when its page exists, so nothing breaks
+   before the policies are published. */
+$btl_privacy_url = get_privacy_policy_url();          // Settings → Privacy page, '' unless published
+$btl_cookie_page = get_page_by_path('cookie-policy-uk');
+$btl_cookie_url  = ($btl_cookie_page && $btl_cookie_page->post_status === 'publish') ? get_permalink($btl_cookie_page) : '';
+$btl_cmplz       = class_exists('COMPLIANZ');          // "Manage cookies" reopens the Complianz banner
 ?>
 <footer>
   <div class="wrap">
@@ -44,7 +51,11 @@ $btl_email    = btl_opt('btl_email');
     </div>
     <div class="f-bottom">
       <span>&copy; <?php echo esc_html(date('Y')); ?> Boxing Trainer London. All rights reserved.</span>
-      <span>Privacy &middot; Terms</span>
+      <span class="f-legal">
+        <?php if ($btl_privacy_url): ?><a href="<?php echo esc_url($btl_privacy_url); ?>">Privacy Policy</a><?php endif; ?>
+        <?php if ($btl_cookie_url): ?><a href="<?php echo esc_url($btl_cookie_url); ?>">Cookie Policy</a><?php endif; ?>
+        <?php if ($btl_cmplz): ?><a href="#" class="cmplz-show-banner">Manage cookies</a><?php endif; ?>
+      </span>
     </div>
   </div>
 </footer>

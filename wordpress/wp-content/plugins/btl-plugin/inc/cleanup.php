@@ -29,7 +29,16 @@ function btl_hp_is_template(): bool {
  * so adding a stylesheet or a new template needs no change here.
  */
 function btl_hp_is_own_handle(string $handle): bool {
-    return str_starts_with($handle, 'btl-');
+    if (str_starts_with($handle, 'btl-')) return true;
+
+    // Third-party plugins that must work on BTL templates, allowed by handle prefix
+    // so new handles they add in future updates aren't silently stripped.
+    // - cmplz: Complianz cookie banner (cmplz-general CSS, cmplz-cookiebanner JS).
+    //   Without it the banner never shows on BTL pages and consent can't be given.
+    foreach (apply_filters('btl_hp_allowed_prefixes', ['cmplz']) as $prefix) {
+        if (str_starts_with($handle, $prefix)) return true;
+    }
+    return false;
 }
 
 /** Styles allowed to load on the homepage template. */
