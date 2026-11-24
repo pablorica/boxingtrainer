@@ -6,6 +6,17 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.3.8] - 2026-11-24
+
+### Fixed
+
+- Custom Plugin: Cookie Policy accordions. BTL templates had no `.screen-reader-text` rule (normally supplied by the theme), so Complianz's hidden "Consent to service …" labels rendered one letter per line and stretched each accordion header to ~600px. Rule added to `base.css` for all templates.
+- Custom Plugin: Complianz document styles adapted to the dark theme in `html-template.css` (accordions, consent categories and cookie tables were white/grey with white text).
+
+### Update
+
+- Custom Plugin: version bumped to 1.4.4.
+
 ## [1.3.7] - 2026-11-24
 
 ### Fixed

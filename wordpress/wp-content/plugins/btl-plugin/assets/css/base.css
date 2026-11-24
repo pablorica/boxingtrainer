@@ -228,3 +228,11 @@
   @media (max-width:359px){
     .nav .btn{display:none;}
   }
+
+/* ---------- WordPress core helper ---------- */
+  /* Visually hidden, still read by screen readers. Themes normally provide this;
+     our templates don't load the theme CSS, so plugins' hidden labels (e.g. the
+     Complianz cookie policy "Consent to service …" text) were showing on screen. */
+  .screen-reader-text{border:0;clip:rect(1px,1px,1px,1px);clip-path:inset(50%);
+    height:1px;width:1px;margin:-1px;overflow:hidden;padding:0;
+    position:absolute!important;word-wrap:normal!important;}
