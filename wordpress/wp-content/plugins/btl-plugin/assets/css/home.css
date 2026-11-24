@@ -28,10 +28,12 @@
     opacity:.45;
     transition:opacity 900ms ease;
   }
-  .hero-inner{position:relative;z-index:2;width:100%;padding-bottom:clamp(48px,7vh,84px);}
-  @media (max-width:380px){
-    .hero-inner{padding-top: 15vh;}
-  }
+  /* padding-top reserves the fixed header (76px) + breathing room, so when the
+     hero content is taller than the viewport (most phones) it pushes the hero
+     taller instead of sliding up under the header. No effect on desktop, where
+     the content sits at the bottom of the 92vh hero anyway. */
+  .hero-inner{position:relative;z-index:2;width:100%;
+    padding-top:calc(76px + 28px);padding-bottom:clamp(48px,7vh,84px);}
   .hero h1{font-size:clamp(40px,6.2vw,84px);font-weight:700;max-width:900px;}
   .hero h1 em{font-style:normal;color:var(--accent);}
   .hero .tag{font-family:'Oswald',sans-serif;font-weight:500;font-size:clamp(15px,1.6vw,20px);

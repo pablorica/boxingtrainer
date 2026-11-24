@@ -6,6 +6,18 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.3.6] - 2026-11-24
+
+### Fixed
+
+- Custom Plugin: Home hero H1 no longer sits under the fixed header on phones (iPhone widths 390–430px). `.hero-inner` now always reserves the header height (76px + 28px) in `padding-top`; the old `max-width:380px` / `15vh` rule is removed. Desktop unchanged.
+- Custom Plugin: Mobile header (all templates) — logo and "Book a session" button no longer wrap onto two lines at ≤480px (smaller logo/button, `white-space:nowrap`). Button hidden below 360px; still available in the burger menu.
+- Custom Plugin: BTL templates no longer output the old theme's `<link rel="preload">` tags (printed directly in `wp_head`, so the asset cleanup missed them): 14 unused Lato/Oswald/Poppins TTF font preloads (`boxingtrainer_head_code`) and the "main home image" preload, which on Home 2026 preloaded a below-the-fold photo instead of the hero (`lpd_abcpersonal_codigo_get_main_home_img`). Old-theme pages unaffected.
+
+### Update
+
+- Custom Plugin: version bumped to 1.4.2 so the updated CSS bypasses cached `?ver=1.4.1` assets.
+
 ## [1.3.5] - 2026-11-23
 
 ### Fixed

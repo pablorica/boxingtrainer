@@ -105,7 +105,33 @@ add_action('wp', function () {
 
     // Theme support styles some themes print inline
     remove_action('wp_head', 'wp_custom_css_cb', 100);
+
+    // Old theme (lpd-abcpersonal) <link rel="preload"> tags printed straight into
+    // wp_head, so the dequeue/tag filters above never see them:
+    // - 14 Lato/Oswald/Poppins TTF preloads. Our templates use btl-fonts instead,
+    //   so these were downloaded for nothing and competed with the hero image.
+    remove_action('wp_head', 'boxingtrainer_head_code', 1);
+    // - the "main home image" preload. It preloads the page's featured image,
+    //   which on Home 2026 sits far below the fold, not the hero (LCP).
+    btl_hp_remove_method_hook('wp_head', 'lpd_abcpersonal_codigo_get_main_home_img');
 });
+
+/**
+ * Remove a hook registered as [$object, 'method'] when we have no reference
+ * to the object (the theme instantiates its classes anonymously).
+ */
+function btl_hp_remove_method_hook(string $hook, string $method): void {
+    global $wp_filter;
+    if (empty($wp_filter[$hook])) return;
+    foreach ($wp_filter[$hook]->callbacks as $priority => $callbacks) {
+        foreach ($callbacks as $cb) {
+            $fn = $cb['function'];
+            if (is_array($fn) && isset($fn[1]) && $fn[1] === $method) {
+                remove_action($hook, $fn, $priority);
+            }
+        }
+    }
+}
 
 /* ---------------------------------------------------------------------------
  * 4. Trim body classes: page-builder classes (vc_*, wpb-*, tribe-*) carry

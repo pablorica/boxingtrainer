@@ -213,3 +213,15 @@
   @media (max-width:600px){
     .f-grid{grid-template-columns:1fr;}
   }
+  /* Phones: keep logo and "Book a session" on one line each so the header
+     stays within its 76px height */
+  @media (max-width:480px){
+    .nav{gap:12px;}
+    .logo{font-size:16px;white-space:nowrap;}
+    .nav-cta{gap:14px;}
+    .nav .btn{padding:9px 12px;font-size:11px;letter-spacing:1px;white-space:nowrap;}
+  }
+  /* Very small phones: no room for the button; it's still in the burger menu */
+  @media (max-width:359px){
+    .nav .btn{display:none;}
+  }
